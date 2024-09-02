@@ -1,8 +1,9 @@
 import 'package:get/get.dart';
-import 'package:real_estate_app/app/modules/home/bindings/app_binding.dart';
-import 'package:real_estate_app/app/modules/home/views/onboarding_view.dart';
-import 'package:real_estate_app/app/modules/home/views/registration_view.dart';
+import 'package:real_estate_app/app/modules/home/views/login_view.dart';
 
+import '../modules/home/bindings/app_binding.dart';
+import '../modules/home/views/onboarding_view.dart';
+import '../modules/home/views/registration_view.dart';
 
 part 'app_routes.dart';
 
@@ -19,7 +20,12 @@ class AppPages {
     ),
     GetPage(
       name: _Paths.Registration,
-      page: () =>  RegistrationView(),
+      page: () => RegistrationView(),
+      binding: AppBinding(),
+    ),
+    GetPage(
+      name: _Paths.LOGIN,
+      page: () =>  LoginView(),
       binding: AppBinding(),
     ),
   ];

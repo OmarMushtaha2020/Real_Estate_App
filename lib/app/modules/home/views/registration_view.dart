@@ -7,10 +7,11 @@ import 'package:real_estate_app/app/components/common_widget/text_widget.dart';
 import 'package:real_estate_app/app/modules/home/controllers/registration_controller.dart';
 import 'package:sizer/sizer.dart';
 
-class RegistrationView extends StatelessWidget {
+class RegistrationView extends GetView<RegistrationController> {
   @override
   Widget build(BuildContext context) {
     return GetBuilder<RegistrationController>(
+      init:RegistrationController() ,
       builder: (controller) {
         return Container(
           decoration: BoxDecoration(

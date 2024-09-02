@@ -12,6 +12,9 @@ List<String>LoginMethodsIcon=[
 bool isClick=false;
 void changeValueToClick(){
   isClick=!isClick;
+  if(isClick==true){
+    Get.offAndToNamed("/login");
+  }
   print(isClick);
   update();
 }
