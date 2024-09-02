@@ -1,5 +1,6 @@
 import 'package:get/get.dart';
 import 'package:real_estate_app/app/modules/home/controllers/onboarding_controller.dart';
+import 'package:real_estate_app/app/modules/home/controllers/registration_controller.dart';
 
 
 class AppBinding extends Bindings {
@@ -7,6 +8,9 @@ class AppBinding extends Bindings {
   void dependencies() {
     Get.lazyPut<OnBoardingController>(
       () => OnBoardingController(),
+    );
+    Get.lazyPut<RegistrationController>(
+          () => RegistrationController(),
     );
   }
 }

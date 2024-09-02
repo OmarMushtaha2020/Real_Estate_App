@@ -6,21 +6,18 @@ class OnBoardingController extends GetxController {
   final PageController pageController = PageController();
 
   List<String> onboardingImages = [
-    'assets/image1.png',
-    'assets/image2.png',
-    'assets/image3.png',
+    'assets/image/imageOne.png',
+    'assets/image/imageTwo.png',
   ];
 
   List<String> onboardingTexts = [
-    'Welcome to our app!',
-    'Discover amazing features!',
-    'Get started now!',
+    'Real Estate\n Service at Your\n Finger',
+    'Negotiable Price \n  Best Experience',
   ];
 
   List<String> buttonLabels = [
     'Start',
     'Next',
-    'Finish',
   ];
 
   void nextPage() {
@@ -31,6 +28,7 @@ class OnBoardingController extends GetxController {
         curve: Curves.easeInOut,
       );
     } else {
+      Get.offAndToNamed("/registration_screen");
       // Handle what happens on the last page, e.g., navigate to the main screen
     }
   }

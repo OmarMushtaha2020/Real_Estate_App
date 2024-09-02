@@ -9,4 +9,7 @@ abstract class Routes {
 abstract class _Paths {
   _Paths._();
   static const OnBoarding = '/on_boarding_screen';
+  static const Registration = '/registration_screen';
+
+
 }
