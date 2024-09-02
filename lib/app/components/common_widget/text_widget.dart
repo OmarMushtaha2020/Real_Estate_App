@@ -12,7 +12,8 @@ Color?color;
   Widget build(BuildContext context) {
     return Text(
       text ?? "",
-      style: TextStyle(fontSize: fontSize, fontFamily: fontFamily,color:color ),
+
+      style: TextStyle(fontSize: fontSize, fontFamily: fontFamily,color:color,decoration: TextDecoration.none ),
       textAlign: textAlign,
     );
   }

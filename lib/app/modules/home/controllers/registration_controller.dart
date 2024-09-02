@@ -3,21 +3,17 @@ import 'package:get/get.dart';
 class RegistrationController extends GetxController {
   //TODO: Implement DialogcontrollerController
 
-  final count = 0.obs;
-  @override
-  void onInit() {
-    super.onInit();
-  }
+List<String>LoginMethods=[
+  "Continue With Google","Continue With Apple",'Continue With Facebook'
+];
+List<String>LoginMethodsIcon=[
+  "assets/image/google.png","assets/image/apple.png",'assets/image/facebook.png'
+];
+bool isClick=false;
+void changeValueToClick(){
+  isClick=!isClick;
+  print(isClick);
+  update();
+}
 
-  @override
-  void onReady() {
-    super.onReady();
-  }
-
-  @override
-  void onClose() {
-    super.onClose();
-  }
-
-  void increment() => count.value++;
 }
