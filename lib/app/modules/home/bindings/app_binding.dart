@@ -1,12 +1,12 @@
 import 'package:get/get.dart';
+import 'package:real_estate_app/app/modules/home/controllers/onboarding_controller.dart';
 
-import '../controllers/home_controller.dart';
 
 class AppBinding extends Bindings {
   @override
   void dependencies() {
-    Get.lazyPut<HomeController>(
-      () => HomeController(),
+    Get.lazyPut<OnBoardingController>(
+      () => OnBoardingController(),
     );
   }
 }
