@@ -1,5 +1,6 @@
 import 'package:get/get.dart';
 import 'package:real_estate_app/app/modules/home/views/login_view.dart';
+import 'package:real_estate_app/app/modules/home/views/sign_up_view.dart';
 
 import '../modules/home/bindings/app_binding.dart';
 import '../modules/home/views/onboarding_view.dart';
@@ -28,5 +29,11 @@ class AppPages {
       page: () =>  LoginView(),
       binding: AppBinding(),
     ),
+    GetPage(
+      name: _Paths.SignUp,
+      page: () =>  SignUpView(),
+      binding: AppBinding(),
+    )
+
   ];
 }

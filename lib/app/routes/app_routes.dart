@@ -5,6 +5,10 @@ abstract class Routes {
   Routes._();
   static const OnBoarding = _Paths.OnBoarding;
   static const LOGIN = _Paths.LOGIN;
+  static const Registration= _Paths.Registration;
+  static const SignUp= _Paths.SignUp;
+
+
 }
 
 abstract class _Paths {
@@ -12,4 +16,6 @@ abstract class _Paths {
   static const OnBoarding = '/on_boarding_screen';
   static const Registration = '/registration_screen';
   static const LOGIN = '/login';
+  static const SignUp='/SignUp';
+
 }

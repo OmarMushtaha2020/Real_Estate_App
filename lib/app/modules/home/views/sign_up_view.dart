@@ -1,17 +1,16 @@
 import 'package:flutter/material.dart';
+
 import 'package:get/get.dart';
 import 'package:real_estate_app/app/components/common_widget/CustomCheckbox.dart';
 import 'package:real_estate_app/app/components/common_widget/image_widget.dart';
 import 'package:real_estate_app/app/components/common_widget/sizeBox_widget.dart';
 import 'package:real_estate_app/app/components/common_widget/text_form_widget.dart';
 import 'package:real_estate_app/app/components/common_widget/text_widget.dart';
-import 'package:real_estate_app/app/modules/home/controllers/login_controller.dart';
+import 'package:real_estate_app/app/modules/home/controllers/sign_up_controller.dart';
 import 'package:sizer/sizer.dart';
 
-
-
-class LoginView extends GetView<LoginController> {
-   LoginView({Key? key}) : super(key: key);
+class SignUpView extends GetView<SignUpController> {
+   SignUpView({Key? key}) : super(key: key);
   var form=GlobalKey<FormState>();
   @override
   Widget build(BuildContext context) {
@@ -64,7 +63,7 @@ class LoginView extends GetView<LoginController> {
                             ),
                             SizeBoxWidget(height: 2.h),
                             TextWidget(
-                              "Get Started",
+                              "Create your free account",
                               fontSize: 16.sp,
                               fontFamily: "Satoshi",
                               color: Color(0xFFE86A53),
@@ -72,18 +71,36 @@ class LoginView extends GetView<LoginController> {
                             ),
                             SizeBoxWidget(height: 2.h),
                             TextWidget(
-                              "By joining us, you will gain access to cutting-edge \nresources, expert guidance, etc. Unlock your potential\nnow!",
+                              "Let's start your educational journey together, where every \nstep forward is a step towards a brighter future!",
                               fontSize: 14.sp,
                               fontFamily: "Satoshi",
                               color: Color(0xFF999999),
                               textAlign: TextAlign.start,
                             ),
                             SizeBoxWidget(height: 2.h), // Added for spacing consistency
+
                             Column(
                               crossAxisAlignment: CrossAxisAlignment.start,
                               children: [
                                 TextWidget(
-                                  "Email",
+                                  "Full Name *",
+                                  fontSize: 14.sp,
+                                  fontFamily: "Satoshi",
+                                  color: Color(0xFFE86A53),
+                                  textAlign: TextAlign.start,
+                                ),
+                                SizeBoxWidget(height: 1.h), // Added for spacing consistency
+
+                                TextFormFieldWidget(controller.fullName,12.h,"Full Name",1.3.h,"Full Name"),
+                              ],
+                            ),
+
+                            SizeBoxWidget(height: 2.h), // Added for spacing consistency
+                            Column(
+                              crossAxisAlignment: CrossAxisAlignment.start,
+                              children: [
+                                TextWidget(
+                                  "Email Address *",
                                   fontSize: 14.sp,
                                   fontFamily: "Satoshi",
                                   color: Color(0xFFE86A53),
@@ -100,7 +117,7 @@ class LoginView extends GetView<LoginController> {
                               crossAxisAlignment: CrossAxisAlignment.start,
                               children: [
                                 TextWidget(
-                                  "Password",
+                                  "Password *",
                                   fontSize: 14.sp,
                                   fontFamily: "Satoshi",
                                   color: Color(0xFFE86A53),
@@ -108,37 +125,24 @@ class LoginView extends GetView<LoginController> {
                                 ),
                                 SizeBoxWidget(height: 1.h), // Added for spacing consistency
 
-                                TextFormFieldWidget(controller.email,12.h,"Password",1.3.h,"Password"),
+                                TextFormFieldWidget(controller.password,12.h,"Password",1.3.h,"Password"),
+                              ],
+                            ),  Column(
+                              crossAxisAlignment: CrossAxisAlignment.start,
+                              children: [
+                                TextWidget(
+                                  "Confirm Password *",
+                                  fontSize: 14.sp,
+                                  fontFamily: "Satoshi",
+                                  color: Color(0xFFE86A53),
+                                  textAlign: TextAlign.start,
+                                ),
+                                SizeBoxWidget(height: 1.h), // Added for spacing consistency
+
+                                TextFormFieldWidget(controller.confirmPassword,12.h,"Confirm Password",1.3.h,"Confirm Password"),
                               ],
                             ),
-                        Row(
-              children: [
-                CustomCheckbox(
-                  size: 0.25.w, // Adjust the size here
-                  value: true,
-                  onChanged: (bool? newValue) {
-                        // Handle checkbox state change
-                  },
-                ),
-                SizeBoxWidget(height: 3.w), // Added for spacing consistency
-                TextWidget(
-                  "Remember me",
-                  fontSize: 12.sp,
-                  fontFamily: "Satoshi",
-                  color: Color(0xFF999999),
-                  textAlign: TextAlign.start,
-                ),
-                Spacer(),
-                TextWidget(
-                  "Forgot password?",
-                  fontSize: 12.sp,
-                  fontFamily: "Satoshi",
-                  color: Color(0xFFD30000),
-                  textAlign: TextAlign.start,
-                ),
-
-              ],
-                        ),
+                            SizeBoxWidget(height: 2.h,),
                             GestureDetector(
                               onTap: () {
                                 if(form.currentState!.validate()){
@@ -150,14 +154,14 @@ class LoginView extends GetView<LoginController> {
                                 width: double.infinity,
                                 decoration: BoxDecoration(
                                   color:
-                                      Color(0xFFE86A53)
+                                  Color(0xFFE86A53)
 
-                                 ,
+                                  ,
                                   borderRadius: BorderRadius.circular(10.h),
                                 ),
                                 child: Center(
                                   child: TextWidget(
-                                    "Login",
+                                    "Sign Up",
                                     fontSize: 16.sp,
                                     fontFamily: "RedHatDisplay",
                                     color: Color(0xFFFFFFFF),
