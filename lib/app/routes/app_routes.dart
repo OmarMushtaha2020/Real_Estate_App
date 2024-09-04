@@ -9,7 +9,7 @@ abstract class Routes {
   static const SignUp= _Paths.SignUp;
   static const EmailVerification=_Paths.EmailVerification;
 
-
+static const Role=_Paths.Role;
 }
 
 abstract class _Paths {
@@ -19,5 +19,6 @@ abstract class _Paths {
   static const LOGIN = '/login';
   static const SignUp='/SignUp';
   static const EmailVerification ='/email_verification';
+  static const Role='/role';
 
 }

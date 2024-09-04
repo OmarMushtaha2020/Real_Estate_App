@@ -97,7 +97,9 @@ class EmailVerificationView extends GetView<EmailVerificationController> {
                     ),
                   ),
                   GestureDetector(
-                    onTap: () {},
+                    onTap: () {
+                      Get.toNamed("/role");
+                    },
                     child: Container(
                       height: 7.h,
                       width: double.infinity,

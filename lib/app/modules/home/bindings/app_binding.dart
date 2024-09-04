@@ -3,6 +3,7 @@ import 'package:real_estate_app/app/modules/home/controllers/email_verification_
 import 'package:real_estate_app/app/modules/home/controllers/login_controller.dart';
 import 'package:real_estate_app/app/modules/home/controllers/onboarding_controller.dart';
 import 'package:real_estate_app/app/modules/home/controllers/registration_controller.dart';
+import 'package:real_estate_app/app/modules/home/controllers/role_controller.dart';
 import 'package:real_estate_app/app/modules/home/controllers/sign_up_controller.dart';
 
 
@@ -24,5 +25,9 @@ class AppBinding extends Bindings {
     Get.lazyPut<EmailVerificationController>(
           () => EmailVerificationController(),
     );
+    Get.lazyPut<RoleController>(
+          () => RoleController(),
+    );
+
   }
 }
