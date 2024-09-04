@@ -10,6 +10,8 @@ abstract class Routes {
   static const EmailVerification=_Paths.EmailVerification;
 
 static const Role=_Paths.Role;
+  static const SetUpLocation=_Paths.SetUpLocation;
+
 }
 
 abstract class _Paths {
@@ -20,5 +22,7 @@ abstract class _Paths {
   static const SignUp='/SignUp';
   static const EmailVerification ='/email_verification';
   static const Role='/role';
+  static const SetUpLocation='/set_up_location';
+
 
 }

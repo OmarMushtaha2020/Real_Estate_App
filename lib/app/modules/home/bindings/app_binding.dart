@@ -4,6 +4,7 @@ import 'package:real_estate_app/app/modules/home/controllers/login_controller.da
 import 'package:real_estate_app/app/modules/home/controllers/onboarding_controller.dart';
 import 'package:real_estate_app/app/modules/home/controllers/registration_controller.dart';
 import 'package:real_estate_app/app/modules/home/controllers/role_controller.dart';
+import 'package:real_estate_app/app/modules/home/controllers/set_up_location_controller.dart';
 import 'package:real_estate_app/app/modules/home/controllers/sign_up_controller.dart';
 
 
@@ -27,6 +28,9 @@ class AppBinding extends Bindings {
     );
     Get.lazyPut<RoleController>(
           () => RoleController(),
+    );
+    Get.lazyPut<SetUpLocationController>(
+          () => SetUpLocationController(),
     );
 
   }
