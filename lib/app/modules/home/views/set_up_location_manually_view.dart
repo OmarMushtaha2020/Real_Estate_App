@@ -68,7 +68,7 @@ class SetUpLocationManuallyView extends StatelessWidget {
                           Spacer(),
                           GestureDetector(
                   onTap: () {
-                    // Get.toNamed("/role");
+                    Get.toNamed("/real_estate_type");
                   },
                   child: Container(
                     height: 7.h,

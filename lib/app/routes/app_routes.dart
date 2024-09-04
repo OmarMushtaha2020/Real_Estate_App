@@ -12,6 +12,7 @@ abstract class Routes {
 static const Role=_Paths.Role;
   static const SetUpLocation=_Paths.SetUpLocation;
 static const SetUpLocationManually=_Paths.SetUpLocationManually;
+static const RealEstateType=_Paths.RealEstateType;
 }
 
 abstract class _Paths {
@@ -24,6 +25,6 @@ abstract class _Paths {
   static const Role='/role';
   static const SetUpLocation='/set_up_location';
   static const SetUpLocationManually ='/set_up_location_manually';
-
+static const RealEstateType='/real_estate_type';
 
 }

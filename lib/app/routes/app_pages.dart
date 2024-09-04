@@ -1,7 +1,9 @@
 import 'package:get/get.dart';
+import 'package:real_estate_app/app/modules/home/controllers/real_estate_type_controller.dart';
 import 'package:real_estate_app/app/modules/home/controllers/set_up_location_controller.dart';
 import 'package:real_estate_app/app/modules/home/views/email_verification_view.dart';
 import 'package:real_estate_app/app/modules/home/views/login_view.dart';
+import 'package:real_estate_app/app/modules/home/views/real_estate_type_view.dart';
 import 'package:real_estate_app/app/modules/home/views/role_view.dart';
 import 'package:real_estate_app/app/modules/home/views/set_up_location_manually_view.dart';
 import 'package:real_estate_app/app/modules/home/views/set_up_location_view.dart';
@@ -57,6 +59,11 @@ class AppPages {
     GetPage(
       name: _Paths.SetUpLocationManually,
       page: () =>  SetUpLocationManuallyView(),
+      binding: AppBinding(),
+    ),
+    GetPage(
+      name: _Paths.RealEstateType,
+      page: () =>  RealEstateTypeView(),
       binding: AppBinding(),
     )
 
