@@ -86,7 +86,7 @@ contentPadding: EdgeInsets.zero,
 
             GestureDetector(
               onTap: () {
-                Get.toNamed("/role");
+                Get.toNamed("/set_up_location");
               },
               child: Container(
                 height: 7.h,
