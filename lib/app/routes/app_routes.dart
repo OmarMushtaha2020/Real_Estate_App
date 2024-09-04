@@ -7,6 +7,7 @@ abstract class Routes {
   static const LOGIN = _Paths.LOGIN;
   static const Registration= _Paths.Registration;
   static const SignUp= _Paths.SignUp;
+  static const EmailVerification=_Paths.EmailVerification;
 
 
 }
@@ -17,5 +18,6 @@ abstract class _Paths {
   static const Registration = '/registration_screen';
   static const LOGIN = '/login';
   static const SignUp='/SignUp';
+  static const EmailVerification ='/email_verification';
 
 }
