@@ -6,9 +6,9 @@ class SetUpLocationController extends GetxController {
   void changeValueToClick(){
     isClick=!isClick;
     if(isClick==false){
-      // Get.offAndToNamed("/SignUp");
+      Get.offAndToNamed("/set_up_location_manually");
     }else{
-      // Get.offAndToNamed("/login");
+      Get.offAndToNamed("/set_up_location_manually");
 
 
     }
