@@ -146,7 +146,7 @@ class SignUpView extends GetView<SignUpController> {
                             GestureDetector(
                               onTap: () {
                                 if(form.currentState!.validate()){
-
+Get.offAndToNamed("email_verification");
                                 }
                               },
                               child: Container(

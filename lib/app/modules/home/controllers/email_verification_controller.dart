@@ -1,7 +1,8 @@
+import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
 class EmailVerificationController extends GetxController {
-  //TODO: Implement EmailVerificationController
+  final TextEditingController otpController = TextEditingController();
 
   final count = 0.obs;
   @override
