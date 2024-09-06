@@ -19,97 +19,96 @@ class EmailVerificationView extends GetView<EmailVerificationController> {
             alignment: AlignmentDirectional.center,
             child: SingleChildScrollView(
                 child: Padding(
-              padding: EdgeInsets.symmetric(horizontal: 4.w),
+              padding: EdgeInsets.symmetric(horizontal: 16.w),
               child: Column(
                 mainAxisAlignment: MainAxisAlignment.center,
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
                   ImageWidget(
                     "assets/image/dreams.png",
-                    width: 10.w,
-                    height: 10.w,
-                    fit: BoxFit.cover,
+                    width: 38.w,
+                    height: 38.w,
+                    fit: BoxFit.contain,
                   ),
-                  SizeBoxWidget(
-                    height: 5.w,
-                  ),
+                  SizeBoxWidget(height: 20.h),
+
                   TextWidget(
                     "Verify your email address",
                     fontFamily: "Satoshi",
+                    fontWeight: FontWeight.w700,
                     fontSize: 16.sp,
                     color: Color(0xFFE86A53),
                   ),
-                  Padding(
-                    padding: EdgeInsets.only(top: 2.h),
-                    child: TextWidget(
-                      "We have sent you 5 - digit verification code at brown@dumpmail.com",
-                      fontSize: 14.sp,
-                      fontFamily: "Satoshi",
-                      color: Color(0xFF999999),
-                      textAlign: TextAlign.start,
-                    ),
-                  ),
-                  Padding(
-                    padding: EdgeInsets.only(
-                        top: 2.h, left: 4.w, right: 4.w, bottom: 4.h),
-                    child: Pinput(
-                      onCompleted: (value) {},
-                      showCursor: true,
-                      length: 5,
-                      // Adjust this to the desired code length
+                  SizeBoxWidget(height: 5.h),
 
-                      cursor: Column(
-                        mainAxisAlignment: MainAxisAlignment.center,
-                        children: [
-                          Padding(
-                            padding: EdgeInsets.symmetric(horizontal: 2.w),
-                            child: Container(
-                              width:6.w,
-                              height: 0.4.h,
-                              color: Color(0xFFE86A53),
-                            ),
-                          )
-                        ],
-                      ),
-                      controller: controller.otpController,
-                      mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                      defaultPinTheme: PinTheme(
-                        width: 15.w,
-                        height: 15.w,
-                        textStyle: Theme.of(context)
-                            .textTheme
-                            .bodyText1
-                            ?.copyWith(
-                              color: Theme.of(context).colorScheme.onBackground,
-                              fontSize: 15.sp,
-                              fontWeight: FontWeight.w500,
-                            ),
-                        decoration: BoxDecoration(
-                          border: Border.all(
-                            color: Color(0XffCCCCCC),
-                          ),
-                          borderRadius: BorderRadius.circular(1.h),
-                        ),
-                      ),
-                      onTap: () {
-                        controller.otpController.clear();
-                      },
-                    ),
+                  TextWidget(
+                    "We have sent you 5 - digit verification code at brown@dumpmail.com",
+                    fontSize: 14.sp,
+                    fontWeight: FontWeight.w400,
+                    fontFamily: "Satoshi",
+                    color: Color(0xFF999999),
+                    textAlign: TextAlign.start,
                   ),
+                  SizeBoxWidget(height: 20.h), // Added for spacing consistency
+
+                  Pinput(
+                    onCompleted: (value) {},
+                    showCursor: true,
+                    length: 5,
+                    // Adjust this to the desired code length
+
+                    cursor: Column(
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      children: [
+                        Container(
+                          width:20.w,
+                          height: 3.h,
+                          color: Color(0xFFE86A53),
+                        )
+                      ],
+                    ),
+                    controller: controller.otpController,
+                    mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                    defaultPinTheme: PinTheme(
+                      width: 64.w,
+                      height: 60.w,
+
+                      textStyle: Theme.of(context)
+                          .textTheme
+                          .bodyText1
+                          ?.copyWith(
+                            color: Theme.of(context).colorScheme.onBackground,
+                            fontSize: 15.sp,
+                            fontWeight: FontWeight.w500,
+                          ),
+                      decoration: BoxDecoration(
+                        border: Border.all(
+                          color: Color(0XffCCCCCC),
+                        ),
+                        borderRadius: BorderRadius.circular(10.r),
+                      ),
+                    ),
+                    onTap: () {
+                      controller.otpController.clear();
+                    },
+                  ),
+                  SizeBoxWidget(height: 20.h), // Added for spacing consistency
+
                   GestureDetector(
                     onTap: () {
                       Get.toNamed("/role");
                     },
                     child: Container(
-                      height: 7.h,
+                      height: 53.h,
                       width: double.infinity,
                       decoration: BoxDecoration(
                         color: Color(0xFFE86A53),
-                        borderRadius: BorderRadius.circular(10.h),
+                        borderRadius: BorderRadius.circular(100.r),
                       ),
                       child: Center(
                         child: TextWidget(
                           "Confirm",
+                          fontWeight: FontWeight.w600,
                           fontSize: 16.sp,
                           fontFamily: "RedHatDisplay",
                           color: Color(0xFFFFFFFF),
@@ -119,13 +118,13 @@ class EmailVerificationView extends GetView<EmailVerificationController> {
                     ),
                   ),
                   Padding(
-                    padding: EdgeInsets.only(top: 3.h),
+                    padding: EdgeInsets.only(top: 10.h),
                     child: Row(
                       mainAxisAlignment: MainAxisAlignment.center,
                       children: [
                         TextWidget(
                           "Didn’t receive the code?",
-                          fontSize: 14.sp,
+                          fontSize: 14.sp,fontWeight: FontWeight.w400,
                           color: Color(0xFF999999),
                           fontFamily: "Satoshi",
                         ),
@@ -135,6 +134,7 @@ class EmailVerificationView extends GetView<EmailVerificationController> {
                                 foregroundColor: Color(0xFFE86A53)),
                             child: TextWidget("Resend here",
                                 fontSize: 14.sp,
+                                fontWeight: FontWeight.w400,
                                 fontFamily: "Satoshi",
                                 color: Color(0xFFE86A53)))
                       ],
