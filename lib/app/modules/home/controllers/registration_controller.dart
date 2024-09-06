@@ -10,12 +10,16 @@ List<String>LoginMethodsIcon=[
   "assets/image/google.png","assets/image/apple.png",'assets/image/facebook.png'
 ];
 bool isClick=true;
-void changeValueToClick(){
-  isClick=!isClick;
+void changeValueToClick(bool value){
+  isClick=value;
   if(isClick==false){
-    Get.offAndToNamed("/SignUp");
-  }else{
+    print("login");
     Get.offAndToNamed("/login");
+
+  }else{
+    print("SignUp");
+
+    Get.offAndToNamed("/SignUp");
 
 
   }

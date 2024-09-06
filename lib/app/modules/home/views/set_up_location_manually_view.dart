@@ -58,13 +58,13 @@ class SetUpLocationManuallyView extends StatelessWidget {
                 SizeBoxWidget(
                   height: 2.h,
                 ),
-                TextFormFieldWidget(
-                  controller.location,
-                  12.h,
-                  "location",
-                  1.3.h,
-                  "Location",
-                ),
+                // TextFormFieldWidget(
+                //   controller.location,
+                //   12.h,
+                //   "location",
+                //   1.3.h,
+                //   "Location",
+                // ),
                           Spacer(),
                           GestureDetector(
                   onTap: () {

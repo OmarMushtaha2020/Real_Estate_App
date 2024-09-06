@@ -91,7 +91,7 @@ class SignUpView extends GetView<SignUpController> {
                                 ),
                                 SizeBoxWidget(height: 1.h), // Added for spacing consistency
 
-                                TextFormFieldWidget(controller.fullName,12.h,"Full Name",1.3.h,"Full Name"),
+                                // TextFormFieldWidget(controller.fullName,12.h,"Full Name",1.3.h,"Full Name"),
                               ],
                             ),
 
@@ -108,7 +108,7 @@ class SignUpView extends GetView<SignUpController> {
                                 ),
                                 SizeBoxWidget(height: 1.h), // Added for spacing consistency
 
-                                TextFormFieldWidget(controller.email,12.h,"Email Address",1.3.h,"Email Address"),
+                                // TextFormFieldWidget(controller.email,12.h,"Email Address",1.3.h,"Email Address"),
                               ],
                             ),
                             SizeBoxWidget(height: 2.h), // Added for spacing consistency
@@ -125,7 +125,7 @@ class SignUpView extends GetView<SignUpController> {
                                 ),
                                 SizeBoxWidget(height: 1.h), // Added for spacing consistency
 
-                                TextFormFieldWidget(controller.password,12.h,"Password",1.3.h,"Password"),
+                                // TextFormFieldWidget(controller.password,12.h,"Password",1.3.h,"Password"),
                               ],
                             ),  Column(
                               crossAxisAlignment: CrossAxisAlignment.start,
@@ -139,7 +139,7 @@ class SignUpView extends GetView<SignUpController> {
                                 ),
                                 SizeBoxWidget(height: 1.h), // Added for spacing consistency
 
-                                TextFormFieldWidget(controller.confirmPassword,12.h,"Confirm Password",1.3.h,"Confirm Password"),
+                                // TextFormFieldWidget(controller.confirmPassword,12.h,"Confirm Password",1.3.h,"Confirm Password"),
                               ],
                             ),
                             SizeBoxWidget(height: 2.h,),

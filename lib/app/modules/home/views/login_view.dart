@@ -33,68 +33,71 @@ class LoginView extends GetView<LoginController> {
                 children: [
                   Container(
                     width: double.infinity,
-                    height: 60.h,
+                    height: 515.h,
                     decoration: BoxDecoration(
                       color: Colors.white,
                       borderRadius: BorderRadius.only(
-                        topRight: Radius.circular(3.h),
-                        topLeft: Radius.circular(3.h),
+                        topRight: Radius.circular(25.r),
+                        topLeft: Radius.circular(25.r),
                       ),
                     ),
                     child: Padding(
-                      padding: EdgeInsets.symmetric(horizontal: 4.w, vertical: 2.h),
+                      padding: EdgeInsets.symmetric(horizontal: 16.w, vertical: 8.h),
                       child: SingleChildScrollView(
                         child: Column(
                           crossAxisAlignment: CrossAxisAlignment.start,
                           children: [
                             Center(
                               child: SizedBox(
-                                width: 17.w,
+                                width: 60.h,
                                 child: Divider(
-                                  thickness: 0.60.h,
+                                  thickness: 3.h,
                                   color: Color(0xFFCDCFD1),
                                 ),
                               ),
                             ),
                             ImageWidget(
                               "assets/image/stars.png",
-                              width: 10.w,
-                              height: 10.w,
-                              fit: BoxFit.cover,
+                              width: 38.w,
+                              height: 38.h,
+                              fit: BoxFit.contain,
                             ),
-                            SizeBoxWidget(height: 2.h),
+                            SizeBoxWidget(height: 20.h),
                             TextWidget(
                               "Get Started",
                               fontSize: 16.sp,
+                              fontWeight: FontWeight.w700,
                               fontFamily: "Satoshi",
                               color: Color(0xFFE86A53),
                               textAlign: TextAlign.start,
                             ),
-                            SizeBoxWidget(height: 2.h),
+                            SizeBoxWidget(height: 5.h),
                             TextWidget(
                               "By joining us, you will gain access to cutting-edge \nresources, expert guidance, etc. Unlock your potential\nnow!",
                               fontSize: 14.sp,
+                              fontWeight: FontWeight.w400,
                               fontFamily: "Satoshi",
                               color: Color(0xFF999999),
                               textAlign: TextAlign.start,
                             ),
-                            SizeBoxWidget(height: 2.h), // Added for spacing consistency
+                            SizeBoxWidget(height: 20.h), // Added for spacing consistency
                             Column(
                               crossAxisAlignment: CrossAxisAlignment.start,
                               children: [
                                 TextWidget(
                                   "Email",
                                   fontSize: 14.sp,
+                                  fontWeight: FontWeight.w500,
                                   fontFamily: "Satoshi",
                                   color: Color(0xFFE86A53),
                                   textAlign: TextAlign.start,
                                 ),
-                                SizeBoxWidget(height: 1.h), // Added for spacing consistency
+                                SizeBoxWidget(height: 8.h), // Added for spacing consistency
 
-                                TextFormFieldWidget(controller.email,12.h,"Email Address",1.3.h,"Email Address"),
+                                TextFormFieldWidget(controller.email,"Email Address",10.r,"Email Address",10.h,10.w,)
                               ],
                             ),
-                            SizeBoxWidget(height: 2.h), // Added for spacing consistency
+                            SizeBoxWidget(height: 20.h), // Added for spacing consistency
 
                             Column(
                               crossAxisAlignment: CrossAxisAlignment.start,
@@ -106,25 +109,27 @@ class LoginView extends GetView<LoginController> {
                                   color: Color(0xFFE86A53),
                                   textAlign: TextAlign.start,
                                 ),
-                                SizeBoxWidget(height: 1.h), // Added for spacing consistency
+                                SizeBoxWidget(height: 8.h), // Added for spacing consistency
 
-                                TextFormFieldWidget(controller.email,12.h,"Password",1.3.h,"Password"),
+                                TextFormFieldWidget(controller.password,"Password",10.r,"Password",10.h,10.w),
                               ],
                             ),
+                        SizedBox(height: 15.h,),
                         Row(
               children: [
                 CustomCheckbox(
-                  size: 0.25.w, // Adjust the size here
-                  value: true,
+
+                  size: 1.w, // Adjust the size here
+                  value: false,
                   onChanged: (bool? newValue) {
                         // Handle checkbox state change
                   },
                 ),
-                SizeBoxWidget(height: 3.w), // Added for spacing consistency
                 TextWidget(
                   "Remember me",
                   fontSize: 12.sp,
                   fontFamily: "Satoshi",
+                  fontWeight: FontWeight.w500,
                   color: Color(0xFF999999),
                   textAlign: TextAlign.start,
                 ),
@@ -133,12 +138,14 @@ class LoginView extends GetView<LoginController> {
                   "Forgot password?",
                   fontSize: 12.sp,
                   fontFamily: "Satoshi",
+                  fontWeight: FontWeight.w500,
                   color: Color(0xFFD30000),
                   textAlign: TextAlign.start,
                 ),
 
               ],
                         ),
+                            SizedBox(height: 15.h,),
                             GestureDetector(
                               onTap: () {
                                 if(form.currentState!.validate()){
@@ -146,18 +153,19 @@ class LoginView extends GetView<LoginController> {
                                 }
                               },
                               child: Container(
-                                height: 7.h,
+                                height: 53.h,
                                 width: double.infinity,
                                 decoration: BoxDecoration(
                                   color:
                                       Color(0xFFE86A53)
 
                                  ,
-                                  borderRadius: BorderRadius.circular(10.h),
+                                  borderRadius: BorderRadius.circular(100.r),
                                 ),
                                 child: Center(
                                   child: TextWidget(
                                     "Login",
+                                    fontWeight: FontWeight.w600,
                                     fontSize: 16.sp,
                                     fontFamily: "RedHatDisplay",
                                     color: Color(0xFFFFFFFF),
@@ -180,10 +188,10 @@ class LoginView extends GetView<LoginController> {
           ),
 
           Padding(
-            padding:  EdgeInsets.only(top: 5.h,left: 5.w),
+            padding:  EdgeInsets.only(top: 64.h,left: 20.w),
             child: GestureDetector(onTap: (){
               Get.offAndToNamed("/registration_screen");
-            },child: CircleAvatar(radius: 2.5.h,backgroundColor: Color(0xFFFFFFFF).withOpacity(0.50),child: Icon(Icons.arrow_back,color: Colors.white,),)),
+            },child: CircleAvatar(radius: 20.h,backgroundColor: Color(0xFFFFFFFF).withOpacity(0.50),child: Icon(Icons.arrow_back,color: Colors.white,weight: 20.w,size: 20.w,),)),
           ),
         ],
       ),

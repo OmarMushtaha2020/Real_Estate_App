@@ -22,7 +22,9 @@ class CustomCheckbox extends StatelessWidget {
           ),
         ),
         child: Checkbox(
+
           value: value,
+
           onChanged: onChanged,
           fillColor: MaterialStateProperty.resolveWith<Color?>(
                 (Set<MaterialState> states) {

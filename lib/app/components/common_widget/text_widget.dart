@@ -14,6 +14,7 @@ Color?color;
   @override
   Widget build(BuildContext context) {
     return Text(
+
       text ?? "",
 
       style: TextStyle(fontSize: fontSize, fontFamily: fontFamily,color:color,decoration: TextDecoration.none,fontWeight: fontWeight ),

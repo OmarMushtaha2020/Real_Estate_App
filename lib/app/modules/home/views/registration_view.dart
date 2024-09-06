@@ -57,7 +57,7 @@ class RegistrationView extends GetView<RegistrationController> {
                             Expanded(
                               child: GestureDetector(
                                 onTap: () {
-                                  controller.changeValueToClick();
+                                  controller.changeValueToClick(false);
                                 },
                                 child: Container(
                                   height: 53.h,
@@ -93,7 +93,7 @@ class RegistrationView extends GetView<RegistrationController> {
                             Expanded(
                               child: GestureDetector(
                                 onTap: () {
-                                  controller.changeValueToClick();
+                                  controller.changeValueToClick(true);
                                 },
                                 child: Container(
                                   height: 53.h,

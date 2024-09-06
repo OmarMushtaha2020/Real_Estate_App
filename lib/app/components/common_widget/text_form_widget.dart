@@ -1,12 +1,14 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 class TextFormFieldWidget extends StatelessWidget {
 TextEditingController? controller;
 double ?radius;
-double?borderSide;
 String?hint;
 String ?validatorText;
-TextFormFieldWidget(this.controller,this.borderSide,this.hint,this.radius,this.validatorText);
+double?vertical;
+double?horizontal;
+TextFormFieldWidget(this.controller,this.hint,this.radius,this.validatorText,this.vertical,this.horizontal);
   @override
   Widget build(BuildContext context) {
     return                         TextFormField(
@@ -17,20 +19,25 @@ TextFormFieldWidget(this.controller,this.borderSide,this.hint,this.radius,this.v
         }
         return null;
     },
+      style: TextStyle(
+        fontSize: 16.sp
+      ),
+
     decoration: InputDecoration(
+      errorStyle: TextStyle(
+          fontSize: 16.sp
+
+      ),
 
     border: OutlineInputBorder(
 
 borderRadius: BorderRadius.circular(radius!), // Custom border radius
-borderSide: BorderSide(
-color: Colors.blue, // Border color
-width: borderSide!, // Border width
-),
+
 ),
 
 contentPadding: EdgeInsets.symmetric(
-vertical: 15,
-horizontal: 10,
+vertical: vertical!,
+horizontal: horizontal!,
 ), // Padding inside the text field
 hintText: '${hint}',
 ),
