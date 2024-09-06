@@ -1,5 +1,6 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter/widgets.dart';
 import 'package:get/get.dart';
 import 'package:real_estate_app/app/components/common_widget/image_widget.dart';
 import 'package:real_estate_app/app/components/common_widget/sizeBox_widget.dart';
@@ -25,30 +26,30 @@ class RegistrationView extends GetView<RegistrationController> {
             children: [
               Container(
                 width: double.infinity,
-                height: 50.h,
+                height: 393.h,
                 decoration: BoxDecoration(
                   color: Color(0xFFFFFFFF),
                   borderRadius: BorderRadius.only(
-                    topRight: Radius.circular(3.h),
-                    topLeft: Radius.circular(3.h),
+                    topRight: Radius.circular(25.r),
+                    topLeft: Radius.circular(25.r),
                   ),
                 ),
                 child: Padding(
-                  padding: EdgeInsets.symmetric(horizontal: 2.w, vertical: 2.h),
+                  padding: EdgeInsets.symmetric(horizontal: 20.w, vertical: 8.h),
                   child: SingleChildScrollView(
                     child: Column(
                       children: [
                         SizedBox(
-                          width: 17.w, // Set the desired width here
+                          width: 60.w, // Set the desired width here
                           child: Divider(
-                              thickness: 0.60.h,
+                              thickness:3.h,
                               // Set the thickness of the divider here
                               color: Color(
                                   0XffCDCFD1) // Set the color of the divider here
                               ),
                         ),
                         SizeBoxWidget(
-                          height: 2.h,
+                          height: 31.h,
                         ),
 
                         Row(
@@ -59,7 +60,7 @@ class RegistrationView extends GetView<RegistrationController> {
                                   controller.changeValueToClick();
                                 },
                                 child: Container(
-                                  height: 7.h,
+                                  height: 53.h,
                                   decoration: BoxDecoration(
                                     color: controller.isClick == false
                                         ? Color(0xFFE86A53)
@@ -67,14 +68,15 @@ class RegistrationView extends GetView<RegistrationController> {
                                     border: controller.isClick == true
                                         ? Border.all(
                                             color: Color(0XffCCCCCC),
-                                            width: 0.3.w)
+                                            width: 1.h)
                                         : null,
-                                    borderRadius: BorderRadius.circular(10.h),
+                                    borderRadius: BorderRadius.circular(100.r),
                                   ),
                                   child: Center(
                                     child: TextWidget(
                                       "Login",
                                       fontSize: 16.sp,
+                                      fontWeight: FontWeight.w600,
                                       fontFamily: "RedHatDisplay",
                                       color: controller.isClick == false
                                           ? Color(0xFFFFFFFF)
@@ -86,7 +88,7 @@ class RegistrationView extends GetView<RegistrationController> {
                               ),
                             ),
                             SizeBoxWidget(
-                              width: 4.w,
+                              width: 21.w,
                             ),
                             Expanded(
                               child: GestureDetector(
@@ -94,7 +96,7 @@ class RegistrationView extends GetView<RegistrationController> {
                                   controller.changeValueToClick();
                                 },
                                 child: Container(
-                                  height: 7.h,
+                                  height: 53.h,
                                   decoration: BoxDecoration(
                                     color: controller.isClick == true
                                         ? Color(0xFFE86A53)
@@ -102,14 +104,15 @@ class RegistrationView extends GetView<RegistrationController> {
                                     border: controller.isClick == false
                                         ? Border.all(
                                             color: Color(0XffCCCCCC),
-                                            width: 0.3.w)
+                                            width: 1.w)
                                         : null,
-                                    borderRadius: BorderRadius.circular(10.h),
+                                    borderRadius: BorderRadius.circular(100.r),
                                   ),
                                   child: Center(
                                     child: TextWidget(
                                       "Sign Up",
                                       fontSize: 16.sp,
+                                      fontWeight: FontWeight.w600,
                                       fontFamily: "RedHatDisplay",
                                       color: controller.isClick == true
                                           ? Color(0xFFFFFFFF)
@@ -124,11 +127,12 @@ class RegistrationView extends GetView<RegistrationController> {
                         ),
                         // Uncomment and update the following section if needed
                         SizeBoxWidget(
-                          height: 2.h,
+                          height: 18.h,
                         ),
                         TextWidget(
                           "or continue with",
                           fontSize: 14.sp,
+                          fontWeight: FontWeight.w500,
                           fontFamily: "Satoshi",
                           color: Color(0xFF999999),
                           textAlign: TextAlign.start,
@@ -138,39 +142,43 @@ class RegistrationView extends GetView<RegistrationController> {
                           physics: BouncingScrollPhysics(),
                           scrollDirection: Axis.vertical,
                           itemBuilder: (context, index) => Container(
-                            height: 7.h,
+                            height: 53.h,
                             width: double.infinity,
                             decoration: BoxDecoration(
                               border: Border.all(
-                                  color: Color(0xFFCCCCCC), width: 0.3.w),
-                              borderRadius: BorderRadius.circular(10.h),
+                                  color: Color(0xFFCCCCCC), width: 1.w),
+                              borderRadius: BorderRadius.circular(100.r),
                             ),
-                            child: Row(
-                              mainAxisAlignment: MainAxisAlignment.center,
+                            child: Stack(
+                              alignment: Alignment.center,
                               children: [
-                                Padding(
-                                  padding: EdgeInsets.only(left: 4.w),
-                                  child: ImageWidget(
-                                    "${controller.LoginMethodsIcon[index]}",
-                                    width: 5.w,
-                                    height: 5.w,
-                                    fit: BoxFit.cover,
-                                  ),
-                                ),
-                                Spacer(),
                                 TextWidget(
                                   "${controller.LoginMethods[index]}",
                                   fontSize: 16.sp,
                                   fontFamily: "RedHatDisplay",
+                                  fontWeight: FontWeight.w600,
                                   color: Color(0xFF040404),
                                   textAlign: TextAlign.start,
                                 ),
-                                Spacer(),
+                                Padding(
+                                  padding:  EdgeInsets.only(left: 20.w),
+                                  child: Align(
+                                    alignment: Alignment.centerLeft,
+                                    child: ImageWidget(
+                                      "${controller.LoginMethodsIcon[index]}",
+                                      width: 24.w,
+                                      height: 24.h,
+
+                                      fit: BoxFit.contain,
+                                    ),
+                                  ),
+                                ),
+
                               ],
                             ),
                           ),
                           separatorBuilder: (context, index) => SizedBox(
-                            height: 2.h,
+                            height: 15.h,
                           ),
                           itemCount: controller.LoginMethods.length,
                         ),

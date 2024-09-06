@@ -12,7 +12,7 @@ class OnBoardingController extends GetxController {
 
   List<String> onboardingTexts = [
     'Real Estate\n Service at Your\n Finger',
-    'Negotiable Price \n  Best Experience',
+    'Negotiable Price \n  Best Experience\n ',
   ];
 
   List<String> buttonLabels = [
