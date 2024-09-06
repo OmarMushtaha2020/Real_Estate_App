@@ -14,40 +14,43 @@ class RoleView extends GetView<RoleController> {
     return Scaffold(
       appBar: AppBar(),
       body: Padding(
-        padding: EdgeInsets.symmetric(horizontal: 4.w),
+        padding: EdgeInsets.symmetric(horizontal: 16.w),
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
-            SizeBoxWidget(height: 5.h,),
+            SizeBoxWidget(height: 25.h,),
 
             ImageWidget(
               "assets/image/smiley.png",
-              width: 10.w,
-              height: 10.w,
-              fit: BoxFit.cover,
+              width: 38.w,
+              height: 38.w,
+              fit: BoxFit.contain,
             ),
             SizeBoxWidget(
-              height: 5.w,
+              height: 20.h,
             ),
             TextWidget(
               "What are you looking for?",
+              fontWeight: FontWeight.w700,
               fontFamily: "Satoshi",
               fontSize: 16.sp,
               color: const Color(0xFFE86A53),
             ),
             Padding(
-              padding: EdgeInsets.only(top: 2.h),
+              padding: EdgeInsets.only(top: 5.h),
               child: TextWidget(
                 "Please select the category below, so we know you better",
                 fontSize: 14.sp,
+                fontWeight: FontWeight.w400,
+
                 fontFamily: "Satoshi",
                 color: const Color(0xFF999999),
                 textAlign: TextAlign.start,
               ),
             ),
             // Wrapping ListView.builder with GetBuilder to listen to changes
-            SizeBoxWidget(height: 3.h,),
+            SizeBoxWidget(height: 10.h,),
 
             GetBuilder<RoleController>(
               builder: (controller) {
@@ -88,20 +91,24 @@ contentPadding: EdgeInsets.zero,
               onTap: () {
                 Get.toNamed("/set_up_location");
               },
-              child: Container(
-                height: 7.h,
-                width: double.infinity,
-                decoration: BoxDecoration(
-                  color: Color(0xFFE86A53),
-                  borderRadius: BorderRadius.circular(10.h),
-                ),
-                child: Center(
-                  child: TextWidget(
-                    "Next",
-                    fontSize: 16.sp,
-                    fontFamily: "RedHatDisplay",
-                    color: Color(0xFFFFFFFF),
-                    textAlign: TextAlign.center,
+              child: Padding(
+                padding:  EdgeInsets.only(bottom: 10.h),
+                child: Container(
+                  height: 53.h,
+                  width: double.infinity,
+                  decoration: BoxDecoration(
+                    color: Color(0xFFE86A53),
+                    borderRadius: BorderRadius.circular(100.r),
+                  ),
+                  child: Center(
+                    child: TextWidget(
+                      "Next",
+                      fontSize: 16.sp,
+                      fontWeight: FontWeight.w600 ,
+                      fontFamily: "RedHatDisplay",
+                      color: Color(0xFFFFFFFF),
+                      textAlign: TextAlign.center,
+                    ),
                   ),
                 ),
               ),
