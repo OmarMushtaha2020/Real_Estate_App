@@ -31,20 +31,22 @@ class OnBoardingView extends GetView<OnBoardingController> {
                     mainAxisAlignment: MainAxisAlignment.center,
                     crossAxisAlignment: CrossAxisAlignment.center,
                     children: [
-                      ImageWidget(controller.onboardingImages[index],height: 369,width:355.62 ,fit: BoxFit.cover,),
+                      ImageWidget(controller.onboardingImages[index],height: 369.h,width:355.62.w ,fit: BoxFit.contain,),
                       SizeBoxWidget(
-                        height: 4.h,
+                        height: 52.h,
                       ),
                       TextWidget(
                         controller.onboardingTexts[index],
                         fontSize: 40.sp,
                         fontFamily: "RedHatDisplay",
+                        fontWeight: FontWeight.w600,
                         color: Color(0xFFE86A53),
                         textAlign: TextAlign.start,
                       ),
                       SizeBoxWidget(
-                        height: 4.h,
+                        height: 52.h,
                       ),
+
                       GestureDetector(
                         onTap: () {
                           controller.nextPage();
@@ -58,15 +60,20 @@ class OnBoardingView extends GetView<OnBoardingController> {
                               textAlign: TextAlign.center,
                               color: Color(0xFF040404),
                               fontSize: 18.sp,
+                              fontWeight: FontWeight.w700,
                               fontFamily: "Satoshi",
                             ),
                             SizeBoxWidget(
-                              width: 2.h,
+                              width: 10.w,
                             ),
-                            ImageWidget("assets/image/arrow.png",width: 3.h,height: 3.h,fit: BoxFit.contain,),
+                            ImageWidget("assets/image/arrow.png",width: 13.w,height: 13.h,fit: BoxFit.fitHeight,),
+                            SizeBoxWidget(
+                              width: 10.w,
+                            ),
                           ],
                         ),
                       ),
+
                     ],
                   ),
                 ),
