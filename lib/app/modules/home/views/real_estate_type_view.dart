@@ -2,7 +2,7 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:real_estate_app/app/components/common_widget/sizeBox_widget.dart';
-import 'package:sizer/sizer.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:real_estate_app/app/components/common_widget/image_widget.dart';
 import 'package:real_estate_app/app/components/common_widget/text_widget.dart';
 import 'package:real_estate_app/app/modules/home/controllers/real_estate_type_controller.dart';

@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:get/get.dart';
 import 'package:real_estate_app/app/components/common_widget/CustomCheckbox.dart';
 import 'package:real_estate_app/app/components/common_widget/image_widget.dart';
@@ -6,7 +7,6 @@ import 'package:real_estate_app/app/components/common_widget/sizeBox_widget.dart
 import 'package:real_estate_app/app/components/common_widget/text_form_widget.dart';
 import 'package:real_estate_app/app/components/common_widget/text_widget.dart';
 import 'package:real_estate_app/app/modules/home/controllers/login_controller.dart';
-import 'package:sizer/sizer.dart';
 
 
 

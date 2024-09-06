@@ -41,6 +41,7 @@ dependencies:
   intl_phone_number_input: ^0.7.2
   google_maps_flutter:
   pinput: ^2.2.31
+  flutter_screenutil: ^5.9.3
 dev_dependencies:
   flutter_test:
     sdk: flutter

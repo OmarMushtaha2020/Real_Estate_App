@@ -5,7 +5,7 @@ import 'package:real_estate_app/app/components/common_widget/sizeBox_widget.dart
 import 'package:real_estate_app/app/components/common_widget/text_form_widget.dart';
 import 'package:real_estate_app/app/components/common_widget/text_widget.dart';
 import 'package:real_estate_app/app/modules/home/controllers/set_up_location_manually_controller.dart';
-import 'package:sizer/sizer.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 class SetUpLocationManuallyView extends StatelessWidget {
   const SetUpLocationManuallyView({Key? key}) : super(key: key);

@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:sizer/sizer.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:device_preview/device_preview.dart';
 import 'package:real_estate_app/app/routes/app_pages.dart';
 
@@ -17,8 +17,11 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Sizer(
-      builder: (context, orientation, deviceType) {
+    return ScreenUtilInit(
+      designSize: Size(375, 812), // Set your design size here (width, height)
+      minTextAdapt: true,
+      splitScreenMode: true,
+      builder: (context, child) {
         return GetMaterialApp(
           debugShowCheckedModeBanner: false,
           title: 'Flutter Demo',

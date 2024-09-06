@@ -6,7 +6,7 @@ import 'package:real_estate_app/app/components/common_widget/image_widget.dart';
 import 'package:real_estate_app/app/components/common_widget/sizeBox_widget.dart';
 import 'package:real_estate_app/app/components/common_widget/text_widget.dart';
 import 'package:real_estate_app/app/modules/home/controllers/email_verification_controller.dart';
-import 'package:sizer/sizer.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 class EmailVerificationView extends GetView<EmailVerificationController> {
   const EmailVerificationView({Key? key}) : super(key: key);
