@@ -106,6 +106,8 @@ class LoginView extends GetView<LoginController> {
                                   "Password",
                                   fontSize: 14.sp,
                                   fontFamily: "Satoshi",
+                                  fontWeight: FontWeight.w500,
+
                                   color: Color(0xFFE86A53),
                                   textAlign: TextAlign.start,
                                 ),
