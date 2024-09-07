@@ -1,3 +1,4 @@
+import 'package:animate_do/animate_do.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:get/get.dart';
@@ -56,96 +57,121 @@ class LoginView extends GetView<LoginController> {
                                 ),
                               ),
                             ),
-                            ImageWidget(
-                              "assets/image/stars.png",
-                              width: 38.w,
-                              height: 38.h,
-                              fit: BoxFit.contain,
+                            FadeInUp(
+                              delay: Duration(milliseconds: 200),
+
+                              child: ImageWidget(
+                                "assets/image/stars.png",
+                                width: 38.w,
+                                height: 38.h,
+                                fit: BoxFit.contain,
+                              ),
                             ),
                             SizeBoxWidget(height: 20.h),
-                            TextWidget(
-                              "Get Started",
-                              fontSize: 16.sp,
-                              fontWeight: FontWeight.w700,
-                              fontFamily: "Satoshi",
-                              color: Color(0xFFE86A53),
-                              textAlign: TextAlign.start,
+                            FadeInUp(
+                              delay: Duration(milliseconds: 400),
+
+                              child: TextWidget(
+
+                                "Get Started",
+                                fontSize: 16.sp,
+                                fontWeight: FontWeight.w700,
+                                fontFamily: "Satoshi",
+                                color: Color(0xFFE86A53),
+                                textAlign: TextAlign.start,
+                              ),
                             ),
                             SizeBoxWidget(height: 5.h),
-                            TextWidget(
-                              "By joining us, you will gain access to cutting-edge \nresources, expert guidance, etc. Unlock your potential\nnow!",
-                              fontSize: 14.sp,
-                              fontWeight: FontWeight.w400,
-                              fontFamily: "Satoshi",
-                              color: Color(0xFF999999),
-                              textAlign: TextAlign.start,
+                            FadeInUp(
+                              delay: Duration(milliseconds: 600),
+
+                              child: TextWidget(
+                                "By joining us, you will gain access to cutting-edge \nresources, expert guidance, etc. Unlock your potential\nnow!",
+                                fontSize: 14.sp,
+                                fontWeight: FontWeight.w400,
+                                fontFamily: "Satoshi",
+                                color: Color(0xFF999999),
+                                textAlign: TextAlign.start,
+                              ),
                             ),
                             SizeBoxWidget(height: 20.h), // Added for spacing consistency
-                            Column(
-                              crossAxisAlignment: CrossAxisAlignment.start,
-                              children: [
-                                TextWidget(
-                                  "Email",
-                                  fontSize: 14.sp,
-                                  fontWeight: FontWeight.w500,
-                                  fontFamily: "Satoshi",
-                                  color: Color(0xFFE86A53),
-                                  textAlign: TextAlign.start,
-                                ),
-                                SizeBoxWidget(height: 8.h), // Added for spacing consistency
+                            FadeInUp(
+                              delay: Duration(milliseconds: 800),
 
-                                TextFormFieldWidget(controller.email,"Email Address",10.r,"Email Address",10.h,10.w,)
-                              ],
+                              child: Column(
+                                crossAxisAlignment: CrossAxisAlignment.start,
+                                children: [
+                                  TextWidget(
+                                    "Email",
+                                    fontSize: 14.sp,
+                                    fontWeight: FontWeight.w500,
+                                    fontFamily: "Satoshi",
+                                    color: Color(0xFFE86A53),
+                                    textAlign: TextAlign.start,
+                                  ),
+                                  SizeBoxWidget(height: 8.h), // Added for spacing consistency
+
+                                  TextFormFieldWidget(controller.email,"Email Address",10.r,"Email Address",10.h,10.w,)
+                                ],
+                              ),
                             ),
                             SizeBoxWidget(height: 20.h), // Added for spacing consistency
 
-                            Column(
-                              crossAxisAlignment: CrossAxisAlignment.start,
-                              children: [
-                                TextWidget(
-                                  "Password",
-                                  fontSize: 14.sp,
-                                  fontFamily: "Satoshi",
-                                  fontWeight: FontWeight.w500,
+                            FadeInUp(
+                              delay: Duration(milliseconds: 1000),
 
-                                  color: Color(0xFFE86A53),
-                                  textAlign: TextAlign.start,
-                                ),
-                                SizeBoxWidget(height: 8.h), // Added for spacing consistency
+                              child: Column(
+                                crossAxisAlignment: CrossAxisAlignment.start,
+                                children: [
+                                  TextWidget(
+                                    "Password",
+                                    fontSize: 14.sp,
+                                    fontFamily: "Satoshi",
+                                    fontWeight: FontWeight.w500,
 
-                                TextFormFieldWidget(controller.password,"Password",10.r,"Password",10.h,10.w),
-                              ],
+                                    color: Color(0xFFE86A53),
+                                    textAlign: TextAlign.start,
+                                  ),
+                                  SizeBoxWidget(height: 8.h), // Added for spacing consistency
+
+                                  TextFormFieldWidget(controller.password,"Password",10.r,"Password",10.h,10.w),
+                                ],
+                              ),
                             ),
                         SizedBox(height: 15.h,),
-                        Row(
-              children: [
-                CustomCheckbox(
+                            FadeInUp(
+                          delay: Duration(milliseconds: 1200),
 
-                  size: 1.w, // Adjust the size here
-                  value: false,
-                  onChanged: (bool? newValue) {
-                        // Handle checkbox state change
-                  },
-                ),
-                TextWidget(
-                  "Remember me",
-                  fontSize: 12.sp,
-                  fontFamily: "Satoshi",
-                  fontWeight: FontWeight.w500,
-                  color: Color(0xFF999999),
-                  textAlign: TextAlign.start,
-                ),
-                Spacer(),
-                TextWidget(
-                  "Forgot password?",
-                  fontSize: 12.sp,
-                  fontFamily: "Satoshi",
-                  fontWeight: FontWeight.w500,
-                  color: Color(0xFFD30000),
-                  textAlign: TextAlign.start,
-                ),
+                          child: Row(
+                                        children: [
+                                          CustomCheckbox(
 
-              ],
+                                            size: 1.w, // Adjust the size here
+                                            value: false,
+                                            onChanged: (bool? newValue) {
+                          // Handle checkbox state change
+                                            },
+                                          ),
+                                          TextWidget(
+                                            "Remember me",
+                                            fontSize: 12.sp,
+                                            fontFamily: "Satoshi",
+                                            fontWeight: FontWeight.w500,
+                                            color: Color(0xFF999999),
+                                            textAlign: TextAlign.start,
+                                          ),
+                                          Spacer(),
+                                          TextWidget(
+                                            "Forgot password?",
+                                            fontSize: 12.sp,
+                                            fontFamily: "Satoshi",
+                                            fontWeight: FontWeight.w500,
+                                            color: Color(0xFFD30000),
+                                            textAlign: TextAlign.start,
+                                          ),
+
+                                        ],
+                          ),
                         ),
                             SizedBox(height: 15.h,),
                             GestureDetector(
@@ -154,25 +180,29 @@ class LoginView extends GetView<LoginController> {
 
                                 }
                               },
-                              child: Container(
-                                height: 53.h,
-                                width: double.infinity,
-                                decoration: BoxDecoration(
-                                  color:
-                                      Color(0xFFE86A53)
+                              child: FadeInUp(
+                                delay: Duration(milliseconds: 1400),
 
-                                 ,
-                                  borderRadius: BorderRadius.circular(100.r),
-                                ),
-                                child: Center(
-                                  child: TextWidget(
-                                    "Login",
-                                    fontWeight: FontWeight.w600,
-                                    fontSize: 16.sp,
-                                    fontFamily: "RedHatDisplay",
-                                    color: Color(0xFFFFFFFF),
+                                child: Container(
+                                  height: 53.h,
+                                  width: double.infinity,
+                                  decoration: BoxDecoration(
+                                    color:
+                                        Color(0xFFE86A53)
 
-                                    textAlign: TextAlign.center,
+                                   ,
+                                    borderRadius: BorderRadius.circular(100.r),
+                                  ),
+                                  child: Center(
+                                    child: TextWidget(
+                                      "Login",
+                                      fontWeight: FontWeight.w600,
+                                      fontSize: 16.sp,
+                                      fontFamily: "RedHatDisplay",
+                                      color: Color(0xFFFFFFFF),
+
+                                      textAlign: TextAlign.center,
+                                    ),
                                   ),
                                 ),
                               ),

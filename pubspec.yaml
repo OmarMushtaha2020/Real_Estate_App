@@ -43,6 +43,7 @@ dependencies:
   pinput: ^2.2.31
   flutter_screenutil: ^5.9.3
   animate_do: ^3.3.4
+
 dev_dependencies:
   flutter_test:
     sdk: flutter
