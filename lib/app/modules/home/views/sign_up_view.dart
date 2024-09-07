@@ -1,3 +1,4 @@
+import 'package:animate_do/animate_do.dart';
 import 'package:flutter/material.dart';
 
 import 'package:get/get.dart';
@@ -55,104 +56,132 @@ class SignUpView extends GetView<SignUpController> {
                                 ),
                               ),
                             ),
-                            ImageWidget(
-                              "assets/image/stars.png",
-                              width: 38.w,
-                              height: 38.w,
-                              fit: BoxFit.contain,
+                            FadeInUp(
+                              delay: Duration(milliseconds: 200),
+
+                              child: ImageWidget(
+                                "assets/image/stars.png",
+                                width: 38.w,
+                                height: 38.w,
+                                fit: BoxFit.contain,
+                              ),
                             ),
                             SizeBoxWidget(height: 20.h),
-                            TextWidget(
-                              "Create your free account",
-                              fontSize: 16.sp,
-                              fontFamily: "Satoshi",
-                              fontWeight: FontWeight.w700,
-                              color: Color(0xFFE86A53),
-                              textAlign: TextAlign.start,
+                            FadeInUp(
+                              delay: Duration(milliseconds: 400),
+
+                              child: TextWidget(
+                                "Create your free account",
+                                fontSize: 16.sp,
+                                fontFamily: "Satoshi",
+                                fontWeight: FontWeight.w700,
+                                color: Color(0xFFE86A53),
+                                textAlign: TextAlign.start,
+                              ),
                             ),
                             SizeBoxWidget(height: 5.h),
-                            TextWidget(
-                              "Let's start your educational journey together, where every \nstep forward is a step towards a brighter future!",
-                              fontSize: 14.sp,
-                              fontWeight: FontWeight.w400,
-                              fontFamily: "Satoshi",
+                            FadeInUp(
+                              delay: Duration(milliseconds: 600),
 
-                              color: Color(0xFF999999),
-                              textAlign: TextAlign.start,
+                              child: TextWidget(
+                                "Let's start your educational journey together, where every \nstep forward is a step towards a brighter future!",
+                                fontSize: 14.sp,
+                                fontWeight: FontWeight.w400,
+                                fontFamily: "Satoshi",
+
+                                color: Color(0xFF999999),
+                                textAlign: TextAlign.start,
+                              ),
                             ),
                             SizeBoxWidget(height: 20.h), // Added for spacing consistency
 
-                            Column(
-                              crossAxisAlignment: CrossAxisAlignment.start,
-                              children: [
-                                TextWidget(
-                                  "Full Name *",
-                                  fontSize: 14.sp,
-                                  fontWeight: FontWeight.w500,
+                            FadeInUp(
+                              delay: Duration(milliseconds: 800),
 
-                                  fontFamily: "Satoshi",
-                                  color: Color(0xFFE86A53),
-                                  textAlign: TextAlign.start,
-                                ),
-                                SizeBoxWidget(height: 8.h), // Added for spacing consistency
-                                TextFormFieldWidget(controller.fullName,"Full Name",10.r,"Full Name",10.h,10.w,)
+                              child: Column(
+                                crossAxisAlignment: CrossAxisAlignment.start,
+                                children: [
+                                  TextWidget(
+                                    "Full Name *",
+                                    fontSize: 14.sp,
+                                    fontWeight: FontWeight.w500,
 
-                              ],
+                                    fontFamily: "Satoshi",
+                                    color: Color(0xFFE86A53),
+                                    textAlign: TextAlign.start,
+                                  ),
+                                  SizeBoxWidget(height: 8.h), // Added for spacing consistency
+                                  TextFormFieldWidget(controller.fullName,"Full Name",10.r,"Full Name",10.h,10.w,)
+
+                                ],
+                              ),
                             ),
 
                             SizeBoxWidget(height: 20.h), // Added for spacing consistency
-                            Column(
-                              crossAxisAlignment: CrossAxisAlignment.start,
-                              children: [
-                                TextWidget(
-                                  "Email Address *",
-                                  fontSize: 14.sp,
-                                  fontWeight: FontWeight.w500,
+                            FadeInUp(
+                              delay: Duration(milliseconds: 1000),
 
-                                  fontFamily: "Satoshi",
-                                  color: Color(0xFFE86A53),
-                                  textAlign: TextAlign.start,
-                                ),
-                                SizeBoxWidget(height: 8.h), // Added for spacing consistency
-                                TextFormFieldWidget(controller.email,"Email Address",10.r,"Email Address",10.h,10.w,)
+                              child: Column(
+                                crossAxisAlignment: CrossAxisAlignment.start,
+                                children: [
+                                  TextWidget(
+                                    "Email Address *",
+                                    fontSize: 14.sp,
+                                    fontWeight: FontWeight.w500,
 
-                              ],
+                                    fontFamily: "Satoshi",
+                                    color: Color(0xFFE86A53),
+                                    textAlign: TextAlign.start,
+                                  ),
+                                  SizeBoxWidget(height: 8.h), // Added for spacing consistency
+                                  TextFormFieldWidget(controller.email,"Email Address",10.r,"Email Address",10.h,10.w,)
+
+                                ],
+                              ),
                             ),
                             SizeBoxWidget(height: 20.h), // Added for spacing consistency
 
-                            Column(
-                              crossAxisAlignment: CrossAxisAlignment.start,
-                              children: [
-                                TextWidget(
-                                  "Password *",
-                                  fontSize: 14.sp,
-                                  fontWeight: FontWeight.w500,
+                            FadeInUp(
+                              delay: Duration(milliseconds: 1200),
 
-                                  fontFamily: "Satoshi",
-                                  color: Color(0xFFE86A53),
-                                  textAlign: TextAlign.start,
-                                ),
-                                SizeBoxWidget(height: 8.h), // Added for spacing consistency
-                                TextFormFieldWidget(controller.password,"Password",10.r,"Password",10.h,10.w,)
+                              child: Column(
+                                crossAxisAlignment: CrossAxisAlignment.start,
+                                children: [
+                                  TextWidget(
+                                    "Password *",
+                                    fontSize: 14.sp,
+                                    fontWeight: FontWeight.w500,
 
-                              ],
+                                    fontFamily: "Satoshi",
+                                    color: Color(0xFFE86A53),
+                                    textAlign: TextAlign.start,
+                                  ),
+                                  SizeBoxWidget(height: 8.h), // Added for spacing consistency
+                                  TextFormFieldWidget(controller.password,"Password",10.r,"Password",10.h,10.w,)
+
+                                ],
+                              ),
                             ),
                             SizeBoxWidget(height: 20.h), // Added for spacing consistency
 
-                            Column(
-                              crossAxisAlignment: CrossAxisAlignment.start,
-                              children: [
-                                TextWidget(
-                                  "Confirm Password *",
-                                  fontSize: 14.sp,
-                                  fontFamily: "Satoshi",fontWeight: FontWeight.w500,
-                                  color: Color(0xFFE86A53),
-                                  textAlign: TextAlign.start,
-                                ),
-                                SizeBoxWidget(height: 8.h), // Added for spacing consistency
-                                TextFormFieldWidget(controller.confirmPassword,"Confirm Password",10.r,"Confirm Password",10.h,10.w,)
+                            FadeInUp(
+                              delay: Duration(milliseconds: 1400),
 
-                              ],
+                              child: Column(
+                                crossAxisAlignment: CrossAxisAlignment.start,
+                                children: [
+                                  TextWidget(
+                                    "Confirm Password *",
+                                    fontSize: 14.sp,
+                                    fontFamily: "Satoshi",fontWeight: FontWeight.w500,
+                                    color: Color(0xFFE86A53),
+                                    textAlign: TextAlign.start,
+                                  ),
+                                  SizeBoxWidget(height: 8.h), // Added for spacing consistency
+                                  TextFormFieldWidget(controller.confirmPassword,"Confirm Password",10.r,"Confirm Password",10.h,10.w,)
+
+                                ],
+                              ),
                             ),
                             SizeBoxWidget(height: 15.h,),
                             GestureDetector(
@@ -161,25 +190,29 @@ class SignUpView extends GetView<SignUpController> {
 Get.offAndToNamed("email_verification");
                                 }
                               },
-                              child: Container(
-                                height: 53.h,
-                                width: double.infinity,
-                                decoration: BoxDecoration(
-                                  color:
-                                  Color(0xFFE86A53)
+                              child: FadeInUp(
+                                delay: Duration(milliseconds: 1600),
 
-                                  ,
-                                  borderRadius: BorderRadius.circular(100.r),
-                                ),
-                                child: Center(
-                                  child: TextWidget(
-                                    "Sign Up",
-                                    fontSize: 16.sp,
-                                    fontWeight: FontWeight.w600,
-                                    fontFamily: "RedHatDisplay",
-                                    color: Color(0xFFFFFFFF),
+                                child: Container(
+                                  height: 53.h,
+                                  width: double.infinity,
+                                  decoration: BoxDecoration(
+                                    color:
+                                    Color(0xFFE86A53)
 
-                                    textAlign: TextAlign.center,
+                                    ,
+                                    borderRadius: BorderRadius.circular(100.r),
+                                  ),
+                                  child: Center(
+                                    child: TextWidget(
+                                      "Sign Up",
+                                      fontSize: 16.sp,
+                                      fontWeight: FontWeight.w600,
+                                      fontFamily: "RedHatDisplay",
+                                      color: Color(0xFFFFFFFF),
+
+                                      textAlign: TextAlign.center,
+                                    ),
                                   ),
                                 ),
                               ),

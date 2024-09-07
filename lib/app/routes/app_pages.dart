@@ -24,46 +24,64 @@ class AppPages {
     GetPage(
       name: _Paths.OnBoarding,
       page: () => const OnBoardingView(),
+      transition: Transition.downToUp, // Example of another custom transition
+      transitionDuration: const Duration(milliseconds: 500),
       binding: AppBinding(),
     ),
     GetPage(
       name: _Paths.Registration,
       page: () => RegistrationView(),
+      transition: Transition.downToUp, // Example of another custom transition
+      transitionDuration: const Duration(milliseconds: 500),
       binding: AppBinding(),
     ),
     GetPage(
       name: _Paths.LOGIN,
       page: () =>  LoginView(),
+      transition: Transition.downToUp, // Example of another custom transition
+      transitionDuration: const Duration(milliseconds: 500),
       binding: AppBinding(),
     ),
     GetPage(
       name: _Paths.SignUp,
       page: () =>  SignUpView(),
+      transition: Transition.downToUp, // Example of another custom transition
+      transitionDuration: const Duration(milliseconds: 500),
       binding: AppBinding(),
     ),
     GetPage(
       name: _Paths.EmailVerification,
       page: () =>  EmailVerificationView(),
+      transition: Transition.downToUp, // Example of another custom transition
+      transitionDuration: const Duration(milliseconds: 500),
       binding: AppBinding(),
     ),
     GetPage(
       name: _Paths.Role,
       page: () =>  RoleView(),
+      transition: Transition.downToUp, // Example of another custom transition
+      transitionDuration: const Duration(milliseconds: 500),
       binding: AppBinding(),
     ),
     GetPage(
       name: _Paths.SetUpLocation,
       page: () =>  SetUpLocationView(),
+      transition: Transition.downToUp, // Example of another custom transition
+      transitionDuration: const Duration(milliseconds: 500),
       binding: AppBinding(),
     ),
     GetPage(
       name: _Paths.SetUpLocationManually,
       page: () =>  SetUpLocationManuallyView(),
+      transition: Transition.downToUp, // Example of another custom transition
+      transitionDuration: const Duration(milliseconds: 500),
       binding: AppBinding(),
     ),
     GetPage(
       name: _Paths.RealEstateType,
       page: () =>  RealEstateTypeView(),
+      transition: Transition.downToUp, // Example of another custom transition
+      transitionDuration: const Duration(milliseconds: 500),
       binding: AppBinding(),
     )
 
