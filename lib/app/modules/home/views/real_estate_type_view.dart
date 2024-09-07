@@ -14,40 +14,48 @@ class RealEstateTypeView extends GetView<RealEstateTypeController> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('Real Estate Types'),
+        iconTheme: IconThemeData(
+          size: 20.w
+
+        ),
       ),
       body: Padding(
-        padding: EdgeInsets.symmetric(horizontal: 4.w),
+        padding: EdgeInsets.symmetric(horizontal: 16.w),
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
+            SizeBoxWidget(height: 20.h,),
             ImageWidget(
               "assets/image/hand_drawn.png",
-              width: 10.w,
-              height: 10.w,
+              width: 38.w,
+              height: 38.w,
               fit: BoxFit.cover,
             ),
+            SizeBoxWidget(height: 20.h,),
             TextWidget(
               "Choose real estate type",
               fontFamily: "Satoshi",
+              fontWeight: FontWeight.w700,
+
               fontSize: 16.sp,
               color: const Color(0xFFE86A53),
             ),
             Padding(
-              padding: EdgeInsets.only(top: 2.h),
+              padding: EdgeInsets.only(top: 5.h),
               child: TextWidget(
                 "Select your preferable real estate type below",
                 fontSize: 14.sp,
+                fontWeight: FontWeight.w400,
                 fontFamily: "Satoshi",
                 color: const Color(0xFF999999),
                 textAlign: TextAlign.start,
               ),
             ),
-            SizedBox(height: 2.h), // Add spacing between text and GridView
+            SizedBox(height: 20.h), // Add spacing between text and GridView
             Expanded(
 
               child: Padding(
-                padding:  EdgeInsets.only(bottom: 4.h),
+                padding:  EdgeInsets.only(bottom: 20.h),
                 child: GridView.builder(
                   shrinkWrap: true,
                   gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
@@ -57,8 +65,7 @@ class RealEstateTypeView extends GetView<RealEstateTypeController> {
                   ),
                   itemCount: 10, // Number of items in the grid
                   itemBuilder: (context, index) {
-                    return Card(
-                      elevation: 0,
+                    return Container(
                       child: Column(
                         mainAxisAlignment: MainAxisAlignment.start,
                         crossAxisAlignment: CrossAxisAlignment.start,
@@ -95,16 +102,17 @@ class RealEstateTypeView extends GetView<RealEstateTypeController> {
                 Get.toNamed("/real_estate_type");
               },
               child: Container(
-                height: 7.h,
+                height: 53.h,
                 width: double.infinity,
                 decoration: BoxDecoration(
                   color: Color(0xFFE86A53),
-                  borderRadius: BorderRadius.circular(10.h),
+                  borderRadius: BorderRadius.circular(100.r),
                 ),
                 child: Center(
                   child: TextWidget(
                     "Confirm",
                     fontSize: 16.sp,
+                    fontWeight: FontWeight.w600,
                     fontFamily: "RedHatDisplay",
                     color: Color(0xFFFFFFFF),
                     textAlign: TextAlign.center,

@@ -3,16 +3,17 @@ import 'package:get/get.dart';
 class SetUpLocationController extends GetxController {
   //TODO: Implement SetUpLocationController
   bool isClick=true;
-  void changeValueToClick(){
-    isClick=!isClick;
+  void changeValueToClick(bool value){
+    isClick=value;
     if(isClick==false){
+      print(isClick);
       Get.offAndToNamed("/set_up_location_manually");
     }else{
-      Get.offAndToNamed("/set_up_location_manually");
+      Get.offAndToNamed("/real_estate_type");
+      print(isClick);
 
 
     }
-    print(isClick);
     update();
   }
 

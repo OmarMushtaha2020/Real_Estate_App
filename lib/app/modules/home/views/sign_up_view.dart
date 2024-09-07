@@ -197,10 +197,10 @@ Get.offAndToNamed("email_verification");
           ),
 
           Padding(
-            padding:  EdgeInsets.only(top: 5.h,left: 5.w),
+            padding:  EdgeInsets.only(top: 64.h,left: 20.w),
             child: GestureDetector(onTap: (){
               Get.offAndToNamed("/registration_screen");
-            },child: CircleAvatar(radius: 2.5.h,backgroundColor: Color(0xFFFFFFFF).withOpacity(0.50),child: Icon(Icons.arrow_back,color: Colors.white,),)),
+            },child: CircleAvatar(radius: 20.h,backgroundColor: Color(0xFFFFFFFF).withOpacity(0.50),child: Icon(Icons.arrow_back,color: Colors.white,weight: 20.w,size: 20.w,),)),
           ),
         ],
       ),

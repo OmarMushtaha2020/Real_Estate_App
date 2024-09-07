@@ -19,42 +19,45 @@ class SetUpLocationView extends StatelessWidget {
           body: Container(
             width: double.infinity,
             child: Padding(
-              padding: EdgeInsets.symmetric(horizontal: 4.w),
+              padding: EdgeInsets.symmetric(horizontal: 16.w),
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.center,
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
                   ImageWidget(
                     "assets/image/Illustration.png",
-                    width: 60.w,
-                    height: 60.w,
+                    width: 263.w,
+                    height: 263.w,
                     fit: BoxFit.cover,
                   ),
+                  SizeBoxWidget(height: 20.h,),
                   TextWidget(
-                    "What are you looking for?",
+                    "Set your location",
                     fontFamily: "Satoshi",
+                    fontWeight: FontWeight.w700,
                     fontSize: 20.sp,
                     color: const Color(0xFFE86A53),
                   ),
                   Padding(
-                    padding: EdgeInsets.only(top: 2.h),
+                    padding: EdgeInsets.only(top: 5.h),
                     child: TextWidget(
                       "Let us know your location for best experience",
                       fontSize: 16.sp,
+                      fontWeight: FontWeight.w400,
                       fontFamily: "Satoshi",
                       color: const Color(0xFF999999),
                       textAlign: TextAlign.center,
                     ),
                   ),
                   SizeBoxWidget(
-                    height: 4.w,
+                    height: 20.h,
                   ),
                   GestureDetector(
                     onTap: () {
-                      controller.changeValueToClick();
+                      controller.changeValueToClick(true);
                     },
                     child: Container(
-                      height: 7.h,
+                      height: 53.h,
                       decoration: BoxDecoration(
                         color: controller.isClick == false
                             ? const Color(0xFFE86A53)
@@ -62,16 +65,17 @@ class SetUpLocationView extends StatelessWidget {
                         border: controller.isClick == true
                             ? Border.all(
                           color: const Color(0XffCCCCCC),
-                          width: 0.3.w,
+                          width: 1.w,
                         )
                             : null,
-                        borderRadius: BorderRadius.circular(10.h),
+                        borderRadius: BorderRadius.circular(100.r),
                       ),
                       child: Center(
                         child: TextWidget(
-                          "Login",
+                          "Allow Google Maps",
                           fontSize: 16.sp,
                           fontFamily: "RedHatDisplay",
+                          fontWeight: FontWeight.w600,
                           color: controller.isClick == false
                               ? const Color(0xFFFFFFFF)
                               : const Color(0XffE86A53),
@@ -81,14 +85,14 @@ class SetUpLocationView extends StatelessWidget {
                     ),
                   ),
                   SizeBoxWidget(
-                    height: 4.w,
+                    height: 21.h,
                   ),
                   GestureDetector(
                     onTap: () {
-                      controller.changeValueToClick();
+                      controller.changeValueToClick(false);
                     },
                     child: Container(
-                      height: 7.h,
+                      height: 53.h,
                       decoration: BoxDecoration(
                         color: controller.isClick == true
                             ? const Color(0xFFE86A53)
@@ -96,15 +100,16 @@ class SetUpLocationView extends StatelessWidget {
                         border: controller.isClick == false
                             ? Border.all(
                           color: const Color(0XffCCCCCC),
-                          width: 0.3.w,
+                          width: 1.w,
                         )
                             : null,
-                        borderRadius: BorderRadius.circular(10.h),
+                        borderRadius: BorderRadius.circular(100.r),
                       ),
                       child: Center(
                         child: TextWidget(
-                          "Sign Up",
+                          "Set Manually",
                           fontSize: 16.sp,
+                          fontWeight: FontWeight.w600,
                           fontFamily: "RedHatDisplay",
                           color: controller.isClick == true
                               ? const Color(0xFFFFFFFF)

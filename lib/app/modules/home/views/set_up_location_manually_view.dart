@@ -16,81 +16,92 @@ class SetUpLocationManuallyView extends StatelessWidget {
       init: SetUpLocationManuallyController(),
       builder: (controller) {
         return Scaffold(
-          appBar: AppBar(),
+          appBar: AppBar(
+            iconTheme: IconThemeData(
+                size: 20.w
+
+            ),
+          ),
           body: Padding(
-            padding: EdgeInsets.symmetric(horizontal: 4.w),
+            padding: EdgeInsets.symmetric(horizontal: 16.w),
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
+                SizeBoxWidget(height: 30.h,),
                 ImageWidget(
                   "assets/image/arrows.png",
-                  width: 10.w,
-                  height: 10.w,
+                  width: 38.w,
+                  height: 38.w,
                   fit: BoxFit.cover,
                 ),
+                SizeBoxWidget(height: 20.h,),
                 TextWidget(
                   "Set your location",
+                  fontWeight: FontWeight.w700,
                   fontFamily: "Satoshi",
                   fontSize: 16.sp,
                   color: const Color(0xFFE86A53),
                 ),
                 Padding(
-                  padding: EdgeInsets.only(top: 2.h),
+                  padding: EdgeInsets.only(top: 5.h),
                   child: TextWidget(
                     "Please set your location manually below.",
                     fontSize: 14.sp,
+                    fontWeight: FontWeight.w400,
+
                     fontFamily: "Satoshi",
                     color: const Color(0xFF999999),
                     textAlign: TextAlign.center,
                   ),
                 ),
                 SizeBoxWidget(
-                  height: 3.h,
+                  height: 30  .h,
                 ),                Container(
                   width: double.infinity,
-                  height: 35.h,
+                  height: 280.h,
                   decoration: BoxDecoration(
                     color: Colors.grey,
-                    borderRadius: BorderRadius.circular(1.5.h),
+                    borderRadius: BorderRadius.circular(10.r),
                   ),
                 ),
                 SizeBoxWidget(
-                  height: 2.h,
+                  height: 17.h,
                 ),
-                // TextFormFieldWidget(
-                //   controller.location,
-                //   12.h,
-                //   "location",
-                //   1.3.h,
-                //   "Location",
-                // ),
-                          Spacer(),
-                          GestureDetector(
-                  onTap: () {
-                    Get.toNamed("/real_estate_type");
-                  },
-                  child: Container(
-                    height: 7.h,
-                    width: double.infinity,
-                    decoration: BoxDecoration(
-                      color: Color(0xFFE86A53),
-                      borderRadius: BorderRadius.circular(10.h),
-                    ),
-                    child: Center(
-                      child: TextWidget(
-                        "Confirm",
-                        fontSize: 16.sp,
-                        fontFamily: "RedHatDisplay",
-                        color: Color(0xFFFFFFFF),
-                        textAlign: TextAlign.center,
-                      ),
-                    ),
-                  ),
-                ),
-                SizeBoxWidget(
-                  height: 3.h,
-                ),
+                TextFormFieldWidget(controller.location,"Location",10.r,"Location",10.h,10.w,),
+Spacer(),
+
+
+                          Padding(
+                            padding:  EdgeInsets.only(bottom: 20.h),
+                            child: GestureDetector(
+                                              onTap: () {
+                                                Get.toNamed("/real_estate_type");
+                                              },
+                                              child: Align(
+                                                alignment: Alignment.bottomCenter,
+                                                child: Container(
+                                                  height: 53.h,
+                                                  width: double.infinity,
+                                                  decoration: BoxDecoration(
+                                                    color: Color(0xFFE86A53),
+                                                    borderRadius: BorderRadius.circular(100.r),
+                                                  ),
+                                                  child: Center(
+                                                    child: TextWidget(
+                                                      "Confirm",
+                                                      fontSize: 16.sp,
+                                                      fontWeight: FontWeight.w600,
+                                                      fontFamily: "RedHatDisplay",
+                                                      color: Color(0xFFFFFFFF),
+                                                      textAlign: TextAlign.center,
+                                                    ),
+                                                  ),
+                                                ),
+                                              ),
+                                            ),
+                          ),
+
               ],
             ),
           ),

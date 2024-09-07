@@ -15,7 +15,6 @@ class OnBoardingView extends GetView<OnBoardingController> {
       appBar: AppBar(),
       body: GetBuilder<OnBoardingController>(
         init: OnBoardingController(),
-        // Make sure to initialize your controller if it's not already done
         builder: (controller) {
           return PageView.builder(
             controller: controller.pageController,
@@ -24,59 +23,73 @@ class OnBoardingView extends GetView<OnBoardingController> {
             },
             itemCount: controller.onboardingImages.length,
             itemBuilder: (context, index) {
-              return SingleChildScrollView(
-                child: Padding(
-                  padding: EdgeInsets.symmetric(horizontal: 2.w),
-                  child: Column(
-                    mainAxisAlignment: MainAxisAlignment.center,
-                    crossAxisAlignment: CrossAxisAlignment.center,
-                    children: [
-                      ImageWidget(controller.onboardingImages[index],height: 369.h,width:355.62.w ,fit: BoxFit.contain,),
-                      SizeBoxWidget(
-                        height: 52.h,
-                      ),
-                      TextWidget(
-                        controller.onboardingTexts[index],
-                        fontSize: 40.sp,
-                        fontFamily: "RedHatDisplay",
-                        fontWeight: FontWeight.w600,
-                        color: Color(0xFFE86A53),
-                        textAlign: TextAlign.start,
-                      ),
-                      SizeBoxWidget(
-                        height: 52.h,
-                      ),
+              // Adding the animation using AnimatedBuilder
+              return AnimatedBuilder(
+                animation: controller.pageController,
+                builder: (context, child) {
+                  // Calculate the scaling effect
+                  double value = controller.pageController.position.haveDimensions
+                      ? controller.pageController.page! - index
+                      : 0.0;
+                  value = (1 - (value.abs() * 0.3)).clamp(0.7, 1.0);
 
-                      GestureDetector(
-                        onTap: () {
-                          controller.nextPage();
-                          print("object");
-                        },
-                        child: Row(
-                          mainAxisAlignment: MainAxisAlignment.end,
+                  return Transform.scale(
+                    scale: value,
+                    child: SingleChildScrollView(
+                      child: Padding(
+                        padding: EdgeInsets.symmetric(horizontal: 2.w),
+                        child: Column(
+                          mainAxisAlignment: MainAxisAlignment.center,
+                          crossAxisAlignment: CrossAxisAlignment.center,
                           children: [
+                            ImageWidget(
+                              controller.onboardingImages[index],
+                              height: 369.h,
+                              width: 355.62.w,
+                              fit: BoxFit.contain,
+                            ),
+                            SizeBoxWidget(height: 52.h),
                             TextWidget(
-                              controller.buttonLabels[index],
-                              textAlign: TextAlign.center,
-                              color: Color(0xFF040404),
-                              fontSize: 18.sp,
-                              fontWeight: FontWeight.w700,
-                              fontFamily: "Satoshi",
+                              controller.onboardingTexts[index],
+                              fontSize: 40.sp,
+                              fontFamily: "RedHatDisplay",
+                              fontWeight: FontWeight.w600,
+                              color: const Color(0xFFE86A53),
+                              textAlign: TextAlign.start,
                             ),
-                            SizeBoxWidget(
-                              width: 10.w,
-                            ),
-                            ImageWidget("assets/image/arrow.png",width: 13.w,height: 13.h,fit: BoxFit.fitHeight,),
-                            SizeBoxWidget(
-                              width: 10.w,
+                            SizeBoxWidget(height: 52.h),
+                            GestureDetector(
+                              onTap: () {
+                                controller.nextPage();
+                              },
+                              child: Row(
+                                mainAxisAlignment: MainAxisAlignment.end,
+                                children: [
+                                  TextWidget(
+                                    controller.buttonLabels[index],
+                                    textAlign: TextAlign.center,
+                                    color: const Color(0xFF040404),
+                                    fontSize: 18.sp,
+                                    fontWeight: FontWeight.w700,
+                                    fontFamily: "Satoshi",
+                                  ),
+                                  SizeBoxWidget(width: 10.w),
+                                  ImageWidget(
+                                    "assets/image/arrow.png",
+                                    width: 13.w,
+                                    height: 13.h,
+                                    fit: BoxFit.fitHeight,
+                                  ),
+                                  SizeBoxWidget(width: 10.w),
+                                ],
+                              ),
                             ),
                           ],
                         ),
                       ),
-
-                    ],
-                  ),
-                ),
+                    ),
+                  );
+                },
               );
             },
           );
