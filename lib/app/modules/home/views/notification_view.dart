@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 import 'package:get/get.dart';
+import 'package:real_estate_app/app/components/common_widget/image_widget.dart';
 import 'package:real_estate_app/app/components/common_widget/sizeBox_widget.dart';
 import 'package:real_estate_app/app/components/common_widget/text_widget.dart';
 import 'package:real_estate_app/app/modules/home/controllers/notification_controller.dart';
@@ -36,28 +37,46 @@ class NotificationView extends GetView<NotificationController> {
                 child: Padding(
                   padding:  EdgeInsets.symmetric(horizontal: 10.w),
                   child: Row(
-                  mainAxisAlignment: MainAxisAlignment.end,
+                  mainAxisAlignment: MainAxisAlignment.
+                    start,
                     children: [
+                      Container(
+                        width: 64.h,
+                        child: Column(
+                          mainAxisAlignment: MainAxisAlignment.center,
+                          children: [
+                            ImageWidget("${controller.notificationModel[index].image}",width: 24.w,height: 24.w,fit: BoxFit.contain,),
+                          ],
+                        ),
+                        height: 64.h,
+                        decoration: BoxDecoration(
+
+                            color: controller.notificationModel[index].color,
+                            shape: BoxShape.circle
+                        ),
+                      ),
+                      SizeBoxWidget(width: 13.w,),
+
                       Column(
-                        crossAxisAlignment: CrossAxisAlignment.end,
+                        crossAxisAlignment: CrossAxisAlignment.start,
                         mainAxisAlignment: MainAxisAlignment.center,
                         children: [
                         TextWidget(
-                          'Receipt Released',
+                          '${controller.notificationModel[index].tilteOfNotification}',
                           fontSize: 14.sp,
                           fontWeight: FontWeight.w500,
                           color: Color(0XffE86A53),
                           fontFamily: "Satoshi",
                         ),
                         TextWidget(
-                          'Your receipt has been released',
+                          '${controller.notificationModel[index].descriptionOfNotification}',
                           fontSize: 12.sp,
                           fontWeight: FontWeight.w500,
                           color: Color(0Xff999999),
                           fontFamily: "Satoshi",
                         ),
                         TextWidget(
-                          '20/07/2024',
+                          '${controller.notificationModel[index].dateOfNotification}',
                           fontSize: 12.sp,
                           fontWeight: FontWeight.w400,
                           color: Color(0Xff999999),
@@ -65,29 +84,19 @@ class NotificationView extends GetView<NotificationController> {
                         ),
 
                       ],),
-                      SizeBoxWidget(width: 13.w,),
-                      Container(
-                        width: 64.h,
-                        child: Image.asset("",width: 24.w,height: 24.w,),
-                        height: 64.h,
-                        decoration: BoxDecoration(
 
-                          color: Colors.orange,
-                          shape: BoxShape.circle
-                        ),
-                      ),
                     ],
                   ),
                 ),
                 width: double.infinity,
-                height: 80.h,
+                height: 82.h,
                 decoration: BoxDecoration(
                   color: Color(0XFFF8F8F8),
                   borderRadius: BorderRadius.circular(100.r)
                 ),
               ),
               separatorBuilder: (context,index)=>SizedBox(height: 10.h,),
-              itemCount: 4),
+              itemCount: controller.notificationModel.length),
         ));
   }
 }
