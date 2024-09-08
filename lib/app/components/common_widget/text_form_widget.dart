@@ -13,6 +13,8 @@ TextFormFieldWidget(this.controller,this.hint,this.radius,this.validatorText,thi
   Widget build(BuildContext context) {
     return                         TextFormField(
       controller: controller,
+    cursorColor: Color(0xFFcccccc),
+
     validator: (value){
         if(value!.isEmpty){
           return 'Please enter $validatorText ';
@@ -22,13 +24,22 @@ TextFormFieldWidget(this.controller,this.hint,this.radius,this.validatorText,thi
       style: TextStyle(
         fontSize: 16.sp
       ),
-
     decoration: InputDecoration(
+
+      focusedBorder: OutlineInputBorder(
+
+        borderSide: BorderSide(color: Color(0xFFcccccc)),
+        borderRadius: BorderRadius.circular(10.r),
+
+      ),
       errorStyle: TextStyle(
           fontSize: 16.sp
 
       ),
-
+      enabledBorder: OutlineInputBorder(
+        borderSide: BorderSide(color: Color(0xFFcccccc)),
+        borderRadius: BorderRadius.circular(10.r), // Optional: adjust the corner radius
+      ),
     border: OutlineInputBorder(
 
 borderRadius: BorderRadius.circular(radius!), // Custom border radius
