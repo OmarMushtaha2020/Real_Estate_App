@@ -14,6 +14,7 @@ static const Role=_Paths.Role;
 static const SetUpLocationManually=_Paths.SetUpLocationManually;
 static const RealEstateType=_Paths.RealEstateType;
 static const Notification=_Paths.Notification;
+static const Filter=_Paths.Filter;
 }
 
 abstract class _Paths {
@@ -28,5 +29,6 @@ abstract class _Paths {
   static const SetUpLocationManually ='/set_up_location_manually';
 static const RealEstateType='/real_estate_type';
 static const Notification='/notification';
+static const Filter='/filter';
 
 }
