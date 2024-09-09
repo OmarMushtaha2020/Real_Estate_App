@@ -1,3 +1,4 @@
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:intl/intl.dart';
@@ -26,6 +27,7 @@ class _FilterViewState extends State<FilterView> {
   final double _min = 2.0;
   final double _max = 10.0;
   SfRangeValues _initialValues = SfRangeValues(4.5, 8.5);
+  RangeValues _rangeSliderDiscreteValues = const RangeValues(40, 80);
 
   final List<Data> _chartData = <Data>[
     Data(x: 2.0, y: 2.2),
@@ -39,29 +41,21 @@ class _FilterViewState extends State<FilterView> {
     Data(x: 10.0, y: 3.7),
   ];
 
-  List<Data> _filteredData = [];
   List<Color> _columnColors = [];
-  SfRangeValues _currentValues = SfRangeValues(4.5, 8.5);
 
   @override
   void initState() {
     super.initState();
-    _updateFilteredData(_initialValues);
+    _updateColumnColors(_initialValues);
   }
 
-  void _updateFilteredData(SfRangeValues values) {
+  void _updateColumnColors(SfRangeValues values) {
     setState(() {
-      _currentValues = values;
-      _filteredData = _chartData
-          .where((data) =>
-      data.x >= values.start && data.x <= values.end)
-          .toList();
-
       _columnColors = _chartData.map((data) {
         if (data.x >= values.start && data.x <= values.end) {
           return Colors.blue; // Color for selected range
         } else {
-          return Colors.grey; // Color for non-selected range
+          return Colors.grey.withOpacity(0.5); // Faded color for non-selected range
         }
       }).toList();
     });
@@ -71,7 +65,8 @@ class _FilterViewState extends State<FilterView> {
   double _scaleColumnHeight(double x) {
     final double center = (_min + _max) / 2;
     final double range = _max - _min;
-    final double scaledValue = 1 - ((x - center).abs() / (range / 2)).clamp(0.0, 1.0);
+    final double scaledValue =
+        1 - ((x - center).abs() / (range / 2)).clamp(0.0, 1.0);
 
     return scaledValue * 0.5 + 0.5; // Adjust scaling range
   }
@@ -94,55 +89,69 @@ class _FilterViewState extends State<FilterView> {
             ),
             SizedBox(height: 16.h),
             Container(
-              height: 250,
-              child: SfRangeSelector(
-                min: _min,
-                max: _max,
-                initialValues: _initialValues,
-                // interval: 1,
-                showLabels: false,
-                showTicks: false,
-                numberFormat: NumberFormat("\$"),
-                onChanged: (SfRangeValues values) {
-                  _updateFilteredData(values);
-                },
-                activeColor: Colors.blue.withOpacity(1),
-                inactiveColor: Colors.transparent,
-                tooltipTextFormatterCallback: (dynamic value, String format) {
-                  return NumberFormat("\$").format(value);
-                },
-                child: SfCartesianChart(
-                  margin: EdgeInsets.zero,
-                  primaryXAxis: NumericAxis(
-                    minimum: _min,
-                    maximum: _max,
-                    axisLabelFormatter: (AxisLabelRenderDetails details) {
-                      // Custom label formatter
-                      if ([2.0, 4.0, 6.0, 8.0, 10.0].contains(details.value)) {
+              child: Stack(
+                alignment: Alignment.bottomRight,
+                children: [
+                  SfCartesianChart(
+                    margin: EdgeInsets.zero,
+                    primaryXAxis: NumericAxis(
+                      minimum: _min,
+                      maximum: _max,
+                      majorGridLines: MajorGridLines(width: 0), // Hides the grid lines
+                      majorTickLines: MajorTickLines(size: 0), // Hides the tick marks (tails)
+
+                      axisLabelFormatter: (AxisLabelRenderDetails details) {
+                        // Return an empty label to hide the numbers
                         return ChartAxisLabel('', TextStyle(color: Colors.transparent));
-                      }
-                      return ChartAxisLabel(details.text, details.textStyle);
+                      },
+                    ),
+                    primaryYAxis: NumericAxis(
+                      isVisible: false,
+                      maximum: 4,
+                    ),
+                    plotAreaBorderWidth: 0,
+                    plotAreaBackgroundColor: Colors.transparent,
+                    series: <ColumnSeries<Data, double>>[
+                      ColumnSeries<Data, double>(
+                        dataSource: _chartData,
+
+                        pointColorMapper: (Data data, int index) {
+                          return _columnColors[index];
+                        },
+                        xValueMapper: (Data data, int index) => data.x,
+                        yValueMapper: (Data data, int index) {
+                          double scaledHeight = _scaleColumnHeight(data.x);
+                          return 3 * scaledHeight; // Apply scaling
+                        },
+                        width: 0.99, // Column width remains constant
+                      ),
+                    ],
+                  ),
+                  RangeSlider(
+                    values: _rangeSliderDiscreteValues,
+                    min: 0,
+                    activeColor: Colors.blue, // Color of the active track
+                    inactiveColor: Colors.transparent, // Color of the inactive track
+
+                    max: 100,
+                    divisions: 5,
+
+                    labels: RangeLabels(
+                      _rangeSliderDiscreteValues.start.round().toString(),
+                      _rangeSliderDiscreteValues.end.round().toString(),
+                    ),
+                    onChanged: (values) {
+                      setState(() {
+                        _rangeSliderDiscreteValues = values;
+                        // Convert slider values to chart range and update column colors
+                        double start =
+                            _min + (values.start / 100) * (_max - _min);
+                        double end = _min + (values.end / 100) * (_max - _min);
+                        _updateColumnColors(SfRangeValues(start, end));
+                      });
                     },
                   ),
-                  primaryYAxis: NumericAxis(isVisible: false, maximum:4,),
-                  plotAreaBorderWidth: 0,
-                  plotAreaBackgroundColor: Colors.transparent,
-                  series: <ColumnSeries<Data, double>>[
-                    ColumnSeries<Data, double>(
-                      dataSource: _chartData,
-                      color: Colors.blue, // Default color (not used here)
-                      pointColorMapper: (Data data, int index) {
-                        return _columnColors[index];
-                      },
-                      xValueMapper: (Data data, int index) => data.x,
-                      yValueMapper: (Data data, int index) {
-                        double scaledHeight = _scaleColumnHeight(data.x);
-                        return 3* scaledHeight; // Apply scaling
-                      },
-                      width: 0.9, // Column width remains constant
-                    ),
-                  ],
-                ),
+                ],
               ),
             ),
           ],
