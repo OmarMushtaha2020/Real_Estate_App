@@ -17,6 +17,7 @@ static const Notification=_Paths.Notification;
 static const Filter=_Paths.Filter;
 static const BookMark=_Paths.BookMark;
 static const Chat=_Paths.Chat;
+static const Search=_Paths.Search;
 }
 
 abstract class _Paths {
@@ -34,4 +35,5 @@ static const Notification='/notification';
 static const Filter='/filter';
 static const BookMark='/book_mark';
 static const Chat='/Chat';
+static const Search='/Search';
 }

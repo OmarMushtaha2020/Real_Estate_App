@@ -1,3 +1,4 @@
+import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:real_estate_app/app/modules/home/controllers/book_mark_controller.dart';
 import 'package:real_estate_app/app/modules/home/controllers/chat_controller.dart';
@@ -9,6 +10,7 @@ import 'package:real_estate_app/app/modules/home/controllers/onboarding_controll
 import 'package:real_estate_app/app/modules/home/controllers/real_estate_type_controller.dart';
 import 'package:real_estate_app/app/modules/home/controllers/registration_controller.dart';
 import 'package:real_estate_app/app/modules/home/controllers/role_controller.dart';
+import 'package:real_estate_app/app/modules/home/controllers/search_controller.dart';
 import 'package:real_estate_app/app/modules/home/controllers/set_up_location_controller.dart';
 import 'package:real_estate_app/app/modules/home/controllers/set_up_location_manually_controller.dart';
 import 'package:real_estate_app/app/modules/home/controllers/sign_up_controller.dart';
@@ -55,6 +57,9 @@ class AppBinding extends Bindings {
     );
     Get.lazyPut<ChatController>(
           () => ChatController(),
+    );
+    Get.lazyPut<SearchControllers>(
+          () => SearchControllers(),
     );
 
   }

@@ -10,6 +10,7 @@ import 'package:real_estate_app/app/modules/home/views/login_view.dart';
 import 'package:real_estate_app/app/modules/home/views/notification_view.dart';
 import 'package:real_estate_app/app/modules/home/views/real_estate_type_view.dart';
 import 'package:real_estate_app/app/modules/home/views/role_view.dart';
+import 'package:real_estate_app/app/modules/home/views/search_view.dart';
 import 'package:real_estate_app/app/modules/home/views/set_up_location_manually_view.dart';
 import 'package:real_estate_app/app/modules/home/views/set_up_location_view.dart';
 import 'package:real_estate_app/app/modules/home/views/sign_up_view.dart';
@@ -23,7 +24,7 @@ part 'app_routes.dart';
 class AppPages {
   AppPages._();
 
-  static const INITIAL = Routes.Chat;
+  static const INITIAL = Routes.Search;
 
   static final routes = [
     GetPage(
@@ -116,7 +117,15 @@ class AppPages {
       transition: Transition.downToUp, // Example of another custom transition
       transitionDuration: const Duration(milliseconds: 500),
       binding: AppBinding(),
+    ),
+    GetPage(
+      name: _Paths.Search,
+      page: () =>  SearchView(),
+      transition: Transition.downToUp, // Example of another custom transition
+      transitionDuration: const Duration(milliseconds: 500),
+      binding: AppBinding(),
     )
+
 
   ];
 }
