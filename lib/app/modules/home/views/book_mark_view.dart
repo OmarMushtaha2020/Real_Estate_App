@@ -69,6 +69,7 @@ Spacer(),
                     height: 10.h,
                   ),
               itemCount: controller.buliding.length),
-        ));
+        )
+    );
   }
 }

@@ -6,10 +6,10 @@ class ImageWidget extends StatelessWidget {
   double?height;
   double?width;
   BoxFit ?fit;
-
-  ImageWidget(this.url,{this.height,this.width,this.fit});
+Color ?color;
+  ImageWidget(this.url,{this.height,this.width,this.fit,this.color});
   @override
   Widget build(BuildContext context) {
-    return                       Image.asset(url??"",height: height,width:width ,fit: fit,);
+    return                       Image.asset(url??"",height: height,width:width ,fit: fit,color: color,);
   }
 }

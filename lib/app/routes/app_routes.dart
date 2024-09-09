@@ -16,7 +16,7 @@ static const RealEstateType=_Paths.RealEstateType;
 static const Notification=_Paths.Notification;
 static const Filter=_Paths.Filter;
 static const BookMark=_Paths.BookMark;
-static const ChatView=_Paths.Chat;
+static const Chat=_Paths.Chat;
 }
 
 abstract class _Paths {

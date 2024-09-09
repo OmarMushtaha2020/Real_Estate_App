@@ -23,7 +23,7 @@ part 'app_routes.dart';
 class AppPages {
   AppPages._();
 
-  static const INITIAL = Routes.ChatView;
+  static const INITIAL = Routes.Chat;
 
   static final routes = [
     GetPage(
@@ -109,7 +109,7 @@ class AppPages {
       transition: Transition.downToUp, // Example of another custom transition
       transitionDuration: const Duration(milliseconds: 500),
       binding: AppBinding(),
-    )
+    ),
     GetPage(
       name: _Paths.Chat,
       page: () =>  ChatView(),
