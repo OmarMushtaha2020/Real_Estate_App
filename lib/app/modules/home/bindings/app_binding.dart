@@ -1,4 +1,5 @@
 import 'package:get/get.dart';
+import 'package:real_estate_app/app/modules/home/controllers/book_mark_controller.dart';
 import 'package:real_estate_app/app/modules/home/controllers/email_verification_controller.dart';
 import 'package:real_estate_app/app/modules/home/controllers/filter_controller.dart';
 import 'package:real_estate_app/app/modules/home/controllers/login_controller.dart';
@@ -48,7 +49,9 @@ class AppBinding extends Bindings {
     Get.lazyPut<FilterController>(
           () => FilterController(),
     );
-
+    Get.lazyPut<BookMarkController>(
+          () => BookMarkController(),
+    );
 
   }
 }

@@ -2,6 +2,7 @@ import 'package:get/get.dart';
 import 'package:real_estate_app/app/modules/home/controllers/notification_controller.dart';
 import 'package:real_estate_app/app/modules/home/controllers/real_estate_type_controller.dart';
 import 'package:real_estate_app/app/modules/home/controllers/set_up_location_controller.dart';
+import 'package:real_estate_app/app/modules/home/views/book_mark_view.dart';
 import 'package:real_estate_app/app/modules/home/views/email_verification_view.dart';
 import 'package:real_estate_app/app/modules/home/views/filter_view.dart';
 import 'package:real_estate_app/app/modules/home/views/login_view.dart';
@@ -21,7 +22,7 @@ part 'app_routes.dart';
 class AppPages {
   AppPages._();
 
-  static const INITIAL = Routes.Filter;
+  static const INITIAL = Routes.BookMark;
 
   static final routes = [
     GetPage(
@@ -97,6 +98,13 @@ class AppPages {
     GetPage(
       name: _Paths.Filter,
       page: () =>  FilterView(),
+      transition: Transition.downToUp, // Example of another custom transition
+      transitionDuration: const Duration(milliseconds: 500),
+      binding: AppBinding(),
+    ),
+    GetPage(
+      name: _Paths.BookMark,
+      page: () =>  BookMarkView(),
       transition: Transition.downToUp, // Example of another custom transition
       transitionDuration: const Duration(milliseconds: 500),
       binding: AppBinding(),

@@ -15,6 +15,7 @@ static const SetUpLocationManually=_Paths.SetUpLocationManually;
 static const RealEstateType=_Paths.RealEstateType;
 static const Notification=_Paths.Notification;
 static const Filter=_Paths.Filter;
+static const BookMark=_Paths.BookMark;
 }
 
 abstract class _Paths {
@@ -30,5 +31,6 @@ abstract class _Paths {
 static const RealEstateType='/real_estate_type';
 static const Notification='/notification';
 static const Filter='/filter';
+static const BookMark='/book_mark';
 
 }
