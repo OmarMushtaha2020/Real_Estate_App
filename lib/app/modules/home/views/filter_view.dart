@@ -99,26 +99,32 @@ class _FilterViewState extends State<FilterView> {
                 min: _min,
                 max: _max,
                 initialValues: _initialValues,
-                interval: 1,
-                showLabels: true,
-                showTicks: true,
+                // interval: 1,
+                showLabels: false,
+                showTicks: false,
                 numberFormat: NumberFormat("\$"),
                 onChanged: (SfRangeValues values) {
                   _updateFilteredData(values);
                 },
-                activeColor: Colors.blue.withOpacity(0.3),
+                activeColor: Colors.blue.withOpacity(1),
                 inactiveColor: Colors.transparent,
                 tooltipTextFormatterCallback: (dynamic value, String format) {
                   return NumberFormat("\$").format(value);
                 },
                 child: SfCartesianChart(
-                  margin: const EdgeInsets.all(0),
+                  margin: EdgeInsets.zero,
                   primaryXAxis: NumericAxis(
                     minimum: _min,
                     maximum: _max,
+                    axisLabelFormatter: (AxisLabelRenderDetails details) {
+                      // Custom label formatter
+                      if ([2.0, 4.0, 6.0, 8.0, 10.0].contains(details.value)) {
+                        return ChartAxisLabel('', TextStyle(color: Colors.transparent));
+                      }
+                      return ChartAxisLabel(details.text, details.textStyle);
+                    },
                   ),
-                  primaryYAxis: NumericAxis(isVisible: false, maximum: 4),
-
+                  primaryYAxis: NumericAxis(isVisible: false, maximum:4,),
                   plotAreaBorderWidth: 0,
                   plotAreaBackgroundColor: Colors.transparent,
                   series: <ColumnSeries<Data, double>>[
@@ -131,9 +137,9 @@ class _FilterViewState extends State<FilterView> {
                       xValueMapper: (Data data, int index) => data.x,
                       yValueMapper: (Data data, int index) {
                         double scaledHeight = _scaleColumnHeight(data.x);
-                        return data.y * scaledHeight; // Apply scaling
+                        return 3* scaledHeight; // Apply scaling
                       },
-                      width: 0.4, // Column width remains constant
+                      width: 0.9, // Column width remains constant
                     ),
                   ],
                 ),
