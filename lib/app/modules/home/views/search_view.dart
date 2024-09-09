@@ -5,6 +5,8 @@ import 'package:real_estate_app/app/components/common_widget/image_widget.dart';
 import 'package:real_estate_app/app/components/common_widget/text_widget.dart';
 import 'package:real_estate_app/app/modules/home/controllers/search_controller.dart';
 
+import '../../../components/common_widget/sizeBox_widget.dart';
+
 class SearchView extends GetView<SearchControllers> {
   const SearchView({Key? key}) : super(key: key);
 
@@ -92,7 +94,7 @@ height: 35.w,
                 },
               ),
             ),
-            SizedBox(height: 24.h),
+            SizeBoxWidget(height: 24.h),
             TextWidget(
               "Recent Search",
               fontSize: 16.sp,
@@ -102,7 +104,7 @@ height: 35.w,
 
             ),
             // Displaying recent searches
-            SizedBox(height: 10.h),
+            SizeBoxWidget(height: 10.h),
 
             Obx(
                   () => Expanded(

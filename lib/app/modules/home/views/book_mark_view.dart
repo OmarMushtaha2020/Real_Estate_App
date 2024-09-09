@@ -26,7 +26,8 @@ class BookMarkView extends GetView<BookMarkController> {
         body: Padding(
           padding: EdgeInsets.symmetric(horizontal: 16.w, vertical: 8.h),
           child: ListView.separated(
-              itemBuilder: (context, index) => Column(
+              itemBuilder: (context, index) =>
+                  Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
                   Container(
