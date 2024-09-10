@@ -22,6 +22,7 @@ dependencies:
   syncfusion_flutter_sliders: ^26.2.13
   syncfusion_flutter_charts: ^26.2.13
   syncfusion_flutter_core: # or an earlier version without the issue
+  custom_navigation_bar: ^0.8.2
 
 
 
