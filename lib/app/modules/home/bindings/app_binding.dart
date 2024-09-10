@@ -5,6 +5,7 @@ import 'package:real_estate_app/app/modules/home/controllers/chat_controller.dar
 import 'package:real_estate_app/app/modules/home/controllers/email_verification_controller.dart';
 import 'package:real_estate_app/app/modules/home/controllers/filter_controller.dart';
 import 'package:real_estate_app/app/modules/home/controllers/home_controller.dart';
+import 'package:real_estate_app/app/modules/home/controllers/layout_controller.dart';
 import 'package:real_estate_app/app/modules/home/controllers/login_controller.dart';
 import 'package:real_estate_app/app/modules/home/controllers/notification_controller.dart';
 import 'package:real_estate_app/app/modules/home/controllers/onboarding_controller.dart';
@@ -64,6 +65,9 @@ class AppBinding extends Bindings {
     );
     Get.lazyPut<HomeController>(
           () => HomeController(),
+    );
+    Get.lazyPut<LayoutController>(
+          () => LayoutController(),
     );
 
   }

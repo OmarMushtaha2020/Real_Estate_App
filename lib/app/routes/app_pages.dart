@@ -7,6 +7,7 @@ import 'package:real_estate_app/app/modules/home/views/chat_view.dart';
 import 'package:real_estate_app/app/modules/home/views/email_verification_view.dart';
 import 'package:real_estate_app/app/modules/home/views/filter_view.dart';
 import 'package:real_estate_app/app/modules/home/views/home_view.dart';
+import 'package:real_estate_app/app/modules/home/views/layout_view.dart';
 import 'package:real_estate_app/app/modules/home/views/login_view.dart';
 import 'package:real_estate_app/app/modules/home/views/notification_view.dart';
 import 'package:real_estate_app/app/modules/home/views/real_estate_type_view.dart';
@@ -25,7 +26,7 @@ part 'app_routes.dart';
 class AppPages {
   AppPages._();
 
-  static const INITIAL = Routes.Filter;
+  static const INITIAL = Routes.Layout;
 
   static final routes = [
     GetPage(
@@ -133,6 +134,14 @@ class AppPages {
       transition: Transition.downToUp, // Example of another custom transition
       transitionDuration: const Duration(milliseconds: 500),
       binding: AppBinding(),
+    ),
+    GetPage(
+      name: _Paths.Layout,
+      page: () =>  LayoutView(),
+      transition: Transition.downToUp, // Example of another custom transition
+      transitionDuration: const Duration(milliseconds: 500),
+      binding: AppBinding(),
     )
+
   ];
 }
