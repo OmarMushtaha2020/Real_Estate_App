@@ -10,6 +10,7 @@ import 'package:real_estate_app/app/modules/home/views/home_view.dart';
 import 'package:real_estate_app/app/modules/home/views/layout_view.dart';
 import 'package:real_estate_app/app/modules/home/views/login_view.dart';
 import 'package:real_estate_app/app/modules/home/views/notification_view.dart';
+import 'package:real_estate_app/app/modules/home/views/profile_view.dart';
 import 'package:real_estate_app/app/modules/home/views/real_estate_type_view.dart';
 import 'package:real_estate_app/app/modules/home/views/role_view.dart';
 import 'package:real_estate_app/app/modules/home/views/search_view.dart';
@@ -138,6 +139,13 @@ class AppPages {
     GetPage(
       name: _Paths.Layout,
       page: () =>  LayoutView(),
+      transition: Transition.downToUp, // Example of another custom transition
+      transitionDuration: const Duration(milliseconds: 500),
+      binding: AppBinding(),
+    ),
+    GetPage(
+      name: _Paths.Profile,
+      page: () =>  ProfileView(),
       transition: Transition.downToUp, // Example of another custom transition
       transitionDuration: const Duration(milliseconds: 500),
       binding: AppBinding(),

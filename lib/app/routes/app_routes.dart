@@ -20,6 +20,7 @@ static const Chat=_Paths.Chat;
 static const Search=_Paths.Search;
 static const Home=_Paths.Home;
 static const Layout=_Paths.Layout;
+static const Profile=_Paths.Profile;
 }
 
 abstract class _Paths {
@@ -40,4 +41,5 @@ static const Chat='/Chat';
 static const Search='/Search';
 static const Home='/Home';
 static const Layout='/Layout';
+static const Profile='/Profile';
 }

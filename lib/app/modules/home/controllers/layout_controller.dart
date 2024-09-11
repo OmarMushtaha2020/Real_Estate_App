@@ -4,6 +4,7 @@ import 'package:real_estate_app/app/modules/home/views/book_mark_view.dart';
 import 'package:real_estate_app/app/modules/home/views/chat_view.dart';
 import 'package:real_estate_app/app/modules/home/views/home_view.dart';
 import 'package:real_estate_app/app/modules/home/views/notification_view.dart';
+import 'package:real_estate_app/app/modules/home/views/profile_view.dart';
 
 class LayoutController extends GetxController {
   //TODO: Implement LayoutController
@@ -12,7 +13,7 @@ List <Widget>screen=[
   HomeView(),
   BookMarkView(),
   ChatView(),
-NotificationView()
+ProfileView()
 
 ];
   // Function to update the selected index

@@ -166,8 +166,8 @@ class HomeView extends GetView<HomeController> {
                   ),
                   SizeBoxWidget(height: 30.h,),
                   Container(
-                    height: 500.h,
-              
+                    height: 600.h,
+
                     child: ListView.separated(
                       physics: BouncingScrollPhysics(),
                       padding: EdgeInsets.zero,
@@ -187,7 +187,7 @@ class HomeView extends GetView<HomeController> {
                                       color: Colors.white,
                                       borderRadius: BorderRadius.circular(10.r)),
                                 ),
-                                SizedBox(height: 20,),
+                                SizedBox(height: 20.h,),
                                 Container(
                                   width: 280.w,
                                   child: Row(
@@ -197,14 +197,14 @@ mainAxisAlignment: MainAxisAlignment.end,
                                         child: TextWidget(
                                           '${controller.buliding[index].title}',
                                           fontSize: 16.sp,
-                                        
+
                                           fontWeight: FontWeight.w500,
                                           color: Color(0XffE86A53),
                                           fontFamily: "Satoshi",
                                         ),
                                       ),
                                       // Spacer(),
-                                      ImageWidget("assets/image/archive-minus.png",width: 26.w,height: 26.h,)  ,
+                                      ImageWidget("assets/image/archive_grey_color.png",width: 26.w,height: 26.h,)  ,
                                     ],
                                   ),
                                 ),
@@ -215,7 +215,7 @@ mainAxisAlignment: MainAxisAlignment.end,
                                   color: Color(0Xff999999),
                                   fontFamily: "RedHatDisplay",
                                 ),
-              
+
                               ],
                             ),
                         separatorBuilder: (context, index) => SizedBox(
