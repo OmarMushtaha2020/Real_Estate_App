@@ -13,6 +13,7 @@ class LayoutView extends GetView<LayoutController> {
       init: LayoutController(),
       builder: (controller) {
         return Scaffold(
+          body: controller.screen[controller.currentIndex],
           bottomNavigationBar: Padding(
             padding: EdgeInsets.symmetric(horizontal: 20.w, vertical: 20.h),
             child: Container(
