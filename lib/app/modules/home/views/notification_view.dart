@@ -89,7 +89,7 @@ class NotificationView extends GetView<NotificationController> {
                   ),
                 ),
                 width: double.infinity,
-                height: 82.h,
+                height: 90.h,
                 decoration: BoxDecoration(
                   color: Color(0XFFF8F8F8),
                   borderRadius: BorderRadius.circular(100.r)

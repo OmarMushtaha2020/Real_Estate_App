@@ -54,7 +54,7 @@ class BookMarkView extends GetView<BookMarkController> {
                         fontFamily: "Satoshi",
                       ),
 Spacer(),
-        ImageWidget("assets/image/archive-minus.png",width: 26.w,height: 26.h,)  ,
+        ImageWidget("assets/image/archive-minus.png",width: 26.w,height: 26.h,fit: BoxFit.contain,)  ,
                     ],
                   ),
                   TextWidget(

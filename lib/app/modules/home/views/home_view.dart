@@ -113,7 +113,7 @@ class HomeView extends GetView<HomeController> {
                   ),
                   SizeBoxWidget(height: 30.h,),
                   Container(
-                    height: 43.h,
+                    height: 50.h,
                     child: ListView.separated(
                       shrinkWrap: true,
                       scrollDirection: Axis.horizontal,
