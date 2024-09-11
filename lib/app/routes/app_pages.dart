@@ -27,7 +27,7 @@ part 'app_routes.dart';
 class AppPages {
   AppPages._();
 
-  static const INITIAL = Routes.Layout;
+  static const INITIAL = Routes.Filter;
 
   static final routes = [
     GetPage(

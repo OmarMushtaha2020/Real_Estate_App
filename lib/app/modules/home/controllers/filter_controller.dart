@@ -50,9 +50,9 @@ class FilterController extends GetxController {
   void updateColumnColors(SfRangeValues values) {
     columnColors = chartData.map((data) {
       if (data.x >= values.start && data.x <= values.end) {
-        return Colors.blue; // Color for selected range
+        return Color(0xFFE86A53); // Color for selected range
       } else {
-        return Colors.grey.withOpacity(0.5); // Faded color for non-selected range
+        return Color(0XFFD9D9D9); // Faded color for non-selected range
       }
     }).toList();
     update(); // Notify listeners

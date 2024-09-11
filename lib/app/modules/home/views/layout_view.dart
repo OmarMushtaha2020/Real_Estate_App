@@ -84,11 +84,17 @@ class LayoutView extends GetView<LayoutController> {
         child: Row(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
-            Image.asset(
-              imagePath, // Use image path instead of icon
-
-              width: 30.sp, // Adjust size if needed
-              height: 30.sp, // Adjust size if needed
+            AnimatedSwitcher(
+              duration: const Duration(milliseconds: 300),
+              child: Image.asset(
+                imagePath, // Use image path instead of icon
+                key: ValueKey<String>(imagePath), // Unique key to trigger animation
+                width: 30.sp, // Adjust size if needed
+                height: 30.sp, // Adjust size if needed
+              ),
+              transitionBuilder: (Widget child, Animation<double> animation) {
+                return FadeTransition(opacity: animation, child: child);
+              },
             ),
             // Show the label only if the item is expanded (selected)
             if (isExpanded)

@@ -1,7 +1,9 @@
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:get/get.dart';
 import 'package:real_estate_app/app/components/common_widget/CustomWrap.dart';
+import 'package:real_estate_app/app/components/common_widget/sizeBox_widget.dart';
 import 'package:real_estate_app/app/modules/home/controllers/filter_controller.dart';
 import 'package:syncfusion_flutter_charts/charts.dart';
 import 'package:syncfusion_flutter_sliders/sliders.dart';
@@ -29,6 +31,7 @@ class FilterView extends GetView<FilterController> {
             padding: EdgeInsets.all(16.w),
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
+              mainAxisAlignment: MainAxisAlignment.center,
               children: [
                 TextWidget(
                   'Property Type',
@@ -37,7 +40,7 @@ class FilterView extends GetView<FilterController> {
                   color: const Color(0xFF040404),
                   fontFamily: "Satoshi",
                 ),
-                SizedBox(height: 16.h),
+                SizeBoxWidget(height: 30.h),
                 Wrap(
                   spacing: 10.w,
                   runSpacing: 10.h,
@@ -49,11 +52,15 @@ class FilterView extends GetView<FilterController> {
                     ),
                   ),
                 ),
-                Text(
+                SizeBoxWidget(height: 30.h),
+
+                TextWidget(
                   'Price Range:',
-                  style: TextStyle(fontSize: 16.sp, fontWeight: FontWeight.w500),
+                  fontSize: 16.sp, fontWeight: FontWeight.w500,
+                  fontFamily: "Satoshi",
+
                 ),
-                SizedBox(height: 16.h),
+                SizeBoxWidget(height: 30.h),
                 Obx(() {
                   return Container(
                     child: Stack(
@@ -94,10 +101,10 @@ class FilterView extends GetView<FilterController> {
                         RangeSlider(
                           values: controller.rangeSliderDiscreteValues.value,
                           min: 0,
-                          activeColor: Colors.blue,
-                          inactiveColor: Colors.transparent,
+                          activeColor: Color(0xFFE86A53),
+                          inactiveColor: Color(0XFFD9D9D9),
+
                           max: 100,
-                          divisions: 5,
                           labels: RangeLabels(
                             controller.rangeSliderDiscreteValues.value.start.round().toString(),
                             controller.rangeSliderDiscreteValues.value.end.round().toString(),
@@ -110,6 +117,8 @@ class FilterView extends GetView<FilterController> {
                     ),
                   );
                 }),
+                SizeBoxWidget(height: 30.h),
+
                 Row(
                   children: [
                     Expanded(
