@@ -3,6 +3,7 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 import 'package:get/get.dart';
 import 'package:real_estate_app/app/components/common_widget/image_widget.dart';
+import 'package:real_estate_app/app/components/common_widget/sizeBox_widget.dart';
 import 'package:real_estate_app/app/components/common_widget/text_widget.dart';
 import 'package:real_estate_app/app/modules/home/controllers/book_mark_controller.dart';
 
@@ -41,7 +42,7 @@ class BookMarkView extends GetView<BookMarkController> {
                             color: Colors.white,
                             borderRadius: BorderRadius.circular(10.r)),
                       ),
-                  SizedBox(height: 20,),
+                  SizeBoxWidget(height: 20.h,),
                   Row(
                     children: [
                       TextWidget(
@@ -66,7 +67,7 @@ Spacer(),
 
                 ],
               ),
-              separatorBuilder: (context, index) => SizedBox(
+              separatorBuilder: (context, index) => SizeBoxWidget(
                     height: 10.h,
                   ),
               itemCount: controller.buliding.length),

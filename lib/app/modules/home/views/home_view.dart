@@ -166,7 +166,7 @@ class HomeView extends GetView<HomeController> {
                   ),
                   SizeBoxWidget(height: 30.h,),
                   Container(
-                    height: 600.h,
+                    height: 400.h,
 
                     child: ListView.separated(
                       physics: BouncingScrollPhysics(),
@@ -178,7 +178,7 @@ class HomeView extends GetView<HomeController> {
                               children: [
                                 Container(
                                   width:280.w,
-              height: 280.w,
+              height: 280.h,
                                   clipBehavior: Clip.antiAliasWithSaveLayer,
                                   decoration: BoxDecoration(
                                       image: DecorationImage(
@@ -187,24 +187,22 @@ class HomeView extends GetView<HomeController> {
                                       color: Colors.white,
                                       borderRadius: BorderRadius.circular(10.r)),
                                 ),
-                                SizedBox(height: 20.h,),
+                                SizeBoxWidget(height: 20.h,),
                                 Container(
                                   width: 280.w,
                                   child: Row(
 mainAxisAlignment: MainAxisAlignment.end,
                                     children: [
-                                      Expanded(
-                                        child: TextWidget(
-                                          '${controller.buliding[index].title}',
-                                          fontSize: 16.sp,
+                                      TextWidget(
+                                        '${controller.buliding[index].title}',
+                                        fontSize: 16.sp,
 
-                                          fontWeight: FontWeight.w500,
-                                          color: Color(0XffE86A53),
-                                          fontFamily: "Satoshi",
-                                        ),
+                                        fontWeight: FontWeight.w500,
+                                        color: Color(0XffE86A53),
+                                        fontFamily: "Satoshi",
                                       ),
-                                      // Spacer(),
-                                      ImageWidget("assets/image/archive_grey_color.png",width: 26.w,height: 26.h,)  ,
+                                      Spacer(),
+                                      ImageWidget("assets/image/archiveGrey.png",width: 26.w,height: 26.h,fit: BoxFit.contain,)  ,
                                     ],
                                   ),
                                 ),
@@ -218,7 +216,7 @@ mainAxisAlignment: MainAxisAlignment.end,
 
                               ],
                             ),
-                        separatorBuilder: (context, index) => SizedBox(
+                        separatorBuilder: (context, index) => SizeBoxWidget(
                           width: 20.w,
                         ),
                         itemCount: controller.buliding.length),

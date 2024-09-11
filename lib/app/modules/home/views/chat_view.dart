@@ -6,6 +6,7 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 import 'package:get/get.dart';
 import 'package:real_estate_app/app/components/common_widget/image_widget.dart';
+import 'package:real_estate_app/app/components/common_widget/sizeBox_widget.dart';
 import 'package:real_estate_app/app/components/common_widget/text_widget.dart';
 import 'package:real_estate_app/app/modules/home/controllers/chat_controller.dart';
 
@@ -46,8 +47,8 @@ class ChatView extends GetView<ChatController> {
                                             "${controller.owners[index].image}"),
                                         fit: BoxFit.fitHeight)),
                               ),
-                              SizedBox(
-                                width: 10.w,
+
+                              SizeBoxWidget(                                width: 10.w,
                               ),
                               Padding(
                                 padding:  EdgeInsets.only(top: 10.h),
@@ -75,9 +76,9 @@ class ChatView extends GetView<ChatController> {
                                         ),
                                       ],
                                     ),
-                                    SizedBox(width: 20.w,),
+                                    SizeBoxWidget(width: 20.w,),
                                     ImageWidget("assets/image/Vector.png",width: 16.w,height: 16.w,fit: BoxFit.contain,color: controller.owners[index].connected==false? Color(0XffFFFFFF):Color(0xFF3F82FF)),
-                                    SizedBox(width: 5.w,),
+                                    SizeBoxWidget(width: 5.w,),
 
                                     TextWidget(
                                       'VERIFIED',
