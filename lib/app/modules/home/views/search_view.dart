@@ -1,3 +1,4 @@
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:get/get.dart';
@@ -77,7 +78,10 @@ height: 35.w,
                         child: Column(
                           mainAxisAlignment: MainAxisAlignment.center,
                           children: [
-                            ImageWidget("assets/image/fliter.png",width: 14.w,height: 14.w,fit: BoxFit.cover,),
+                            GestureDetector(onTap: (){
+                              Get.toNamed("/filter");
+
+                            },child: ImageWidget("assets/image/fliter.png",width: 14.w,height: 14.w,fit: BoxFit.cover,)),
                           ],
                         ), // Search icon
                       ),

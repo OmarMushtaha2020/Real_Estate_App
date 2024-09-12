@@ -81,6 +81,7 @@ class SetUpLocationManuallyView extends GetView<SetUpLocationManuallyController>
                   padding: EdgeInsets.only(bottom: 20.h),
                   child: GestureDetector(
                     onTap: () {
+                      Get.toNamed('/real_estate_type');
                     },
                     child: Align(
                       alignment: Alignment.bottomCenter,

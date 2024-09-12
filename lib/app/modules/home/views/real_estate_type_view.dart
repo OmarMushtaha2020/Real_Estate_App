@@ -99,7 +99,7 @@ class RealEstateTypeView extends GetView<RealEstateTypeController> {
             ),
             GestureDetector(
               onTap: () {
-                Get.toNamed("/real_estate_type");
+                Get.offAllNamed("/Layout");
               },
               child: Padding(
                 padding:  EdgeInsets.only(bottom: 15.h),

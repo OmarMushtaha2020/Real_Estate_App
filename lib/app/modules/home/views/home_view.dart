@@ -35,15 +35,23 @@ class HomeView extends GetView<HomeController> {
                         fontFamily: "RedHatDisplay",
                       ),
                       Spacer(),
-                      ImageWidget(
-                        "assets/image/notification.png",
-                        height: 24.w,
-                        width: 24.w,
-                        fit: BoxFit.cover,
+
+              GestureDetector(
+                onTap: (){
+                  Get.toNamed("/notification");
+
+                },
+                        child: ImageWidget(
+                          "assets/image/notification.png",
+                          height: 24.w,
+                          width: 24.w,
+                          fit: BoxFit.cover,
+                        ),
                       ),
                     ],
                   ),
-                  SizeBoxWidget(height: 30.h,),
+
+            SizeBoxWidget(height: 30.h,),
                   Container(
                     height: 60.h,
                     decoration: BoxDecoration(
@@ -52,6 +60,10 @@ class HomeView extends GetView<HomeController> {
                     ),
                     padding: EdgeInsets.symmetric(horizontal: 16.w),
                     child: TextFormField(
+                      onTap: (){
+                        Get.toNamed("/Search");
+
+                      },
                       style: TextStyle(
                         fontSize: 16.sp,
                         color: const Color(0xff999999),
