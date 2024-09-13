@@ -5,7 +5,7 @@ class PropertyDetailsController extends GetxController {
   //TODO: Implement PropertyDetailsController
   final count = 0.obs;
   List<ContentsProperty>contentsProperty=[
-    ContentsProperty(1,1,1),
+    ContentsProperty(guest:1,Baths:1,Bedrooms:1),
   ];
   @override
   void onInit() {

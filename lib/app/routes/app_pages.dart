@@ -1,5 +1,6 @@
 import 'package:get/get.dart';
 import 'package:real_estate_app/app/modules/home/controllers/notification_controller.dart';
+import 'package:real_estate_app/app/modules/home/controllers/photos_details_controller.dart';
 import 'package:real_estate_app/app/modules/home/controllers/property_details_controller.dart';
 import 'package:real_estate_app/app/modules/home/controllers/real_estate_type_controller.dart';
 import 'package:real_estate_app/app/modules/home/controllers/set_up_location_controller.dart';
@@ -11,6 +12,7 @@ import 'package:real_estate_app/app/modules/home/views/home_view.dart';
 import 'package:real_estate_app/app/modules/home/views/layout_view.dart';
 import 'package:real_estate_app/app/modules/home/views/login_view.dart';
 import 'package:real_estate_app/app/modules/home/views/notification_view.dart';
+import 'package:real_estate_app/app/modules/home/views/photos_details_view.dart';
 import 'package:real_estate_app/app/modules/home/views/profile_view.dart';
 import 'package:real_estate_app/app/modules/home/views/property_details_view.dart';
 import 'package:real_estate_app/app/modules/home/views/property_owner_view.dart';
@@ -30,7 +32,7 @@ part 'app_routes.dart';
 class AppPages {
   AppPages._();
 
-  static const INITIAL = Routes.PropertyOwner;
+  static const INITIAL = Routes.PhotosDetails;
 
   static final routes = [
     GetPage(
@@ -163,6 +165,13 @@ class AppPages {
     GetPage(
       name: _Paths.PropertyOwner,
       page: () =>  PropertyOwnerView(),
+      transition: Transition.downToUp, // Example of another custom transition
+      transitionDuration: const Duration(milliseconds: 500),
+      binding: AppBinding(),
+    ),
+    GetPage(
+      name: _Paths.PhotosDetails,
+      page: () =>  PhotosDetailsView(),
       transition: Transition.downToUp, // Example of another custom transition
       transitionDuration: const Duration(milliseconds: 500),
       binding: AppBinding(),

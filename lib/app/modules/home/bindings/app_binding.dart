@@ -9,6 +9,7 @@ import 'package:real_estate_app/app/modules/home/controllers/layout_controller.d
 import 'package:real_estate_app/app/modules/home/controllers/login_controller.dart';
 import 'package:real_estate_app/app/modules/home/controllers/notification_controller.dart';
 import 'package:real_estate_app/app/modules/home/controllers/onboarding_controller.dart';
+import 'package:real_estate_app/app/modules/home/controllers/photos_details_controller.dart';
 import 'package:real_estate_app/app/modules/home/controllers/profile_controller.dart';
 import 'package:real_estate_app/app/modules/home/controllers/property_details_controller.dart';
 import 'package:real_estate_app/app/modules/home/controllers/property_owner_controller.dart';
@@ -81,6 +82,9 @@ class AppBinding extends Bindings {
 
     Get.lazyPut<PropertyOwnerController>(
           () => PropertyOwnerController(),
+    );
+    Get.lazyPut<PhotosDetailsController>(
+          () => PhotosDetailsController(),
     );
 
   }
