@@ -1,5 +1,6 @@
 import 'package:get/get.dart';
 import 'package:real_estate_app/app/modules/home/controllers/notification_controller.dart';
+import 'package:real_estate_app/app/modules/home/controllers/property_details_controller.dart';
 import 'package:real_estate_app/app/modules/home/controllers/real_estate_type_controller.dart';
 import 'package:real_estate_app/app/modules/home/controllers/set_up_location_controller.dart';
 import 'package:real_estate_app/app/modules/home/views/book_mark_view.dart';
@@ -11,6 +12,7 @@ import 'package:real_estate_app/app/modules/home/views/layout_view.dart';
 import 'package:real_estate_app/app/modules/home/views/login_view.dart';
 import 'package:real_estate_app/app/modules/home/views/notification_view.dart';
 import 'package:real_estate_app/app/modules/home/views/profile_view.dart';
+import 'package:real_estate_app/app/modules/home/views/property_details_view.dart';
 import 'package:real_estate_app/app/modules/home/views/real_estate_type_view.dart';
 import 'package:real_estate_app/app/modules/home/views/role_view.dart';
 import 'package:real_estate_app/app/modules/home/views/search_view.dart';
@@ -27,7 +29,7 @@ part 'app_routes.dart';
 class AppPages {
   AppPages._();
 
-  static const INITIAL = Routes.OnBoarding;
+  static const INITIAL = Routes.PropertyDetails;
 
   static final routes = [
     GetPage(
@@ -146,6 +148,13 @@ class AppPages {
     GetPage(
       name: _Paths.Profile,
       page: () =>  ProfileView(),
+      transition: Transition.downToUp, // Example of another custom transition
+      transitionDuration: const Duration(milliseconds: 500),
+      binding: AppBinding(),
+    ),
+    GetPage(
+      name: _Paths.PropertyDetails,
+      page: () =>  PropertyDetailsView(),
       transition: Transition.downToUp, // Example of another custom transition
       transitionDuration: const Duration(milliseconds: 500),
       binding: AppBinding(),

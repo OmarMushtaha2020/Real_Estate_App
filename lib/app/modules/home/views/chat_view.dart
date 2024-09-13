@@ -33,6 +33,13 @@ class ChatView extends GetView<ChatController> {
                 children: [
 
                   Container(
+                        width: double.infinity,
+                        height: 90.h,
+                        decoration: BoxDecoration(
+                            borderRadius: BorderRadius.circular(100.r),
+                            color:controller.owners[index].connected==false?Color(0XffE86A53) :Color(0XffF8F8F8) ,
+
+                            ),
                         child: Padding(
                           padding: EdgeInsets.symmetric(horizontal: 10.w),
                           child: Row(
@@ -96,13 +103,6 @@ class ChatView extends GetView<ChatController> {
                             ],
                           ),
                         ),
-                        width: double.infinity,
-                        height: 90.h,
-                        decoration: BoxDecoration(
-                            borderRadius: BorderRadius.circular(100.r),
-                            color:controller.owners[index].connected==false?Color(0XffE86A53) :Color(0XffF8F8F8) ,
-
-                            ),
                       ),
                   controller.owners[index].connected==false?     Positioned(
                     right: 5.w,

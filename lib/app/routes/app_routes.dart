@@ -21,6 +21,7 @@ static const Search=_Paths.Search;
 static const Home=_Paths.Home;
 static const Layout=_Paths.Layout;
 static const Profile=_Paths.Profile;
+static const PropertyDetails=_Paths.PropertyDetails;
 }
 
 abstract class _Paths {
@@ -42,4 +43,6 @@ static const Search='/Search';
 static const Home='/Home';
 static const Layout='/Layout';
 static const Profile='/Profile';
+static const PropertyDetails='/property_details';
+
 }
