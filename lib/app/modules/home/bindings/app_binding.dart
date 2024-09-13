@@ -11,6 +11,7 @@ import 'package:real_estate_app/app/modules/home/controllers/notification_contro
 import 'package:real_estate_app/app/modules/home/controllers/onboarding_controller.dart';
 import 'package:real_estate_app/app/modules/home/controllers/profile_controller.dart';
 import 'package:real_estate_app/app/modules/home/controllers/property_details_controller.dart';
+import 'package:real_estate_app/app/modules/home/controllers/property_owner_controller.dart';
 import 'package:real_estate_app/app/modules/home/controllers/real_estate_type_controller.dart';
 import 'package:real_estate_app/app/modules/home/controllers/registration_controller.dart';
 import 'package:real_estate_app/app/modules/home/controllers/role_controller.dart';
@@ -76,6 +77,10 @@ class AppBinding extends Bindings {
     );
     Get.lazyPut<PropertyDetailsController>(
           () => PropertyDetailsController(),
+    );
+
+    Get.lazyPut<PropertyOwnerController>(
+          () => PropertyOwnerController(),
     );
 
   }
