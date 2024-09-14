@@ -1,3 +1,4 @@
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:get/get.dart';
@@ -44,17 +45,23 @@ class AppointmentScheduleView extends GetView<AppointmentScheduleController> {
                         padding:  EdgeInsets.symmetric(horizontal: 20.w,vertical: 40.h),
                         child: Row(
                           children: [
-                            Container(
-                              height: 36.w,
-                              width: 36.w,
-                              decoration: BoxDecoration(
-                                color: Color(0xFFFFFFFF).withOpacity(0.50),
-                                shape: BoxShape.circle,
-                              ),
-                              child: Icon(
-                                Icons.arrow_back_rounded,
-                                size: 20.w,
-                                color: Colors.black,
+                            GestureDetector(
+                              onTap: (){
+                                Get.offNamed('/property_details');
+
+                              },
+                              child: Container(
+                                height: 36.w,
+                                width: 36.w,
+                                decoration: BoxDecoration(
+                                  color: Color(0xFFFFFFFF).withOpacity(0.50),
+                                  shape: BoxShape.circle,
+                                ),
+                                child: Icon(
+                                  Icons.arrow_back_rounded,
+                                  size: 20.w,
+                                  color: Colors.black,
+                                ),
                               ),
                             ),
                             Spacer(),
@@ -228,16 +235,20 @@ class AppointmentScheduleView extends GetView<AppointmentScheduleController> {
 
                                   firstDate: DateTime(2000),
                                   lastDate: DateTime(2101),
+                                      dayTextStyle: TextStyle(
+                                        fontSize: 8.sp, // Adjust this size for unselected dates
+                                        color: Colors.black, // Set the color for unselected dates
+                                      ),
                                selectedRangeHighlightColor: Color(0xFFE86A53).withOpacity(0.80),
                                   selectedDayHighlightColor: Color(0xFFE86A53),
                                   selectedRangeDayTextStyle:TextStyle(
                                     color: Colors.white,
-                                    fontSize: 12.sp
+                                    fontSize: 8.sp
 
                                   ) ,
                                   calendarType: CalendarDatePicker2Type.range,
                                 ),
-                                dialogSize: Size(Get.width, Get.height/2),
+                                dialogSize: Size(MediaQuery.of(context).size.width/1.5, MediaQuery.of(context).size.height/2),
                                     dialogBackgroundColor: Colors.white
 
 
@@ -251,39 +262,67 @@ class AppointmentScheduleView extends GetView<AppointmentScheduleController> {
                               }
                             },
                             child: Container(
-                              padding: EdgeInsets.symmetric(vertical: 12.h),
-                              child: TextFormField(
-                                controller: controller.dateRangeController,
-                                enabled: false,
-                                style: TextStyle(fontSize: 16.sp),
-                                decoration: InputDecoration(
-                                  focusedBorder: OutlineInputBorder(
-                                    borderSide:
-                                    BorderSide(color: Color(0xFFcccccc)),
-                                    borderRadius: BorderRadius.circular(10.r),
+                              height:48.h,
+                              child: Column(
+                                children: [
+                                  Container(
+                                    height: 48.h,
+                                    child: TextFormField(
+                                      controller: controller.dateRangeController,
+                                      enabled: false,
+                                      style: TextStyle(                                    fontSize: 14.sp
+                                      ),
+
+                                      decoration: InputDecoration(
+                                        focusedBorder: OutlineInputBorder(
+                                          borderSide:
+                                          BorderSide(color: Color(0xFFcccccc)),
+                                          borderRadius: BorderRadius.circular(10.r),
+                                        ),
+                                        enabledBorder: OutlineInputBorder(
+                                          borderSide:
+                                          BorderSide(color: Color(0xFFcccccc)),
+                                          borderRadius: BorderRadius.circular(10
+                                              .r), // Optional: adjust the corner radius
+                                        ),
+                                        border: OutlineInputBorder(
+                                          borderRadius: BorderRadius.circular(
+                                              10.r), // Custom border radius
+                                        ),
+                                        suffixIcon: Column(
+                                          mainAxisAlignment: MainAxisAlignment.center,
+
+                                          children: [
+                                            ImageWidget(
+                                              "assets/image/arrow_right.png",
+                                              fit: BoxFit.contain,
+
+                                              height: 24.h,
+                                              width: 24.w,
+                                            ),
+                                          ],
+                                        ),
+                                        prefixIcon: Column(
+                                          mainAxisAlignment: MainAxisAlignment.center,
+
+                                          children: [
+                                            ImageWidget(
+                                              "assets/image/calendar.png",
+                                              height: 24.h,
+                                              fit: BoxFit.contain,
+
+                                              width: 24.w,
+                                            ),
+                                          ],
+                                        ),
+                                        labelText: 'Select Date',
+                                        labelStyle: TextStyle(
+                                          fontSize: 14.sp
+                                        )
+                                      ),
+                                    ),
                                   ),
-                                  enabledBorder: OutlineInputBorder(
-                                    borderSide:
-                                    BorderSide(color: Color(0xFFcccccc)),
-                                    borderRadius: BorderRadius.circular(10
-                                        .r), // Optional: adjust the corner radius
-                                  ),
-                                  border: OutlineInputBorder(
-                                    borderRadius: BorderRadius.circular(
-                                        10.r), // Custom border radius
-                                  ),
-                                  suffixIcon: ImageWidget(
-                                    "assets/image/arrow_right.png",
-                                    height: 24.h,
-                                    width: 24.w,
-                                  ),
-                                  prefixIcon: ImageWidget(
-                                    "assets/image/calendar.png",
-                                    height: 24.h,
-                                    width: 24.w,
-                                  ),
-                                  labelText: 'Select Date',
-                                ),
+                                ],
                               ),
                             ),
                           ),
@@ -330,16 +369,29 @@ class AppointmentScheduleView extends GetView<AppointmentScheduleController> {
                                     borderRadius: BorderRadius.circular(
                                         10.r), // Custom border radius
                                   ),
-                                  labelText: 'How many guest?',
-prefixIcon:  ImageWidget(
-                                  "assets/image/profile-2user.png",
-                                  height: 24.h,
-                                  width: 24.w,
-                                ),
-                                  suffixIcon: ImageWidget(
-                                    "assets/image/arrow_right.png",
-                                    height: 24.h,
-                                    width: 24.w,
+prefixIcon:  Column(
+  mainAxisAlignment: MainAxisAlignment.center,
+
+  children: [
+    ImageWidget(
+                                      "assets/image/profile-2user.png",
+                                      height: 24.h,
+                                      width: 24.w,
+      fit: BoxFit.contain,
+
+    ),
+  ],
+),
+                                  suffixIcon: Column(
+                                    mainAxisAlignment: MainAxisAlignment.center,
+                                    children: [
+                                      ImageWidget(
+                                        "assets/image/arrow_right.png",
+                                        height: 24.h,
+                                        fit: BoxFit.contain,
+                                        width: 24.w,
+                                      ),
+                                    ],
                                   ),
                                 ),
                               ),
@@ -348,30 +400,43 @@ prefixIcon:  ImageWidget(
                           SizeBoxWidget(height: 15.h),
 
                           // TextFormField for third input
-                          TextFormFieldWidget(icon:   ImageWidget(
-                            "assets/image/call.png",
-                            height: 24.h,
-                            width: 24.w,
+                          TextFormFieldWidget(icon:   Column(
+                            mainAxisAlignment: MainAxisAlignment.center,
+                            children: [
+                              ImageWidget(
+                                "assets/image/call.png",
+                                height: 24.h,fit: BoxFit.contain,
+                                width: 24.w,
 
-                          ),controller.phoneNumber,color: Color(0xFF999999),
+                              ),
+
+                            ],
+                          ),controller.phoneNumber,color: Color(0xFFcccccc),
                               "PhoneNumber", 10.r, "PhoneNumber", 10.h, 10.w),
                           SizeBoxWidget(height: 15.h),
 
-                          TextFormFieldWidget(icon:   ImageWidget(
-                            "assets/image/sms.png",
-                            height: 24.h,
-                            width: 24.w,
-                            color: Color(0xFF999999),
+                          TextFormFieldWidget(icon:   Column(
+                            mainAxisAlignment: MainAxisAlignment.center,
+                            children: [
+                              ImageWidget(
+                                "assets/image/sms.png",
+                                height: 24.h,
+                                fit: BoxFit.contain,
+                                width: 24.w,
 
+                              ),
+                            ],
                           ),controller.email, "Your email",
-                              10.r, "Your email", 10.h, 10.w,),
+                              10.r, "Your email", 10.h, 10.w,color:  Color(0xFFcccccc),),
                           // TextFormField for fourth input
 
                           Spacer(),
                           Padding(
                             padding:  EdgeInsets.only(top: 20.h,bottom: 20.h),
                             child: GestureDetector(
-                              onTap: () {},
+                              onTap: () {
+                                Get.offNamed('/appointment_success');
+                              },
                               child: Container(
                                 height: 53.h,
                                 width: double.infinity,

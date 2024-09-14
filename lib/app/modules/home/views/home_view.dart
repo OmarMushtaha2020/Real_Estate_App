@@ -177,61 +177,66 @@ class HomeView extends GetView<HomeController> {
                     fontFamily: "Satoshi",
                   ),
                   SizeBoxWidget(height: 30.h,),
-                  Container(
-                    height: 400.h,
+                  GestureDetector(
+                    onTap: (){
+                      Get.offNamed("/property_details");
+                    },
+                    child: Container(
+                      height: 400.h,
 
-                    child: ListView.separated(
-                      physics: BouncingScrollPhysics(),
-                      padding: EdgeInsets.zero,
-                      shrinkWrap: true,scrollDirection: Axis.horizontal,
-                        itemBuilder: (context, index) =>
-                            Column(
-                              crossAxisAlignment: CrossAxisAlignment.start,
-                              children: [
-                                Container(
-                                  width:280.w,
-              height: 280.h,
-                                  clipBehavior: Clip.antiAliasWithSaveLayer,
-                                  decoration: BoxDecoration(
-                                      image: DecorationImage(
-                                          image: AssetImage(
-                                              "${controller.buliding[index].image}"),fit: BoxFit.cover),
-                                      color: Colors.white,
-                                      borderRadius: BorderRadius.circular(10.r)),
-                                ),
-                                SizeBoxWidget(height: 20.h,),
-                                Container(
-                                  width: 280.w,
-                                  child: Row(
-mainAxisAlignment: MainAxisAlignment.end,
-                                    children: [
-                                      TextWidget(
-                                        '${controller.buliding[index].title}',
-                                        fontSize: 16.sp,
-
-                                        fontWeight: FontWeight.w500,
-                                        color: Color(0XffE86A53),
-                                        fontFamily: "Satoshi",
-                                      ),
-                                      Spacer(),
-                                      ImageWidget("assets/image/archiveGrey.png",width: 26.w,height: 26.h,fit: BoxFit.contain,)  ,
-                                    ],
+                      child: ListView.separated(
+                        physics: BouncingScrollPhysics(),
+                        padding: EdgeInsets.zero,
+                        shrinkWrap: true,scrollDirection: Axis.horizontal,
+                          itemBuilder: (context, index) =>
+                              Column(
+                                crossAxisAlignment: CrossAxisAlignment.start,
+                                children: [
+                                  Container(
+                                    width:280.w,
+                                  height: 280.h,
+                                    clipBehavior: Clip.antiAliasWithSaveLayer,
+                                    decoration: BoxDecoration(
+                                        image: DecorationImage(
+                                            image: AssetImage(
+                                                "${controller.buliding[index].image}"),fit: BoxFit.cover),
+                                        color: Colors.white,
+                                        borderRadius: BorderRadius.circular(10.r)),
                                   ),
-                                ),
-                                TextWidget(
-                                  '${controller.buliding[index].locationProperty}',
-                                  fontSize: 14.sp,
-                                  fontWeight: FontWeight.w500,
-                                  color: Color(0Xff999999),
-                                  fontFamily: "RedHatDisplay",
-                                ),
+                                  SizeBoxWidget(height: 20.h,),
+                                  Container(
+                                    width: 280.w,
+                                    child: Row(
+                    mainAxisAlignment: MainAxisAlignment.end,
+                                      children: [
+                                        TextWidget(
+                                          '${controller.buliding[index].title}',
+                                          fontSize: 16.sp,
 
-                              ],
-                            ),
-                        separatorBuilder: (context, index) => SizeBoxWidget(
-                          width: 20.w,
-                        ),
-                        itemCount: controller.buliding.length),
+                                          fontWeight: FontWeight.w500,
+                                          color: Color(0XffE86A53),
+                                          fontFamily: "Satoshi",
+                                        ),
+                                        Spacer(),
+                                        ImageWidget("assets/image/archiveGrey.png",width: 26.w,height: 26.h,fit: BoxFit.contain,)  ,
+                                      ],
+                                    ),
+                                  ),
+                                  TextWidget(
+                                    '${controller.buliding[index].locationProperty}',
+                                    fontSize: 14.sp,
+                                    fontWeight: FontWeight.w500,
+                                    color: Color(0Xff999999),
+                                    fontFamily: "RedHatDisplay",
+                                  ),
+
+                                ],
+                              ),
+                          separatorBuilder: (context, index) => SizeBoxWidget(
+                            width: 20.w,
+                          ),
+                          itemCount: controller.buliding.length),
+                    ),
                   ),
                 ],
               

@@ -1,3 +1,4 @@
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
@@ -31,17 +32,22 @@ class BookMarkView extends GetView<BookMarkController> {
                   Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
-                  Container(
-                        width: 353.w,
-                        height: 353.w,
-                        clipBehavior: Clip.antiAliasWithSaveLayer,
-                        decoration: BoxDecoration(
-                            image: DecorationImage(
-                                image: AssetImage(
-                                    "${controller.buliding[index].image}"),fit: BoxFit.cover),
-                            color: Colors.white,
-                            borderRadius: BorderRadius.circular(10.r)),
-                      ),
+                  GestureDetector(
+                    onTap: (){
+                      Get.offNamed('/property_details');
+                    },
+                    child: Container(
+                          width: 353.w,
+                          height: 353.w,
+                          clipBehavior: Clip.antiAliasWithSaveLayer,
+                          decoration: BoxDecoration(
+                              image: DecorationImage(
+                                  image: AssetImage(
+                                      "${controller.buliding[index].image}"),fit: BoxFit.cover),
+                              color: Colors.white,
+                              borderRadius: BorderRadius.circular(10.r)),
+                        ),
+                  ),
                   SizeBoxWidget(height: 20.h,),
                   Row(
                     children: [

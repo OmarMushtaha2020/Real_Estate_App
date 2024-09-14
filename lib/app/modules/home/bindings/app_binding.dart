@@ -4,6 +4,7 @@ import 'package:real_estate_app/app/modules/home/controllers/appointment_schedul
 import 'package:real_estate_app/app/modules/home/controllers/appointment_success_controller.dart';
 import 'package:real_estate_app/app/modules/home/controllers/book_mark_controller.dart';
 import 'package:real_estate_app/app/modules/home/controllers/chat_controller.dart';
+import 'package:real_estate_app/app/modules/home/controllers/chat_details_controller.dart';
 import 'package:real_estate_app/app/modules/home/controllers/email_verification_controller.dart';
 import 'package:real_estate_app/app/modules/home/controllers/filter_controller.dart';
 import 'package:real_estate_app/app/modules/home/controllers/home_controller.dart';
@@ -72,11 +73,9 @@ class AppBinding extends Bindings {
     Get.lazyPut<HomeController>(
           () => HomeController(),
     );
-    Get.lazyPut<LayoutController>(
-          () => LayoutController(),
-    );
+  Get.put(LayoutController(),permanent:true);
     Get.lazyPut<ProfileController>(
-          () => ProfileController(),
+          () => ProfileController()
     );
     Get.lazyPut<PropertyDetailsController>(
           () => PropertyDetailsController(),
@@ -94,7 +93,9 @@ class AppBinding extends Bindings {
     Get.lazyPut<AppointmentScheduleController>(
           () => AppointmentScheduleController(),
     );
-
+    Get.lazyPut<ChatDetailsController>(
+          () => ChatDetailsController(),
+    );
 
   }
 }

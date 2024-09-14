@@ -204,7 +204,10 @@ class PropertyOwnerView extends GetView<PropertyOwnerController> {
         ),
 Padding(
   padding:  EdgeInsets.only(top: 90.h),
-  child: ImageWidget("assets/image/error.png",height: 28.w,width: 28.w,fit: BoxFit.cover,),
+  child: GestureDetector(onTap: (){
+    Get.offNamed("/property_details");
+
+  },child: ImageWidget("assets/image/error.png",height: 28.w,width: 28.w,fit: BoxFit.cover,)),
 ),
       ],
     );

@@ -45,10 +45,15 @@ class PropertyDetailsView extends GetView<PropertyDetailsController> {
                       padding:  EdgeInsets.symmetric(horizontal: 20.w,vertical: 40.h),
                       child: Row(
                         children: [
-                          Container(height: 36.w,width: 36.w,decoration: BoxDecoration(
-                            color: Color(0xFFFFFFFF).withOpacity(0.50),
-                            shape: BoxShape.circle
-                          ),child: Icon(Icons.arrow_back_rounded,size: 20.w,color: Colors.black,))
+                          GestureDetector(
+                            onTap: (){
+                              Get.offNamed("/Layout");
+                            },
+                            child: Container(height: 36.w,width: 36.w,decoration: BoxDecoration(
+                              color: Color(0xFFFFFFFF).withOpacity(0.50),
+                              shape: BoxShape.circle
+                            ),child: Icon(Icons.arrow_back_rounded,size: 20.w,color: Colors.black,)),
+                          )
                          ,
                           Spacer(),
                           Container(height: 36.w,width: 36.w,decoration: BoxDecoration(
@@ -251,82 +256,88 @@ class PropertyDetailsView extends GetView<PropertyDetailsController> {
                           ),
                           SizeBoxWidget(height: 20.h,),
 
-                          Row(
-                            children: [
-                              Container(
-                                width: 64.h,
-                                height: 64.h,
-                                decoration: BoxDecoration(
-                                  shape: BoxShape.circle,
-                                  image: DecorationImage(
-                                    image: AssetImage("assets/image/imageBuildingOne.png"),
-                                    fit: BoxFit.fitHeight,
+                          GestureDetector(
+                            onTap: (){
+                              Get.offNamed("/property_owner");
+
+                            },
+                            child: Row(
+                              children: [
+                                Container(
+                                  width: 64.h,
+                                  height: 64.h,
+                                  decoration: BoxDecoration(
+                                    shape: BoxShape.circle,
+                                    image: DecorationImage(
+                                      image: AssetImage("assets/image/imageBuildingOne.png"),
+                                      fit: BoxFit.fitHeight,
+                                    ),
                                   ),
                                 ),
-                              ),
-                              SizeBoxWidget(width: 10.w),
-                              Expanded(
-                                child: Row(
-                                  mainAxisAlignment: MainAxisAlignment.start,
-                                  crossAxisAlignment: CrossAxisAlignment.start,
-                                  children: [
-                                    Column(
-                                      children: [
-                                        TextWidget(
-                                          'Steven Adams',
-                                          fontSize: 16.sp,
-                                          fontWeight: FontWeight.w500,
-                                          color: Color(0xFFE86A53),
-                                          fontFamily: "Satoshi",
-                                        ),
-                                        TextWidget(
-                                          'Property Owner',
-                                          fontSize: 14.sp,
-                                          fontWeight: FontWeight.w500,
-                                          color: Color(0XffCCCCCC),
-                                          fontFamily: "Satoshi",
-                                        ),
-                                      ],
-                                    ),
-                                    SizeBoxWidget(width: 20.w),
-                                    ImageWidget(
-                                      "assets/image/Vector.png",
-                                      width: 16.w,
-                                      height: 16.w,
-                                      fit: BoxFit.contain,
-                                      color: Color(0xFF3F82FF),
-                                    ),
-                                    SizeBoxWidget(width: 5.w),
-                                    TextWidget(
-                                      'VERIFIED',
-                                      fontSize: 12.sp,
-                                      fontWeight: FontWeight.w700,
-                                      color: Color(0xFF3F82FF),
-                                      fontFamily: "Satoshi",
-                                    ),
-                                                                Spacer(),
-                                    Padding(
-                                      padding:  EdgeInsets.only(top: 12.h,right: 10.w),
-                                      child: ImageWidget(
-                                        "assets/image/archiveGrey.png",
-                                        width: 24.w,
-                                        height: 24.w,
-                                        fit: BoxFit.cover,
+                                SizeBoxWidget(width: 10.w),
+                                Expanded(
+                                  child: Row(
+                                    mainAxisAlignment: MainAxisAlignment.start,
+                                    crossAxisAlignment: CrossAxisAlignment.start,
+                                    children: [
+                                      Column(
+                                        children: [
+                                          TextWidget(
+                                            'Steven Adams',
+                                            fontSize: 16.sp,
+                                            fontWeight: FontWeight.w500,
+                                            color: Color(0xFFE86A53),
+                                            fontFamily: "Satoshi",
+                                          ),
+                                          TextWidget(
+                                            'Property Owner',
+                                            fontSize: 14.sp,
+                                            fontWeight: FontWeight.w500,
+                                            color: Color(0XffCCCCCC),
+                                            fontFamily: "Satoshi",
+                                          ),
+                                        ],
                                       ),
-                                    ),
-                                    Padding(
-                                      padding:  EdgeInsets.only(top: 12.h),
-                                      child: ImageWidget(
-                                        "assets/image/call.png",
-                                        width: 24.w,
-                                        height: 24.w,
-                                        fit: BoxFit.cover,
+                                      SizeBoxWidget(width: 20.w),
+                                      ImageWidget(
+                                        "assets/image/Vector.png",
+                                        width: 16.w,
+                                        height: 16.w,
+                                        fit: BoxFit.contain,
+                                        color: Color(0xFF3F82FF),
                                       ),
-                                    ),
-                                  ],
+                                      SizeBoxWidget(width: 5.w),
+                                      TextWidget(
+                                        'VERIFIED',
+                                        fontSize: 12.sp,
+                                        fontWeight: FontWeight.w700,
+                                        color: Color(0xFF3F82FF),
+                                        fontFamily: "Satoshi",
+                                      ),
+                                                                  Spacer(),
+                                      Padding(
+                                        padding:  EdgeInsets.only(top: 12.h,right: 10.w),
+                                        child: ImageWidget(
+                                          "assets/image/archiveGrey.png",
+                                          width: 24.w,
+                                          height: 24.w,
+                                          fit: BoxFit.cover,
+                                        ),
+                                      ),
+                                      Padding(
+                                        padding:  EdgeInsets.only(top: 12.h),
+                                        child: ImageWidget(
+                                          "assets/image/call.png",
+                                          width: 24.w,
+                                          height: 24.w,
+                                          fit: BoxFit.cover,
+                                        ),
+                                      ),
+                                    ],
+                                  ),
                                 ),
-                              ),
-                            ],
+                              ],
+                            ),
                           ),
                           SizeBoxWidget(height: 20.h,),
 
@@ -350,7 +361,9 @@ class PropertyDetailsView extends GetView<PropertyDetailsController> {
 
                           Spacer(),
                           GestureDetector(
-                            onTap: () {},
+                            onTap: () {
+                              Get.offNamed("/appointment_schedule");
+                            },
                             child: Container(
                               height: 53.h,
                               width: double.infinity,

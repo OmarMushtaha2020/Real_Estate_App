@@ -99,6 +99,7 @@ class AppointmentSuccessView extends GetView {
               Spacer(),
               GestureDetector(
                 onTap: (){
+                  Get.offNamed('/Layout');
 
                 },
                 child: Container(

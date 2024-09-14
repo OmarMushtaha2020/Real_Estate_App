@@ -1,8 +1,10 @@
 import 'package:get/get.dart';
+import 'package:real_estate_app/app/modules/home/controllers/chat_details_controller.dart';
 
 import 'package:real_estate_app/app/modules/home/views/appointment_schedule_view.dart';
 import 'package:real_estate_app/app/modules/home/views/appointment_success_view.dart';
 import 'package:real_estate_app/app/modules/home/views/book_mark_view.dart';
+import 'package:real_estate_app/app/modules/home/views/chat_details_view.dart';
 import 'package:real_estate_app/app/modules/home/views/chat_view.dart';
 import 'package:real_estate_app/app/modules/home/views/email_verification_view.dart';
 import 'package:real_estate_app/app/modules/home/views/filter_view.dart';
@@ -187,7 +189,13 @@ class AppPages {
       transition: Transition.downToUp, // Example of another custom transition
       transitionDuration: const Duration(milliseconds: 500),
       binding: AppBinding(),
+    ),
+    GetPage(
+      name: _Paths.ChatDetails,
+      page: () =>  ChatDetailsView(),
+      transition: Transition.downToUp, // Example of another custom transition
+      transitionDuration: const Duration(milliseconds: 500),
+      binding: AppBinding(),
     )
-
   ];
 }

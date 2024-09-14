@@ -24,7 +24,8 @@ TextFormFieldWidget(this.controller,this.hint,this.radius,this.validatorText,thi
         return null;
     },
       style: TextStyle(
-        fontSize: 16.sp
+        fontSize: 16.sp,
+        color:  color??Color(0xFF999999),
       ),
 
     decoration: InputDecoration(
