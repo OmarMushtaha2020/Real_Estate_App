@@ -8,7 +8,9 @@ String?hint;
 String ?validatorText;
 double?vertical;
 double?horizontal;
-TextFormFieldWidget(this.controller,this.hint,this.radius,this.validatorText,this.vertical,this.horizontal);
+Widget?icon;
+Color?color;
+TextFormFieldWidget(this.controller,this.hint,this.radius,this.validatorText,this.vertical,this.horizontal,{this.icon,this.color});
   @override
   Widget build(BuildContext context) {
     return                         TextFormField(
@@ -24,8 +26,9 @@ TextFormFieldWidget(this.controller,this.hint,this.radius,this.validatorText,thi
       style: TextStyle(
         fontSize: 16.sp
       ),
-    decoration: InputDecoration(
 
+    decoration: InputDecoration(
+prefixIcon: icon??null,
       focusedBorder: OutlineInputBorder(
 
         borderSide: BorderSide(color: Color(0xFFcccccc)),
@@ -33,8 +36,8 @@ TextFormFieldWidget(this.controller,this.hint,this.radius,this.validatorText,thi
 
       ),
       errorStyle: TextStyle(
-          fontSize: 16.sp
-
+          fontSize: 16.sp,
+color: color??Color(0xFF999999),
       ),
       enabledBorder: OutlineInputBorder(
         borderSide: BorderSide(color: Color(0xFFcccccc)),

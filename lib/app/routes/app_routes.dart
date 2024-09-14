@@ -24,6 +24,8 @@ static const Profile=_Paths.Profile;
 static const PropertyDetails=_Paths.PropertyDetails;
 static const PropertyOwner=_Paths.PropertyOwner;
 static const PhotosDetails=_Paths.PhotosDetails;
+static const AppointmentSuccess=_Paths.AppointmentSuccess;
+static const AppointmentSchedule=_Paths.AppointmentSchedule;
 }
 
 abstract class _Paths {
@@ -48,5 +50,6 @@ static const Profile='/Profile';
 static const PropertyDetails='/property_details';
 static const PropertyOwner='/property_owner';
   static const PhotosDetails='/photos_details';
-
+static const AppointmentSuccess='/appointment_success';
+static const AppointmentSchedule='/appointment_schedule';
 }

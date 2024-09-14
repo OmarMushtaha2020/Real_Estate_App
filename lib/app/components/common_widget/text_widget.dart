@@ -8,8 +8,9 @@ class TextWidget extends StatelessWidget {
   String? fontFamily;
   TextAlign? textAlign;
   FontWeight ?fontWeight;
+  double ?height;
 Color?color;
-  TextWidget(this.text, {this.fontSize, this.fontFamily, this.textAlign,this.color,this.fontWeight});
+  TextWidget(this.text, {this.fontSize, this.fontFamily, this.textAlign,this.color,this.fontWeight,this.height});
 
   @override
   Widget build(BuildContext context) {
@@ -17,7 +18,7 @@ Color?color;
 
       text ?? "",
 
-      style: TextStyle(fontSize: fontSize, fontFamily: fontFamily,color:color,decoration: TextDecoration.none,fontWeight: fontWeight ),
+      style: TextStyle(fontSize: fontSize, fontFamily: fontFamily,color:color,decoration: TextDecoration.none,fontWeight: fontWeight,height: height ),
       textAlign: textAlign,
     );
   }

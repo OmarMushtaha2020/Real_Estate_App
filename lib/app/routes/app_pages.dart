@@ -1,9 +1,7 @@
 import 'package:get/get.dart';
-import 'package:real_estate_app/app/modules/home/controllers/notification_controller.dart';
-import 'package:real_estate_app/app/modules/home/controllers/photos_details_controller.dart';
-import 'package:real_estate_app/app/modules/home/controllers/property_details_controller.dart';
-import 'package:real_estate_app/app/modules/home/controllers/real_estate_type_controller.dart';
-import 'package:real_estate_app/app/modules/home/controllers/set_up_location_controller.dart';
+
+import 'package:real_estate_app/app/modules/home/views/appointment_schedule_view.dart';
+import 'package:real_estate_app/app/modules/home/views/appointment_success_view.dart';
 import 'package:real_estate_app/app/modules/home/views/book_mark_view.dart';
 import 'package:real_estate_app/app/modules/home/views/chat_view.dart';
 import 'package:real_estate_app/app/modules/home/views/email_verification_view.dart';
@@ -32,7 +30,7 @@ part 'app_routes.dart';
 class AppPages {
   AppPages._();
 
-  static const INITIAL = Routes.PhotosDetails;
+  static const INITIAL = Routes.AppointmentSchedule;
 
   static final routes = [
     GetPage(
@@ -172,6 +170,20 @@ class AppPages {
     GetPage(
       name: _Paths.PhotosDetails,
       page: () =>  PhotosDetailsView(),
+      transition: Transition.downToUp, // Example of another custom transition
+      transitionDuration: const Duration(milliseconds: 500),
+      binding: AppBinding(),
+    ),
+    GetPage(
+      name: _Paths.AppointmentSuccess,
+      page: () =>  AppointmentSuccessView(),
+      transition: Transition.downToUp, // Example of another custom transition
+      transitionDuration: const Duration(milliseconds: 500),
+      binding: AppBinding(),
+    ),
+    GetPage(
+      name: _Paths.AppointmentSchedule,
+      page: () =>  AppointmentScheduleView(),
       transition: Transition.downToUp, // Example of another custom transition
       transitionDuration: const Duration(milliseconds: 500),
       binding: AppBinding(),
