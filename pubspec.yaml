@@ -24,6 +24,7 @@ dependencies:
   syncfusion_flutter_core: # or an earlier version without the issue
   custom_navigation_bar: ^0.8.2
   calendar_date_picker2: ^0.5.3
+  flutter_rating_bar: ^4.0.0  # Check for the latest version on pub.dev
 
 
   intl: ^0.18.0

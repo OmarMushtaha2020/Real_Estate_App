@@ -244,34 +244,6 @@ textAlignVertical: TextAlignVertical.center,
                   ),
                   SizeBoxWidget(height: 20.h),
               
-                  GestureDetector(
-                    onTap: (){
-                      Get.toNamed("/Search");
-              
-                    },
-                    child: Container(
-                      height: 53.h,
-                      width: double.infinity,
-                      decoration: BoxDecoration(
-                        color:
-                        Color(0xFFE86A53)
-              
-                        ,
-                        borderRadius: BorderRadius.circular(100.r),
-                      ),
-                      child: Center(
-                        child: TextWidget(
-                          "Apply Filter",
-                          fontWeight: FontWeight.w600,
-                          fontSize: 16.sp,
-                          fontFamily: "RedHatDisplay",
-                          color: Color(0xFFFFFFFF),
-              
-                          textAlign: TextAlign.center,
-                        ),
-                      ),
-                    ),
-                  ),
                 ],
               ),
             ),

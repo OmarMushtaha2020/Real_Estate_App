@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:real_estate_app/app/modules/home/controllers/add_review_controller.dart';
 import 'package:real_estate_app/app/modules/home/controllers/appointment_schedule_controller.dart';
 import 'package:real_estate_app/app/modules/home/controllers/appointment_success_controller.dart';
 import 'package:real_estate_app/app/modules/home/controllers/book_mark_controller.dart';
@@ -96,6 +97,10 @@ class AppBinding extends Bindings {
     Get.lazyPut<ChatDetailsController>(
           () => ChatDetailsController(),
     );
+    Get.lazyPut<AddReviewController>(
+          () => AddReviewController(),
+    );
+
 
   }
 }

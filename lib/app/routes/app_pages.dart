@@ -1,5 +1,6 @@
 import 'package:get/get.dart';
 import 'package:real_estate_app/app/modules/home/controllers/chat_details_controller.dart';
+import 'package:real_estate_app/app/modules/home/views/add_review_view.dart';
 
 import 'package:real_estate_app/app/modules/home/views/appointment_schedule_view.dart';
 import 'package:real_estate_app/app/modules/home/views/appointment_success_view.dart';
@@ -32,7 +33,7 @@ part 'app_routes.dart';
 class AppPages {
   AppPages._();
 
-  static const INITIAL = Routes.AppointmentSchedule;
+  static const INITIAL = Routes.AddReview;
 
   static final routes = [
     GetPage(
@@ -193,6 +194,13 @@ class AppPages {
     GetPage(
       name: _Paths.ChatDetails,
       page: () =>  ChatDetailsView(),
+      transition: Transition.downToUp, // Example of another custom transition
+      transitionDuration: const Duration(milliseconds: 500),
+      binding: AppBinding(),
+    ),
+    GetPage(
+      name: _Paths.AddReview,
+      page: () =>  AddReviewView(),
       transition: Transition.downToUp, // Example of another custom transition
       transitionDuration: const Duration(milliseconds: 500),
       binding: AppBinding(),
