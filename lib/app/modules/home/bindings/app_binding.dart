@@ -25,6 +25,7 @@ import 'package:real_estate_app/app/modules/home/controllers/search_controller.d
 import 'package:real_estate_app/app/modules/home/controllers/set_up_location_controller.dart';
 import 'package:real_estate_app/app/modules/home/controllers/set_up_location_manually_controller.dart';
 import 'package:real_estate_app/app/modules/home/controllers/sign_up_controller.dart';
+import 'package:real_estate_app/app/modules/home/controllers/video_call_controller.dart';
 
 
 class AppBinding extends Bindings {
@@ -105,7 +106,8 @@ class AppBinding extends Bindings {
           () => RatingPageController(),
     );
 
-
-
+    Get.lazyPut<VideoCallController>(
+          () => VideoCallController(),
+    );
   }
 }

@@ -29,6 +29,7 @@ static const AppointmentSchedule=_Paths.AppointmentSchedule;
 static const ChatDetails=_Paths.ChatDetails;
 static const AddReview=_Paths.AddReview;
 static const RatingPage=_Paths.RatingPage;
+static const VideoCall=_Paths.VideoCall;
 }
 
 abstract class _Paths {
@@ -58,4 +59,5 @@ static const AppointmentSchedule='/appointment_schedule';
 static const ChatDetails='/chat_details';
 static const AddReview='/add_review';
 static const RatingPage='/RatingPage';
+static const VideoCall='/VideoCall';
 }

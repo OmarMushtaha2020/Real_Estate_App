@@ -24,6 +24,7 @@ import 'package:real_estate_app/app/modules/home/views/search_view.dart';
 import 'package:real_estate_app/app/modules/home/views/set_up_location_manually_view.dart';
 import 'package:real_estate_app/app/modules/home/views/set_up_location_view.dart';
 import 'package:real_estate_app/app/modules/home/views/sign_up_view.dart';
+import 'package:real_estate_app/app/modules/home/views/video_call_view.dart';
 
 import '../modules/home/bindings/app_binding.dart';
 import '../modules/home/views/onboarding_view.dart';
@@ -34,7 +35,7 @@ part 'app_routes.dart';
 class AppPages {
   AppPages._();
 
-  static const INITIAL = Routes.RatingPage;
+  static const INITIAL = Routes.Layout;
 
   static final routes = [
     GetPage(
@@ -212,7 +213,15 @@ class AppPages {
       transition: Transition.downToUp, // Example of another custom transition
       transitionDuration: const Duration(milliseconds: 500),
       binding: AppBinding(),
-    )
+    ),
+    GetPage(
+      name: _Paths.VideoCall,
+      page: () =>  VideoCallView(),
+      transition: Transition.downToUp, // Example of another custom transition
+      transitionDuration: const Duration(milliseconds: 500),
+      binding: AppBinding(),
+    ),
+
 
   ];
 }
