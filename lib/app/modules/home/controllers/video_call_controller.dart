@@ -1,18 +1,9 @@
 import 'package:get/get.dart';
 
-class RatingPageController extends GetxController {
-  //TODO: Implement RatingPageController
-List rating=[
-  'Popular',
-  'Latest',
-  'Oldest'
-];
+class VideoCallController extends GetxController {
+  //TODO: Implement VideoCallController
+
   final count = 0.obs;
-int index=0;
-void changeValueOfIndex(value){
-  index=value;
-  update();
-}
   @override
   void onInit() {
     super.onInit();

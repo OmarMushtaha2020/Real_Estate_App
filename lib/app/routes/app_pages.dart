@@ -17,6 +17,7 @@ import 'package:real_estate_app/app/modules/home/views/photos_details_view.dart'
 import 'package:real_estate_app/app/modules/home/views/profile_view.dart';
 import 'package:real_estate_app/app/modules/home/views/property_details_view.dart';
 import 'package:real_estate_app/app/modules/home/views/property_owner_view.dart';
+import 'package:real_estate_app/app/modules/home/views/rating_page_view.dart';
 import 'package:real_estate_app/app/modules/home/views/real_estate_type_view.dart';
 import 'package:real_estate_app/app/modules/home/views/role_view.dart';
 import 'package:real_estate_app/app/modules/home/views/search_view.dart';
@@ -33,7 +34,7 @@ part 'app_routes.dart';
 class AppPages {
   AppPages._();
 
-  static const INITIAL = Routes.AddReview;
+  static const INITIAL = Routes.RatingPage;
 
   static final routes = [
     GetPage(
@@ -204,6 +205,14 @@ class AppPages {
       transition: Transition.downToUp, // Example of another custom transition
       transitionDuration: const Duration(milliseconds: 500),
       binding: AppBinding(),
+    ),
+    GetPage(
+      name: _Paths.RatingPage,
+      page: () =>  RatingPageView(),
+      transition: Transition.downToUp, // Example of another custom transition
+      transitionDuration: const Duration(milliseconds: 500),
+      binding: AppBinding(),
     )
+
   ];
 }

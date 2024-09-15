@@ -28,6 +28,7 @@ static const AppointmentSuccess=_Paths.AppointmentSuccess;
 static const AppointmentSchedule=_Paths.AppointmentSchedule;
 static const ChatDetails=_Paths.ChatDetails;
 static const AddReview=_Paths.AddReview;
+static const RatingPage=_Paths.RatingPage;
 }
 
 abstract class _Paths {
@@ -56,4 +57,5 @@ static const AppointmentSuccess='/appointment_success';
 static const AppointmentSchedule='/appointment_schedule';
 static const ChatDetails='/chat_details';
 static const AddReview='/add_review';
+static const RatingPage='/RatingPage';
 }

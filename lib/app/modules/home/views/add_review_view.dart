@@ -119,7 +119,8 @@ child: Column(
               ),
             ),
 
-Spacer(),            GestureDetector(
+Spacer(),
+            GestureDetector(
               onTap: (){
 
               },
