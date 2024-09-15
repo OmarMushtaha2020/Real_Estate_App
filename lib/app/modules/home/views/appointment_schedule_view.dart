@@ -230,25 +230,38 @@ class AppointmentScheduleView extends GetView<AppointmentScheduleController> {
                               final result =
                                   await showCalendarDatePicker2Dialog(
                                 context: context,
-                                config:
-                                    CalendarDatePicker2WithActionButtonsConfig(
+                                config: CalendarDatePicker2WithActionButtonsConfig(
 
                                   firstDate: DateTime(2000),
                                   lastDate: DateTime(2101),
                                       dayTextStyle: TextStyle(
-                                        fontSize: 8.sp, // Adjust this size for unselected dates
+                                        fontSize: 12.sp, // Adjust this size for unselected dates
                                         color: Colors.black, // Set the color for unselected dates
                                       ),
+
                                selectedRangeHighlightColor: Color(0xFFE86A53).withOpacity(0.80),
                                   selectedDayHighlightColor: Color(0xFFE86A53),
+cancelButtonTextStyle: TextStyle(
+  fontSize: 17.sp,
+  color:Color(0xFFE86A53),
+),
+                                  yearTextStyle:  TextStyle(
+                                    fontSize: 12.sp,
+                                  ),
+                                  okButtonTextStyle:  TextStyle(
+                                    fontSize: 17.sp,
+                                    color:Color(0xFFE86A53),
+                                  ),
                                   selectedRangeDayTextStyle:TextStyle(
                                     color: Colors.white,
-                                    fontSize: 8.sp
+                                    fontSize: 12.sp
 
                                   ) ,
+
                                   calendarType: CalendarDatePicker2Type.range,
+
                                 ),
-                                dialogSize: Size(MediaQuery.of(context).size.width/1.5, MediaQuery.of(context).size.height/2),
+                                dialogSize: Size(MediaQuery.of(context).size.width/1, MediaQuery.of(context).size.height/2),
                                     dialogBackgroundColor: Colors.white
 
 
