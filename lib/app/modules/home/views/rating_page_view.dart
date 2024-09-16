@@ -200,6 +200,7 @@ class RatingPageView extends GetView<RatingPageController> {
                   child: GestureDetector(
                     onTap: () {
                       // Handle add review action
+                      Get.toNamed("/add_review");
                     },
                     child: Container(
                       height: 53.h,

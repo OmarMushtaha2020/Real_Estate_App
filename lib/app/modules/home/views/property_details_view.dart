@@ -217,32 +217,36 @@ class PropertyDetailsView extends GetView<PropertyDetailsController> {
                             ),
                           ),
                           SizeBoxWidget(height: 20.h,),
-
-                          Row(
-                            children: [
-                              TextWidget(
-                                '4.9',
-                                fontSize: 12.sp,
-                                fontWeight: FontWeight.w500,
-                                color: Color(0Xff333333),
-                                fontFamily: "Satoshi",
-                              ),
-                              SizeBoxWidget(width: 5.w),
-                              ImageWidget(
-                                "assets/image/star.png",
-                                width: 10.w,
-                                height: 10.w,
-                                fit: BoxFit.cover,
-                              ),
-                              SizeBoxWidget(width: 5.w),
-                              TextWidget(
-                                '(486 Review)',
-                                fontSize: 12.sp,
-                                fontWeight: FontWeight.w500,
-                                color: Color(0Xff333333),
-                                fontFamily: "Satoshi",
-                              ),
-                            ],
+                          GestureDetector(
+                            onTap: (){
+                              Get.toNamed("/RatingPage");
+                            },
+                            child: Row(
+                              children: [
+                                TextWidget(
+                                  '4.9',
+                                  fontSize: 12.sp,
+                                  fontWeight: FontWeight.w500,
+                                  color: Color(0Xff333333),
+                                  fontFamily: "Satoshi",
+                                ),
+                                SizeBoxWidget(width: 5.w),
+                                ImageWidget(
+                                  "assets/image/star.png",
+                                  width: 10.w,
+                                  height: 10.w,
+                                  fit: BoxFit.cover,
+                                ),
+                                SizeBoxWidget(width: 5.w),
+                                TextWidget(
+                                  '(486 Review)',
+                                  fontSize: 12.sp,
+                                  fontWeight: FontWeight.w500,
+                                  color: Color(0Xff333333),
+                                  fontFamily: "Satoshi",
+                                ),
+                              ],
+                            ),
                           ),
                           SizeBoxWidget(height: 20.h,),
 

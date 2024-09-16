@@ -33,53 +33,58 @@ class ProfileView extends GetView<ProfileController> {
             child: SingleChildScrollView(
               child: Column(
                 children: [
-                  Container(
-                    child: Padding(
-                      padding:  EdgeInsets.symmetric(horizontal: 10.w),
-                      child: Row(
-                        children: [
-                          Container(
-                            width: 64.w,
-                            height: 64.w,
-                            decoration: BoxDecoration(
-                                shape: BoxShape.circle,
-                                image: DecorationImage(
-                                    image: NetworkImage(
-                                        "https://www.shutterstock.com/image-photo/young-handsome-man-beard-wearing-600nw-1703979295.jpg"),
-                                    fit: BoxFit.cover)),
-                          ),
-                          SizeBoxWidget(width: 15.w,),
-                          Column(
-                            mainAxisAlignment: MainAxisAlignment.center,
-                            crossAxisAlignment: CrossAxisAlignment.start,
-                            children: [
-                              TextWidget(
-                                'Chris Brown',
-                                fontSize: 16.sp,
-                                fontWeight: FontWeight.w500,
-                                color: Color(0XffE86A53),
-                                fontFamily: "Satoshi",
-                              ),
-                              TextWidget(
-                                'brown@dumpmail.com',
-                                fontSize: 14.sp,
-                                fontWeight: FontWeight.w500,
-                                color: Color(0Xff999999),
-                                fontFamily: "RedHatDisplay",
-                              ),
-              
-                            ],
-                          ),
-                          Spacer(),
-                          ImageWidget("assets/image/Icon-4.png",width: 20.w,height: 20.h,fit: BoxFit.contain,),
-                        ],
+                  GestureDetector(
+                    onTap: (){
+                      Get.toNamed("/profile_details");
+                    },
+                    child: Container(
+                      child: Padding(
+                        padding:  EdgeInsets.symmetric(horizontal: 10.w),
+                        child: Row(
+                          children: [
+                            Container(
+                              width: 64.w,
+                              height: 64.w,
+                              decoration: BoxDecoration(
+                                  shape: BoxShape.circle,
+                                  image: DecorationImage(
+                                      image: NetworkImage(
+                                          "https://www.shutterstock.com/image-photo/young-handsome-man-beard-wearing-600nw-1703979295.jpg"),
+                                      fit: BoxFit.cover)),
+                            ),
+                            SizeBoxWidget(width: 15.w,),
+                            Column(
+                              mainAxisAlignment: MainAxisAlignment.center,
+                              crossAxisAlignment: CrossAxisAlignment.start,
+                              children: [
+                                TextWidget(
+                                  'Chris Brown',
+                                  fontSize: 16.sp,
+                                  fontWeight: FontWeight.w500,
+                                  color: Color(0XffE86A53),
+                                  fontFamily: "Satoshi",
+                                ),
+                                TextWidget(
+                                  'brown@dumpmail.com',
+                                  fontSize: 14.sp,
+                                  fontWeight: FontWeight.w500,
+                                  color: Color(0Xff999999),
+                                  fontFamily: "RedHatDisplay",
+                                ),
+
+                              ],
+                            ),
+                            Spacer(),
+                            ImageWidget("assets/image/Icon-4.png",width: 20.w,height: 20.h,fit: BoxFit.contain,),
+                          ],
+                        ),
                       ),
-                    ),
-                    height: 80.h,
-                    width: double.infinity,
-                    decoration: BoxDecoration(
-                      color: Color(0xFFF8F8F8),
-                      borderRadius: BorderRadius.circular(100.r),
+                      height: 80.h,
+                      width: double.infinity,
+                      decoration: BoxDecoration(
+                        color: Color(0xFFF8F8F8),
+                        borderRadius: BorderRadius.circular(100.r),
+                      ),
                     ),
                   ),
                   SizeBoxWidget(height: 15.h,),

@@ -122,6 +122,7 @@ child: Column(
 Spacer(),
             GestureDetector(
               onTap: (){
+                Get.offAllNamed("/RatingPage");
 
               },
               child: Container(

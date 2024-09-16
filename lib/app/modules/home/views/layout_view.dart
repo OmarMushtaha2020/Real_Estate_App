@@ -92,6 +92,7 @@ class LayoutView extends GetView<LayoutController> {
                 key: ValueKey<String>(imagePath), // Unique key to trigger animation
                 width: 30.sp, // Adjust size if needed
                 height: 30.sp, // Adjust size if needed
+                fit:  BoxFit.contain,
               ),
               transitionBuilder: (Widget child, Animation<double> animation) {
                 return FadeTransition(opacity: animation, child: child);

@@ -112,6 +112,7 @@ class SetNewLocationView extends GetView<SetNewLocationController> {
 Expanded(child: Container()),
                   GestureDetector(
                     onTap: () {
+                      Get.toNamed("/profile_details");
                     },
                     child: Align(
                       alignment: Alignment.bottomCenter,

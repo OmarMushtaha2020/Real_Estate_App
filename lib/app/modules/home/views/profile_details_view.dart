@@ -257,6 +257,7 @@ class ProfileDetailsView extends GetView<ProfileDetailsController> {
                             padding: EdgeInsets.only(top: 20.h),
                             child: GestureDetector(
                               onTap: () {
+                                Get.toNamed("/set_new_location");
                               },
                               child: Align(
                                 alignment: Alignment.bottomCenter,
@@ -290,7 +291,7 @@ class ProfileDetailsView extends GetView<ProfileDetailsController> {
                           padding: EdgeInsets.only(bottom: 20.h,top: 20.h),
                           child: GestureDetector(
                             onTap: () {
-                            },
+Get.offAllNamed("/Layout");                            },
                             child: Align(
                               alignment: Alignment.bottomCenter,
                               child: Container(
