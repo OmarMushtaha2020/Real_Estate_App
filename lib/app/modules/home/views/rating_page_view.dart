@@ -114,7 +114,7 @@ class RatingPageView extends GetView<RatingPageController> {
                               child: Center(
                                 child: TextWidget(
                                   "${controller.rating[index]}",
-                                  fontSize: 12,
+                                  fontSize: 12.sp,
                                   fontFamily: "Satoshi",
                                   fontWeight: FontWeight.w500,
                                   color: Color(0xFFE86A53),
@@ -192,7 +192,7 @@ class RatingPageView extends GetView<RatingPageController> {
                       ),
                     ),
                     separatorBuilder: (context, index) => SizedBox(height: 15.h),
-                    itemCount: 9,
+                    itemCount: 1,
                   ),
                 ),
                 Padding(

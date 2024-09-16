@@ -37,7 +37,7 @@ part 'app_routes.dart';
 class AppPages {
   AppPages._();
 
-  static const INITIAL = Routes.SetNewLocationView;
+  static const INITIAL = Routes.RatingPage;
 
   static final routes = [
     GetPage(
