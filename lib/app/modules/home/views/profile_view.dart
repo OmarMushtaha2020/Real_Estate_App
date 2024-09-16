@@ -85,7 +85,7 @@ class ProfileView extends GetView<ProfileController> {
                   SizeBoxWidget(height: 15.h,),
                   Container(
                     child: Padding(
-                      padding:  EdgeInsets.symmetric(horizontal: 20.w,vertical: 5.h),
+                      padding:  EdgeInsets.symmetric(horizontal: 20.w,vertical: 10.h),
                       child: Column(
                         crossAxisAlignment: CrossAxisAlignment.start,
                         mainAxisAlignment: MainAxisAlignment.center,
@@ -153,7 +153,7 @@ class ProfileView extends GetView<ProfileController> {
                                 fontFamily: "Satoshi",
                               ),
                               Spacer(),
-              FlutterSwitch(height: 25.w,width:50.w,value: controller.isSwitched,activeColor: Color(0xFFE86A53), onToggle: (value){
+              FlutterSwitch(height: 25.w,width:50.w,borderRadius: 100.r,value: controller.isSwitched,activeColor: Color(0xFFE86A53), onToggle: (value){
                 controller.changeValueSwitched(value);
               })
                             ],
@@ -162,7 +162,6 @@ class ProfileView extends GetView<ProfileController> {
                         ],
                       ),
                     ),
-                    height: 170.h,
                     width: double.infinity,
                     decoration: BoxDecoration(
                       color: Color(0xFFF8F8F8),
@@ -173,7 +172,7 @@ class ProfileView extends GetView<ProfileController> {
               
                   Container(
                     child: Padding(
-                      padding:  EdgeInsets.symmetric(horizontal: 20.w,vertical: 5.h),
+                      padding:  EdgeInsets.symmetric(horizontal: 20.w,vertical: 10.h),
                       child: Column(
                         crossAxisAlignment: CrossAxisAlignment.start,
                         mainAxisAlignment: MainAxisAlignment.center,
@@ -198,7 +197,7 @@ class ProfileView extends GetView<ProfileController> {
                                 fontFamily: "Satoshi",
                               ),
                               Spacer(),
-                              FlutterSwitch(height: 25.w,width:50.w,value: controller.isSwitched,activeColor: Color(0xFFE86A53), onToggle: (value){
+                              FlutterSwitch(height: 25.w,width:50.w,borderRadius: 100.r,value: controller.isSwitched,activeColor: Color(0xFFE86A53), onToggle: (value){
                                 controller.changeValueSwitched(value);
                               })
               
@@ -215,7 +214,7 @@ class ProfileView extends GetView<ProfileController> {
                                 fontFamily: "Satoshi",
                               ),
                               Spacer(),
-                              FlutterSwitch(height: 25.w,width:50.w,value: controller.isSwitched,activeColor: Color(0xFFE86A53), onToggle: (value){
+                              FlutterSwitch(height: 25.w,width:50.w,borderRadius: 100.r,value: controller.isSwitched,activeColor: Color(0xFFE86A53), onToggle: (value){
                                 controller.changeValueSwitched(value);
                               })
 
@@ -240,7 +239,6 @@ Icon(Icons.arrow_forward_ios_rounded,size: 16.w,color: Color(0Xff999999),)
                         ],
                       ),
                     ),
-                    height: 169.h,
                     width: double.infinity,
                     decoration: BoxDecoration(
                       color: Color(0xFFF8F8F8),
@@ -251,7 +249,7 @@ Icon(Icons.arrow_forward_ios_rounded,size: 16.w,color: Color(0Xff999999),)
               
                   Container(
                     child: Padding(
-                      padding:  EdgeInsets.symmetric(horizontal: 20.w,vertical: 5.h),
+                      padding:  EdgeInsets.symmetric(horizontal: 20.w,vertical: 10.h),
                       child: Column(
                         crossAxisAlignment: CrossAxisAlignment.start,
                         mainAxisAlignment: MainAxisAlignment.center,
@@ -274,7 +272,7 @@ Icon(Icons.arrow_forward_ios_rounded,size: 16.w,color: Color(0Xff999999),)
                                 fontFamily: "Satoshi",
                               ),
                               Spacer(),
-                              FlutterSwitch(height: 25.w,width:50.w,value: controller.isSwitched,activeColor: Color(0xFFE86A53), onToggle: (value){
+                              FlutterSwitch(height: 25.w,width:50.w,borderRadius: 100.r,value: controller.isSwitched,activeColor: Color(0xFFE86A53), onToggle: (value){
                                 controller.changeValueSwitched(value);
                               })
                             ],
@@ -292,7 +290,7 @@ Icon(Icons.arrow_forward_ios_rounded,size: 16.w,color: Color(0Xff999999),)
                                 fontFamily: "Satoshi",
                               ),
                               Spacer(),
-                              FlutterSwitch(height: 25.w,width:50.w,value: controller.isSwitched,activeColor: Color(0xFFE86A53), onToggle: (value){
+                              FlutterSwitch(height: 25.w,width:50.w,borderRadius: 100.r,value: controller.isSwitched,activeColor: Color(0xFFE86A53), onToggle: (value){
                                 controller.changeValueSwitched(value);
                               })
                             ],
@@ -301,7 +299,6 @@ Icon(Icons.arrow_forward_ios_rounded,size: 16.w,color: Color(0Xff999999),)
                         ],
                       ),
                     ),
-                    height: 169.h,
                     width: double.infinity,
                     decoration: BoxDecoration(
                       color: Color(0xFFF8F8F8),
@@ -335,7 +332,7 @@ Icon(Icons.arrow_forward_ios_rounded,size: 16.w,color: Color(0Xff999999),)
                                 fontFamily: "Satoshi",
                               ),
                               Spacer(),
-                              ImageWidget("assets/image/logout.png"),
+                              ImageWidget("assets/image/logout.png",height: 24.h,width: 24.h,fit: BoxFit.contain,),
 
                             ],
                           ),
