@@ -31,6 +31,7 @@ static const AddReview=_Paths.AddReview;
 static const RatingPage=_Paths.RatingPage;
 static const VideoCall=_Paths.VideoCall;
 static const ProfileDetails=_Paths.ProfileDetails;
+static const SetNewLocationView=_Paths.SetNewLocationView;
 }
 
 abstract class _Paths {
@@ -62,4 +63,5 @@ static const AddReview='/add_review';
 static const RatingPage='/RatingPage';
 static const VideoCall='/VideoCall';
 static const ProfileDetails='/profile_details';
+static const SetNewLocationView='/set_new_location';
 }

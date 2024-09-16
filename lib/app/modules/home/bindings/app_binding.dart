@@ -23,6 +23,7 @@ import 'package:real_estate_app/app/modules/home/controllers/real_estate_type_co
 import 'package:real_estate_app/app/modules/home/controllers/registration_controller.dart';
 import 'package:real_estate_app/app/modules/home/controllers/role_controller.dart';
 import 'package:real_estate_app/app/modules/home/controllers/search_controller.dart';
+import 'package:real_estate_app/app/modules/home/controllers/set_new_location_controller.dart';
 import 'package:real_estate_app/app/modules/home/controllers/set_up_location_controller.dart';
 import 'package:real_estate_app/app/modules/home/controllers/set_up_location_manually_controller.dart';
 import 'package:real_estate_app/app/modules/home/controllers/sign_up_controller.dart';
@@ -113,6 +114,8 @@ class AppBinding extends Bindings {
     Get.lazyPut<ProfileDetailsController>(
           () => ProfileDetailsController(),
     );
-
+    Get.lazyPut<SetNewLocationController>(
+          () => SetNewLocationController(),
+    );
   }
 }

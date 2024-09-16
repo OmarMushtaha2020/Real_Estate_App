@@ -22,6 +22,7 @@ import 'package:real_estate_app/app/modules/home/views/rating_page_view.dart';
 import 'package:real_estate_app/app/modules/home/views/real_estate_type_view.dart';
 import 'package:real_estate_app/app/modules/home/views/role_view.dart';
 import 'package:real_estate_app/app/modules/home/views/search_view.dart';
+import 'package:real_estate_app/app/modules/home/views/set_new_location_view.dart';
 import 'package:real_estate_app/app/modules/home/views/set_up_location_manually_view.dart';
 import 'package:real_estate_app/app/modules/home/views/set_up_location_view.dart';
 import 'package:real_estate_app/app/modules/home/views/sign_up_view.dart';
@@ -36,7 +37,7 @@ part 'app_routes.dart';
 class AppPages {
   AppPages._();
 
-  static const INITIAL = Routes.ProfileDetails;
+  static const INITIAL = Routes.SetNewLocationView;
 
   static final routes = [
     GetPage(
@@ -230,6 +231,12 @@ class AppPages {
       binding: AppBinding(),
     ),
 
-
+    GetPage(
+      name: _Paths.SetNewLocationView,
+      page: () =>  SetNewLocationView(),
+      transition: Transition.downToUp, // Example of another custom transition
+      transitionDuration: const Duration(milliseconds: 500),
+      binding: AppBinding(),
+    ),
   ];
 }
