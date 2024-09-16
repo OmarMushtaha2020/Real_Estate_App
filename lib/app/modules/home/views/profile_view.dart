@@ -71,7 +71,7 @@ class ProfileView extends GetView<ProfileController> {
                             ],
                           ),
                           Spacer(),
-                          ImageWidget("assets/image/Icon-4.png",width: 20.w,height: 20.h,fit: BoxFit.cover,),
+                          ImageWidget("assets/image/Icon-4.png",width: 20.w,height: 20.h,fit: BoxFit.contain,),
                         ],
                       ),
                     ),
@@ -85,7 +85,7 @@ class ProfileView extends GetView<ProfileController> {
                   SizeBoxWidget(height: 15.h,),
                   Container(
                     child: Padding(
-                      padding:  EdgeInsets.symmetric(horizontal: 20.w,vertical: 20.h),
+                      padding:  EdgeInsets.symmetric(horizontal: 20.w,vertical: 5.h),
                       child: Column(
                         crossAxisAlignment: CrossAxisAlignment.start,
                         mainAxisAlignment: MainAxisAlignment.center,
@@ -98,7 +98,7 @@ class ProfileView extends GetView<ProfileController> {
                             color: Color(0XffE86A53),
                             fontFamily: "Satoshi",
                           ),
-                          SizeBoxWidget(height: 10.h,),
+                          SizeBoxWidget(height: 2.h,),
               
                           Row(
                             children: [
@@ -120,7 +120,7 @@ class ProfileView extends GetView<ProfileController> {
               
                             ],
                           ),
-                          SizeBoxWidget(height: 5.h,),
+                          SizeBoxWidget(height: 2.h,),
                           Row(
                             children: [
                               TextWidget(
@@ -141,8 +141,8 @@ class ProfileView extends GetView<ProfileController> {
               
                             ],
                           ),
-                          SizeBoxWidget(height: 5.h,),
-              
+                          SizeBoxWidget(height: 2.h,),
+
                           Row(
                             children: [
                               TextWidget(
@@ -162,7 +162,7 @@ class ProfileView extends GetView<ProfileController> {
                         ],
                       ),
                     ),
-                    height: 169.h,
+                    height: 170.h,
                     width: double.infinity,
                     decoration: BoxDecoration(
                       color: Color(0xFFF8F8F8),
@@ -173,7 +173,7 @@ class ProfileView extends GetView<ProfileController> {
               
                   Container(
                     child: Padding(
-                      padding:  EdgeInsets.symmetric(horizontal: 20.w,vertical: 20.h),
+                      padding:  EdgeInsets.symmetric(horizontal: 20.w,vertical: 5.h),
                       child: Column(
                         crossAxisAlignment: CrossAxisAlignment.start,
                         mainAxisAlignment: MainAxisAlignment.center,
@@ -186,7 +186,7 @@ class ProfileView extends GetView<ProfileController> {
                             color: Color(0XffE86A53),
                             fontFamily: "Satoshi",
                           ),
-                          SizeBoxWidget(height: 10.h,),
+                          SizeBoxWidget(height: 2.h,),
               
                           Row(
                             children: [
@@ -204,7 +204,7 @@ class ProfileView extends GetView<ProfileController> {
               
                             ],
                           ),
-                          SizeBoxWidget(height: 5.h,),
+                          SizeBoxWidget(height: 2.h,),
                           Row(
                             children: [
                               TextWidget(
@@ -221,7 +221,7 @@ class ProfileView extends GetView<ProfileController> {
 
                             ],
                           ),
-                          SizeBoxWidget(height: 5.h,),
+                          SizeBoxWidget(height: 2.h,),
               
                           Row(
                             children: [
@@ -251,7 +251,7 @@ Icon(Icons.arrow_forward_ios_rounded,size: 16.w,color: Color(0Xff999999),)
               
                   Container(
                     child: Padding(
-                      padding:  EdgeInsets.symmetric(horizontal: 20.w,vertical: 20.h),
+                      padding:  EdgeInsets.symmetric(horizontal: 20.w,vertical: 5.h),
                       child: Column(
                         crossAxisAlignment: CrossAxisAlignment.start,
                         mainAxisAlignment: MainAxisAlignment.center,
@@ -263,7 +263,7 @@ Icon(Icons.arrow_forward_ios_rounded,size: 16.w,color: Color(0Xff999999),)
                             color: Color(0XffE86A53),
                             fontFamily: "Satoshi",
                           ),
-                          SizeBoxWidget(height: 10.h,),
+                          SizeBoxWidget(height: 2.h,),
                           Row(
                             children: [
                               TextWidget(
@@ -280,7 +280,7 @@ Icon(Icons.arrow_forward_ios_rounded,size: 16.w,color: Color(0Xff999999),)
                             ],
                           ),
 
-                          SizeBoxWidget(height: 5.h,),
+                          SizeBoxWidget(height: 2.h,),
               
                           Row(
                             children: [
@@ -312,7 +312,7 @@ Icon(Icons.arrow_forward_ios_rounded,size: 16.w,color: Color(0Xff999999),)
 
                   Container(
                     child: Padding(
-                      padding:  EdgeInsets.symmetric(horizontal: 20.w,vertical: 20.h),
+                      padding:  EdgeInsets.symmetric(horizontal: 20.w,vertical: 5.h),
                       child: Column(
                         mainAxisAlignment: MainAxisAlignment.center,
                         crossAxisAlignment: CrossAxisAlignment.start,
@@ -324,7 +324,7 @@ Icon(Icons.arrow_forward_ios_rounded,size: 16.w,color: Color(0Xff999999),)
                             color: Color(0XffE86A53),
                             fontFamily: "Satoshi",
                           ),
-                          SizeBoxWidget(height: 10.h,),
+                          SizeBoxWidget(height: 2.h,),
                           Row(
                             children: [
                               TextWidget(

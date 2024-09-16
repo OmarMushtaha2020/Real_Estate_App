@@ -109,5 +109,9 @@ class AppBinding extends Bindings {
     Get.lazyPut<VideoCallController>(
           () => VideoCallController(),
     );
+    Get.lazyPut<PropertyDetailsController>(
+          () => PropertyDetailsController(),
+    );
+
   }
 }

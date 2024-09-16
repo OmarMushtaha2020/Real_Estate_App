@@ -26,7 +26,6 @@ class PropertyDetailsView extends GetView<PropertyDetailsController> {
               crossAxisAlignment: CrossAxisAlignment.start,
               mainAxisAlignment: MainAxisAlignment.start,
               children: [
-
                 Stack(
                   children: [
 
@@ -387,6 +386,7 @@ class PropertyDetailsView extends GetView<PropertyDetailsController> {
                     ),
                   ),
                 ),
+
               ],
             ),
           ),

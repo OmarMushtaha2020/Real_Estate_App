@@ -30,6 +30,7 @@ static const ChatDetails=_Paths.ChatDetails;
 static const AddReview=_Paths.AddReview;
 static const RatingPage=_Paths.RatingPage;
 static const VideoCall=_Paths.VideoCall;
+static const ProfileDetails=_Paths.ProfileDetails;
 }
 
 abstract class _Paths {
@@ -60,4 +61,5 @@ static const ChatDetails='/chat_details';
 static const AddReview='/add_review';
 static const RatingPage='/RatingPage';
 static const VideoCall='/VideoCall';
+static const ProfileDetails='/profile_details';
 }
