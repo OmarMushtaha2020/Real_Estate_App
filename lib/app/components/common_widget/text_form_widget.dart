@@ -55,6 +55,10 @@ vertical: vertical!,
 horizontal: horizontal!,
 ), // Padding inside the text field
 hintText: '${hint}',
+      hintStyle: TextStyle(
+        color: Color(0xFF999999
+        )
+      )
 ),
 );
 }
