@@ -371,12 +371,17 @@ Row(
       fontFamily: "Satoshi",
     ),
 Spacer(),
-    TextWidget(
-      'See All',
-      fontSize: 14.sp,
-      fontWeight: FontWeight.w500,
-      color: Color(0xFF999999),
-      fontFamily: "Satoshi",
+    GestureDetector(
+      onTap: (){
+Get.toNamed("/photos_details");
+      },
+      child: TextWidget(
+        'See All',
+        fontSize: 14.sp,
+        fontWeight: FontWeight.w500,
+        color: Color(0xFF999999),
+        fontFamily: "Satoshi",
+      ),
     ),
 
   ],

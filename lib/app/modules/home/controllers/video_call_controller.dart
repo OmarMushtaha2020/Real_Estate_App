@@ -6,7 +6,7 @@ List image=[
   "assets/image/microphone-2.png",
   "assets/image/video_call_image.png",
   "assets/image/flip.png",
-      "assets/image/ri_more-2-fill.png"
+      "assets/image/microphone-2.png"
 ];
   final count = 0.obs;
   @override

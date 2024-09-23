@@ -310,8 +310,8 @@ cancelButtonTextStyle: TextStyle(
                                               "assets/image/arrow_right.png",
                                               fit: BoxFit.contain,
 
-                                              height: 24.h,
-                                              width: 24.w,
+                                              height: 16.h,
+                                              width: 16.w,
                                             ),
                                           ],
                                         ),
@@ -400,9 +400,9 @@ prefixIcon:  Column(
                                     children: [
                                       ImageWidget(
                                         "assets/image/arrow_right.png",
-                                        height: 24.h,
+                                        height: 16.h,
                                         fit: BoxFit.contain,
-                                        width: 24.w,
+                                        width: 16.w,
                                       ),
                                     ],
                                   ),

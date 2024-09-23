@@ -210,23 +210,39 @@ class ProfileDetailsView extends GetView<ProfileDetailsController> {
                                 textAlign: TextAlign.start,
                               ),
                               SizeBoxWidget(height: 8.h), // Added for spacing consistency
-                              CSCPicker(
+                              Container(
 
-                                dropdownDecoration: BoxDecoration(
-                                  borderRadius: BorderRadius.circular(10.r), // Rounded corners for dropdown
-                                  border: Border.all(color: Color(0XFFCCCCCC), width: 1.w), // Border color and width for dropdown
+                                child: CSCPicker(
+
+                                  dropdownDecoration: BoxDecoration(
+
+                                    borderRadius: BorderRadius.circular(10.r), // Rounded corners for dropdown
+                                    border: Border.all(color: Color(0XFFCCCCCC), width: 1.w), // Border color and width for dropdown
+                                  ),
+                                  showCities: false,
+                                  showStates: false,
+dropdownHeadingStyle: TextStyle(
+    fontSize: 14.sp,
+    color: Color(0xFF999999),
+    fontWeight: FontWeight.w500,
+    fontFamily: "Satoshi"
+),
+                                  selectedItemStyle: TextStyle(
+                                    fontSize: 14.sp,
+                                    color: Color(0xFF999999),
+                                    fontWeight: FontWeight.w500,
+                                    fontFamily: "Satoshi"
+                                  ),
+                                  onCountryChanged: (value) {
+                                    // print('Selected Country: ${value?.name}');
+                                  },
+                                  onStateChanged: (value) {
+                                    // print('Selected State: ${value?.name}');
+                                  },
+                                  onCityChanged: (value) {
+                                    // print('Selected City: ${value?.name}');
+                                  },
                                 ),
-                                showCities: false,
-                                showStates: false,
-                                onCountryChanged: (value) {
-                                  // print('Selected Country: ${value?.name}');
-                                },
-                                onStateChanged: (value) {
-                                  // print('Selected State: ${value?.name}');
-                                },
-                                onCityChanged: (value) {
-                                  // print('Selected City: ${value?.name}');
-                                },
                               ),
                             ],
                           ),

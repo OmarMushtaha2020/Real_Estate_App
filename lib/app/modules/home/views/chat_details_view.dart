@@ -31,6 +31,7 @@ class ChatDetailsView extends GetView<ChatDetailsController> {
             ),
             SizeBoxWidget(width: 10.w,),
 
+
             ImageWidget("assets/image/Vector.png",width: 16.w,height: 16.w,fit: BoxFit.contain,color: Color(0xFF3F82FF)),
             SizeBoxWidget(width: 5.w,),
 
@@ -54,11 +55,17 @@ class ChatDetailsView extends GetView<ChatDetailsController> {
           ),
           SizeBoxWidget(width: 15.w,),
 
-          ImageWidget(
-            "assets/image/video_call_image.png",
-            width: 24.w,
-            height: 24.w,
-            fit: BoxFit.cover,
+      GestureDetector(
+      onTap: (){
+        Get.toNamed("/VideoCall");
+
+      },
+            child: ImageWidget(
+              "assets/image/video_call_image.png",
+              width: 24.w,
+              height: 24.w,
+              fit: BoxFit.cover,
+            ),
           ),
 
           SizeBoxWidget(width: 15.w,),
