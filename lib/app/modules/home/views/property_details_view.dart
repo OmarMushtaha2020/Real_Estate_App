@@ -361,6 +361,42 @@ class PropertyDetailsView extends GetView<PropertyDetailsController> {
                             fontFamily: "Satoshi",
                           ),
                           SizeBoxWidget(height: 20.h),
+Row(
+  children: [
+    TextWidget(
+      'Photos',
+      fontSize: 14.sp,
+      fontWeight: FontWeight.w700,
+      color: Color(0XffE86A53),
+      fontFamily: "Satoshi",
+    ),
+Spacer(),
+    TextWidget(
+      'See All',
+      fontSize: 14.sp,
+      fontWeight: FontWeight.w500,
+      color: Color(0xFF999999),
+      fontFamily: "Satoshi",
+    ),
+
+  ],
+),
+                          SizeBoxWidget(height: 20.h),
+SizedBox(height: 260.h,child: ListView.separated(shrinkWrap: true,scrollDirection: Axis.horizontal,itemBuilder: (context,index)=>Column(
+  children: [
+    Container(
+     width: 373.w,
+        height: 260.h,
+      decoration: BoxDecoration(
+
+        borderRadius: BorderRadius.circular(10.r),
+        image: DecorationImage(image: AssetImage("assets/image/imageBuildingTwo.png"),fit: BoxFit.cover)
+      ),
+    ),
+  ],
+), separatorBuilder: (context,index)=>                          SizeBoxWidget(width: 15.w),  itemCount: 3))
+                       ,
+                          SizeBoxWidget(height: 20.h),
 
                           Spacer(),
                           GestureDetector(

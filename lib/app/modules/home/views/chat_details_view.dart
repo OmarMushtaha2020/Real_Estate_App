@@ -260,7 +260,7 @@ Column(
                     fontFamily: "Satoshi",
                   ),
                   decoration: InputDecoration(
-                    hintText: 'Search anything',
+                    hintText: 'Write a message ...',
                     hintStyle: TextStyle(
                       fontSize: 16.sp,
                       color: const Color(0xff999999),
@@ -271,7 +271,7 @@ Column(
                       mainAxisAlignment: MainAxisAlignment.center,
                       children: [
                         ImageWidget(
-                          "assets/image/majesticons_search-line.png",
+                          "assets/image/heroicons-outline_paper-clip.png",
                           width: 18.w,
                           height: 18.w,
                           fit: BoxFit.cover,
@@ -282,17 +282,17 @@ Column(
                       mainAxisAlignment: MainAxisAlignment.center,
                       children: [
                         Container(
-                          height: 35.w,
-                          width: 35.w,
+                          height: 44.w,
+                          width: 44.w,
                           decoration: BoxDecoration(
                             shape: BoxShape.circle,
-                            color: Colors.white,
+                            color: Color(0XffE86A53),
                           ),
                           child: Column(
                             mainAxisAlignment: MainAxisAlignment.center,
                             children: [
                               ImageWidget(
-                                "assets/image/fliter.png",
+                                "assets/image/majesticons_send.png",
                                 width: 14.w,
                                 height: 14.w,
                                 fit: BoxFit.cover,
