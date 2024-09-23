@@ -57,6 +57,22 @@ packages:
       url: "https://pub.dev"
     source: hosted
     version: "1.18.0"
+  country_list_pick:
+    dependency: "direct main"
+    description:
+      name: country_list_pick
+      sha256: "379da3b8d194d4bd5a07472128c3ce5b4d205a0a15e217236aed1c393959a8b6"
+      url: "https://pub.dev"
+    source: hosted
+    version: "1.0.1+6"
+  country_picker:
+    dependency: "direct main"
+    description:
+      name: country_picker
+      sha256: "327f5e15a76352089a6b5057abb761ee5202e7516c9440d8d6a7524139f9b14e"
+      url: "https://pub.dev"
+    source: hosted
+    version: "2.0.26"
   csc_picker:
     dependency: "direct main"
     description:

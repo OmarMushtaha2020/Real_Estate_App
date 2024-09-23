@@ -11,7 +11,14 @@ class ProfileDetailsController extends GetxController {
   TextEditingController name=TextEditingController();
   TextEditingController fullName=TextEditingController();
   TextEditingController phoneNumber=TextEditingController();
+  String? selectedCountryName;
+  String? selectedCountryFlag;
+  void changeCountryNameAndFlag(String name,String flag){
 
+    selectedCountryName=name;
+    selectedCountryFlag=flag;
+    update();
+  }
   int index=0;
   void changeValueOfIndex(value){
     index=value;

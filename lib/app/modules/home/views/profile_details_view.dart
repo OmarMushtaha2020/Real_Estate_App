@@ -1,3 +1,5 @@
+import 'package:country_list_pick/country_list_pick.dart';
+import 'package:country_picker/country_picker.dart';
 import 'package:csc_picker/csc_picker.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
@@ -13,7 +15,8 @@ import 'package:real_estate_app/app/components/common_widget/text_widget.dart';
 import 'package:real_estate_app/app/modules/home/controllers/profile_details_controller.dart';
 
 class ProfileDetailsView extends GetView<ProfileDetailsController> {
-  const ProfileDetailsView({Key? key}) : super(key: key);
+   ProfileDetailsView({Key? key}) : super(key: key);
+
   @override
   Widget build(BuildContext context) {
     return GetBuilder<ProfileDetailsController>(
@@ -210,40 +213,59 @@ class ProfileDetailsView extends GetView<ProfileDetailsController> {
                                 textAlign: TextAlign.start,
                               ),
                               SizeBoxWidget(height: 8.h), // Added for spacing consistency
-                              Container(
 
-                                child: CSCPicker(
 
-                                  dropdownDecoration: BoxDecoration(
+                Container(
+                width: double.infinity,
+                height: 48.h,
+                decoration: BoxDecoration(
+                  borderRadius: BorderRadius.circular(10.r),
+                  border: Border.all(color: Color(0XffCCCCCC)),
+                ),
+                child: InkWell(
+                  onTap: () {
+                    showCountryPicker(
+                      context: context,
+                      showPhoneCode: false, // optional
+                      onSelect: (Country country) {
+                        controller.changeCountryNameAndFlag(country.name, country.flagEmoji);
 
-                                    borderRadius: BorderRadius.circular(10.r), // Rounded corners for dropdown
-                                    border: Border.all(color: Color(0XFFCCCCCC), width: 1.w), // Border color and width for dropdown
-                                  ),
-                                  showCities: false,
-                                  showStates: false,
-dropdownHeadingStyle: TextStyle(
-    fontSize: 14.sp,
-    color: Color(0xFF999999),
-    fontWeight: FontWeight.w500,
-    fontFamily: "Satoshi"
-),
-                                  selectedItemStyle: TextStyle(
-                                    fontSize: 14.sp,
-                                    color: Color(0xFF999999),
-                                    fontWeight: FontWeight.w500,
-                                    fontFamily: "Satoshi"
-                                  ),
-                                  onCountryChanged: (value) {
-                                    // print('Selected Country: ${value?.name}');
-                                  },
-                                  onStateChanged: (value) {
-                                    // print('Selected State: ${value?.name}');
-                                  },
-                                  onCityChanged: (value) {
-                                    // print('Selected City: ${value?.name}');
-                                  },
-                                ),
-                              ),
+                      },
+                    );
+                  },
+                  child: Row(
+                    children: [
+                      // Country title (aligned to the start)
+                      SizeBoxWidget(width: 10.w,),
+                      TextWidget(
+                        controller.selectedCountryName ?? 'Select Country',
+                        fontSize: 16.sp,
+                        fontWeight: FontWeight.w400,
+                        color: Color(0xFF999999),
+                        textAlign: TextAlign.start,
+                      ),
+SizeBoxWidget(width: 10.w,),
+                      // Country flag (aligned to the end)
+                      Padding(
+                        padding: EdgeInsets.only(right: 10.w), // Optional padding
+                        child: Text(
+                          controller.selectedCountryFlag ?? '',
+                          style: TextStyle(fontSize: 20.sp),
+                        ),
+                      ),
+                      Spacer(),
+                      ImageWidget(
+                        "assets/image/arrow_right.png",
+                        height: 16.h,
+                        fit: BoxFit.contain,
+                        width: 16.w,
+                      ),
+                      SizeBoxWidget(width: 10.w,),
+
+                    ],
+                  ),
+                ),
+              )
                             ],
                           ),
                         ],):Column(children: [

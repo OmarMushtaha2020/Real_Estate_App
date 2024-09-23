@@ -28,8 +28,9 @@ dependencies:
   flutter_switch: ^0.3.2
   intl_phone_field:
   csc_picker: ^0.2.7
-
+  country_list_pick: ^1.0.1+6
   intl: ^0.18.0
+  country_picker: ^2.0.26
 
 dev_dependencies:
   flutter_test:
