@@ -17,6 +17,8 @@ class ChatView extends GetView<ChatController> {
   Widget build(BuildContext context) {
     return Scaffold(
         appBar: AppBar(
+          surfaceTintColor: Colors.transparent,
+
           title: TextWidget(
             'Chat',
             fontSize: 20.sp,

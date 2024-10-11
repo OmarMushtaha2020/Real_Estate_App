@@ -15,6 +15,8 @@ class BookMarkView extends GetView<BookMarkController> {
   Widget build(BuildContext context) {
     return Scaffold(
         appBar: AppBar(
+          surfaceTintColor: Colors.transparent,
+
           title:
           TextWidget(
             'Bookmark',

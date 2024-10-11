@@ -19,6 +19,8 @@ class ProfileView extends GetView<ProfileController> {
       builder: (controller){
         return  Scaffold(
           appBar: AppBar(
+            surfaceTintColor: Colors.transparent,
+
             title: TextWidget(
               'Profile',
               fontSize: 20.sp,

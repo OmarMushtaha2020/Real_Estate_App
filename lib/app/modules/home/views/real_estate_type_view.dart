@@ -14,7 +14,8 @@ class RealEstateTypeView extends GetView<RealEstateTypeController> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        
+        surfaceTintColor: Colors.transparent,
+
         iconTheme: IconThemeData(
           size: 20.w
 

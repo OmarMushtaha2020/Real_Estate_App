@@ -14,7 +14,10 @@ class EmailVerificationView extends GetView<EmailVerificationController> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-        appBar: AppBar(),
+        appBar: AppBar(
+          surfaceTintColor: Colors.transparent,
+
+        ),
         body: Container(
             alignment: AlignmentDirectional.center,
             child: SingleChildScrollView(

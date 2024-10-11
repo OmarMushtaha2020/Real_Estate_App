@@ -14,6 +14,8 @@ class NotificationView extends GetView<NotificationController> {
   Widget build(BuildContext context) {
     return Scaffold(
         appBar: AppBar(
+          surfaceTintColor: Colors.transparent,
+
           iconTheme: IconThemeData(size: 20.w),
           title:
           TextWidget(

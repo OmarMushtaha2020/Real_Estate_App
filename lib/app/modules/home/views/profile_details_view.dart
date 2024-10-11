@@ -25,6 +25,8 @@ class ProfileDetailsView extends GetView<ProfileDetailsController> {
 
         return Scaffold(
           appBar: AppBar(
+            surfaceTintColor: Colors.transparent,
+
             iconTheme: IconThemeData(size: 20.w),
 
             title: TextWidget(

@@ -12,7 +12,10 @@ class OnBoardingView extends GetView<OnBoardingController> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(),
+      appBar: AppBar(
+        surfaceTintColor: Colors.transparent,
+
+      ),
       body: GetBuilder<OnBoardingController>(
         init: OnBoardingController(),
         builder: (controller) {

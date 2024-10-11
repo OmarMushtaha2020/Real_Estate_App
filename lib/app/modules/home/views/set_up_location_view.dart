@@ -15,7 +15,10 @@ class SetUpLocationView extends StatelessWidget {
       init: SetUpLocationController(),
       builder: (controller) {
         return Scaffold(
-          appBar: AppBar(),
+          appBar: AppBar(
+            surfaceTintColor: Colors.transparent,
+
+          ),
           body: Container(
             width: double.infinity,
             child: Padding(

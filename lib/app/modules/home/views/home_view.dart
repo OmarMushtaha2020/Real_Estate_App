@@ -18,7 +18,10 @@ class HomeView extends GetView<HomeController> {
       init: HomeController(),
       builder: (HomeController controller) {
         return Scaffold(
-          appBar: AppBar(),
+          appBar: AppBar(
+            surfaceTintColor: Colors.transparent,
+
+          ),
           body: Padding(
             padding: EdgeInsets.symmetric(horizontal: 16.w, vertical: 8.h),
             child: SingleChildScrollView(

@@ -16,6 +16,8 @@ class ChatDetailsView extends GetView<ChatDetailsController> {
     return Scaffold(
       backgroundColor: Color(0XffF8F8F8),
       appBar: AppBar(
+        surfaceTintColor: Colors.transparent,
+
         toolbarHeight: 110.h,
         iconTheme: IconThemeData(size: 20.w),
         title: Row(

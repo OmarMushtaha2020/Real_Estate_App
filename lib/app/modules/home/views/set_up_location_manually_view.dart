@@ -18,6 +18,8 @@ class SetUpLocationManuallyView extends GetView<SetUpLocationManuallyController>
       builder: (controller) {
         return Scaffold(
           appBar: AppBar(
+            surfaceTintColor: Colors.transparent,
+
             iconTheme: IconThemeData(
               size: 20.w,
             ),

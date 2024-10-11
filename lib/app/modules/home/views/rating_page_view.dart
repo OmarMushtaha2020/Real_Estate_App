@@ -17,6 +17,8 @@ class RatingPageView extends GetView<RatingPageController> {
         return Scaffold(
           backgroundColor: Colors.white,
           appBar: AppBar(
+            surfaceTintColor: Colors.transparent,
+
             iconTheme: IconThemeData(size: 20.w),
             title: TextWidget(
               'Ratings',

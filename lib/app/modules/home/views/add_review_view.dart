@@ -15,7 +15,10 @@ class AddReviewView extends GetView<AddReviewController> {
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: Colors.white,
+
       appBar: AppBar(
+        surfaceTintColor: Colors.transparent,
+
         iconTheme: IconThemeData(size: 20.w),
         title: TextWidget(
           'Add Review',
